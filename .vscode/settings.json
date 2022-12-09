@@ -1,0 +1,30 @@
+{
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.codeActionsOnSave": {
+		// For ESLint
+		"source.fixAll": true,
+		"source.fixAll.eslint": true
+	},
+
+	"[javascript]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+
+	"prettier.endOfLine": "auto",
+	"prettier.configPath": ".prettierrc",
+	// "prettier.disableLanguages": ["js"],
+
+	// "eslint.autoFixOnSave": true,
+	"eslint.alwaysShowStatus": true
+	// "files.autoSave": "onFocusChange",
+}
