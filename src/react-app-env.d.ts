@@ -13,4 +13,5 @@ declare namespace NodeJS {
 	}
 }
 
-type RootStore = ReturnType<typeof import('@redux/connectors.redux').RootState>;
+
+type RootState = ReturnType<typeof import('@/redux_legacy/connectors.redux').RootState>;

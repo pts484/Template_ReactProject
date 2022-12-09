@@ -2,11 +2,11 @@ import '@include';
 import React, { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { detectedBreakpoint, isMobile, setLanguage } from '@/redux/reducers/GlobalStatus.reducer';
+import { detectedBreakpoint, isMobile, setLanguage } from '@/redux_legacy/reducers/GlobalStatus.reducer';
 
 const App = (): JSX.Element => {
 	const dispatch = useDispatch();
-	const { server, language } = useSelector((store: RootStore) => store.GlobalStatus);
+	const { server, language } = useSelector((store: RootState) => store.GlobalStatus);
 
 	useEffect(() => {
 		/**

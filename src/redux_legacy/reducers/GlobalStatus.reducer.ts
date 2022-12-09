@@ -1,4 +1,4 @@
-import { createAction, createReducer } from '@reduxjs/toolkit';
+import { createAction, handleActions, Action } from 'redux-actions';
 import { applyPenders } from 'redux-pender';
 /** ***************** declare  ****************** */
 
@@ -41,7 +41,7 @@ const ORIENTATION = 'GLOBAL_STATUS/ORIENTATION';
 const BREAKPOINT = 'GLOBAL_STATUS/BREAKPOINT';
 
 /** ***************** ACTION FUNCTIONS ****************** */
-export const setLanguage = createAction(LANGUAGE);
+export const setLanguage = createAction(LANGUAGE, (data: string) => data);
 export const isDevice = createAction(DEVICE);
 export const isMobile = createAction(MOBILE);
 export const isPlatform = createAction(PLATFORM);
@@ -56,46 +56,54 @@ const initialState = {
 	breakpoint: _generateBreakpoint(),
 	orientation: _orientation(),
 	device: navigator.userAgent.toLowerCase(),
-	deviceSs: 'dsdsd',
 };
 
-const reducer = createReducer(initialState, (builder):void=>{
-	builder
-	.addCase(setLanguage, (state: RootState, action:any) => {
-		let _language: string = action.payload;
+const reducer = handleActions(
+	{
+		[LANGUAGE]: (state: RootState, action: Action<any>) => {
+			let _language: string = action.payload;
 
-		if (!_language) {
-			_language = localStorage.getItem(keyNameLanguage) ?? navigator.language;
-		}
+			if (!_language) {
+				_language = localStorage.getItem(keyNameLanguage) ?? navigator.language;
+			}
 
-		localStorage.setItem(keyNameLanguage, _language);
+			localStorage.setItem(keyNameLanguage, _language);
 
-		
-		state.language= _language,
-	})
+			return {
+				...state,
+				language: _language,
+			};
+		},
 
-	// .addCase(DEVICE, (state:any) => {
-	// 	state.device = navigator.userAgent.toLowerCase(),
-	// })
+		[DEVICE]: (state) => ({
+			...state,
+			device: navigator.userAgent.toLowerCase(),
+		}),
 
-	// .addCase(MOBILE, (state:any) => {
-		
-	// 	state.mobile = _mobile(),
-	// })
+		[MOBILE]: (state) => ({
+			...state,
+			mobile: _mobile(),
+		}),
 
-	// .addCase(PLATFORM, (state:any) => {
-	// 	state.isPlatform= _platform(),
-	// })
+		[PLATFORM]: (state) => ({
+			...state,
+			isPlatform: _platform(),
+		}),
 
-	// .addCase(ORIENTATION, (state:any) => {
-	// 	state.orientation= _orientation(),
-	// })
+		[ORIENTATION]: (state) => ({
+			...state,
+			orientation: _orientation(),
+		}),
 
-	// .addCase(BREAKPOINT, (state:any, action) => {
-	// 	state.breakpoint= _generateBreakpoint(),
-
-	// })
-});
+		[BREAKPOINT]: (state, action) => {
+			return {
+				...state,
+				breakpoint: _generateBreakpoint(),
+			};
+		},
+	},
+	initialState,
+);
 
 // export default reducer;
 export default applyPenders(reducer, [
