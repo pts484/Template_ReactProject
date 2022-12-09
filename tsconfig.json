@@ -1,4 +1,5 @@
 {
+	"extends": "./tsconfig.paths.json",
 	"compilerOptions": {
 		"target": "es5",
 		"lib": ["dom", "dom.iterable", "esnext"],
@@ -19,5 +20,6 @@
 		"strictPropertyInitialization": true,
 		"noImplicitReturns": true
 	},
-	"include": ["src"]
+	"include": ["src", "src/*", "**/*.ts", "**/*.d.ts", "**/*.declare.ts", "**/*.tsx", "**/*.js"],
+	"exclude": ["node_modules", "src/_statics"]
 }

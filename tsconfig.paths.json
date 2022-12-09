@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"baseUrl": "./",
+		"paths": {
+			"@include": ["./src/include"],
+			"@include/*": ["./src/include/*"],
+			"@module": ["./src/module"],
+			"@module/*": ["./src/module/*"],
+			"@component": ["./src/_component"],
+			"@component/*": ["./src/_component/*"],
+			"@redux": ["./src/redux"],
+			"@redux/*": ["./src/redux/*"],
+			"@reducers": ["./src/redux/reducers"],
+			"@reducers/*": ["./src/redux/reducers/*"],
+			"@hook": ["./src/hook"],
+			"@hook/*": ["./src/hook/*"],
+			"@": ["./src"],
+			"@/*": ["./src/*"]
+		}
+	}
+}

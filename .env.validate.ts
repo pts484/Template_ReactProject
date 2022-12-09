@@ -45,9 +45,14 @@ export default (env: any) => {
 		},
 	};
 
-	const _processEnv = process.env;
+	const _processEnv = { ...process.env };
 
-	process.env = { ...envDefault, ...envParsed };
+	process.env = {
+		NODE_ENV: 'test',
+		PUBLIC_URL: '',
+		...envDefault,
+		...envParsed,
+	};
 
 	envValidator({
 		envDefault,
@@ -56,5 +61,6 @@ export default (env: any) => {
 	});
 
 	process.env = { ..._processEnv, ...envDefault, ...envParsed };
+
 	console.log(process.env);
 };
