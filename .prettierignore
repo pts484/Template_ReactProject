@@ -6,6 +6,7 @@ public/*
 dist/*
 build/*
 .env
+README.md
 
 # Ignore all HTML files:
 # *.html

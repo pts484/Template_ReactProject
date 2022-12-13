@@ -1,4 +1,3 @@
-import '@include';
 import React, { useEffect } from 'react';
 
 import {
@@ -12,7 +11,7 @@ import {
 
 import { useDispatch, useSelector } from '@hook/useStore/useStore.hook';
 
-const App = (): JSX.Element => {
+const TestComponent = (): JSX.Element => {
 	const dispatch = useDispatch();
 	const gStatus = useSelector((state) => state.GlobalStatus);
 
@@ -73,4 +72,4 @@ const App = (): JSX.Element => {
 	);
 };
 
-export default App;
+export default TestComponent;
