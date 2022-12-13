@@ -1,0 +1,148 @@
+//정의 중 start
+.nav-item {
+    position: relative;
+}
+
+.dropdown-item {
+    display: flex;
+    // border-bottom: 1px solid $gray-100;
+}
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.nav-global-drop {
+    top: 57px !important;
+    right: -53px !important;
+    left: auto !important;
+    position: absolute !important;
+}
+.nav-global-txt {
+    @include subhead-03;
+}
+
+// 정의 중 end
+
+.dropdown-item {
+    border-radius: 8px;
+    padding: 12px 14px;
+    // border-bottom: 1px solid $gray-100;
+    &:last-child {
+        // border-bottom: none;
+    }
+}
+
+.dropdown-menu {
+    border: 0;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.15);
+    border-radius: $border-radius-large;
+    font-size: $font-size-base;
+    padding: 8px;
+
+    &.dropdown-menu-right {
+        &:before {
+            left: auto;
+            right: 10px;
+        }
+    }
+
+    .dropdown & {
+        @include transform-translate-y-dropdown(-25px);
+        visibility: hidden;
+        display: block;
+        top: 100% !important;
+    }
+
+    .dropdown.show &,
+    &.open {
+        visibility: visible;
+        @include transform-translate-y-dropdown(0px);
+    }
+
+    .dropdown-item,
+    .bootstrap-select &.inner li a {
+        // padding: 1rem;
+        outline: none;
+
+        &:hover,
+        &:focus {
+            background-color: var(--brand-bl-100);
+        }
+
+        &.disabled,
+        &:disabled {
+            &:hover,
+            &:focus {
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+/**
+ * 서치바 드롭다운 리스트 스타일
+ *
+ **/
+
+.dropdown-pannel {
+    @include dropdown-background();
+
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid $gray-150;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(46, 12, 84, 0.15);
+
+    .dropdown-item {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+
+        &:hover {
+            background-color: $gray-50;
+        }
+
+        &:first-child {
+            &:hover {
+                border-radius: 12px 12px 0 0;
+            }
+            animation: rotateMenu 400ms ease-in-out forwards;
+            transform-origin: top center;
+        }
+
+        &:last-child {
+            &:hover {
+                border-radius: 0 0 12px 12px;
+            }
+        }
+    }
+
+    .detail {
+        padding: 0 16px;
+
+        svg {
+            margin-right: 8px;
+        }
+
+        .icon {
+            margin: 8px 16px 8px 0;
+            width: 32px;
+            height: 32px;
+            background-color: $gray-150;
+            border-radius: 8px;
+            outline: none;
+            border: none;
+        }
+
+        .name {
+            flex-grow: 1;
+            @include subhead-02;
+            color: $text-800;
+        }
+    }
+}

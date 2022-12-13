@@ -46,29 +46,45 @@ const App = (): JSX.Element => {
 
 	return (
 		<div className="App">
-			<br />
-			{gStatus.breakpoint}
-			<br />
-			{gStatus.language}
-			<br />
-			{gStatus.languageBrowser}
-			<br />
-			{gStatus.mobile ? 'mobile' : 'desktop'}
-			<br />
-			{JSON.stringify(gStatus.orientation)}
-			<br />
-			{gStatus.platform}
 			<button
 				type="button"
+				className="btn-filled-lg"
+				onClick={() => {
+					dispatch(_LANGUAGE_('ko-KR'));
+				}}
+			>
+				ko-KR
+			</button>
+			<button
+				type="button"
+				className="btn-filled-md"
+				onClick={() => {
+					dispatch(_LANGUAGE_('en-US'));
+				}}
+			>
+				en-US
+			</button>
+			<button
+				type="button"
+				className="btn-filled-xs"
 				onClick={() => {
 					dispatch(_LANGUAGE_('en-US'));
 				}}
 			>
 				aaaaaaaaaa
 			</button>
-			<a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-				Learn React
-			</a>
+
+			<p> 컬러 </p>
+
+			<button
+				type="button"
+				className="btn-filled-xs bg-white"
+				onClick={() => {
+					dispatch(_LANGUAGE_('en-US'));
+				}}
+			>
+				aaaaaaaaaa
+			</button>
 		</div>
 	);
 };

@@ -1,0 +1,93 @@
+/* .App {
+    position: relative;
+} */
+html,
+body {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+    border: 0 solid;
+}
+ol,
+li,
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ol,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+p,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a:hover,
+a:active {
+    text-decoration: none;
+    color: inherit;
+    outline: 0;
+}
+
+option {
+    font-weight: normal;
+    display: block;
+    white-space: nowrap;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+
+input:focus {
+    outline: none;
+}
+
+canvas {
+    display: block;
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'SUIT', 'TossFaceFontMac';
+    // font-family: 'SUIT', sans-serif;
+    background-color: #fff;
+}
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+    border: 0 solid;
+    border-color: inherit;
+}

@@ -3,6 +3,21 @@ import webpack from 'webpack';
 import validateEnv from './.env.validate';
 
 export default {
+	style: {
+		modules: {
+			localIdentName: '',
+		},
+		// css: {
+		// 	loaderOptions: (cssLoaderOptions, { env, paths }) => {
+		// 		return cssLoaderOptions;
+		// 	},
+		// },
+		sass: {
+			loaderOptions: (sassLoaderOptions, { env, paths }) => {
+				return sassLoaderOptions;
+			},
+		},
+	},
 	webpack: {
 		configure: (webpackConfig: any, { env, paths }: any) => {
 			/**
