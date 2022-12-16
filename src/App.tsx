@@ -10,7 +10,7 @@ import {
 	_BREAKPOINT_,
 } from '@/redux/reducers/GlobalStatus.reducer';
 
-import { useDispatch, useSelector } from '@hook/useStore/useStore.hook';
+import { useDispatch, useSelector } from '@/hooks/useStore/useStore.hook';
 
 const App = (): JSX.Element => {
 	const dispatch = useDispatch();

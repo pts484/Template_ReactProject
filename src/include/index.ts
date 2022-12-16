@@ -5,6 +5,10 @@
  * 라이브러리 파일은 /src/include/lib에 복사 후 여기에서 import 한다.
  **************************************************************************************/
 
+/** Bootstrap 5 */
+import 'bootstrap/dist/bootstrap.css'; // SCSS
+// import 'bootstrap';
+
 /** 디자인 시스템 */
 import '@design/import.scss';
 
