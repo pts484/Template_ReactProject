@@ -11,6 +11,11 @@ import {
 } from '@/redux/reducers/GlobalStatus.reducer';
 
 import { useDispatch, useSelector } from '@hook/useStore/useStore.hook';
+import ButtonTest00 from './component/ButtonTest00/ButtonTest00';
+import ButtonTest01 from './component/ButtonTest01/ButtonTest01';
+import ButtonTest02 from './component/ButtonTest02/ButtonTest02';
+import { Link, Outlet, Router } from 'react-router-dom';
+import Routers from './routers';
 
 const App = (): JSX.Element => {
 	const dispatch = useDispatch();
@@ -69,6 +74,19 @@ const App = (): JSX.Element => {
 			<a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
 				Learn React
 			</a>
+			<section>
+				<nav className="gnb">
+					<Link to="/">메인</Link>
+					<Link to="/page01">페이지 1</Link>
+					<Link to="/page02">페이지 2</Link>
+				</nav>
+				<div className="button-wrap">
+					<ButtonTest00 />
+					<ButtonTest01 />
+					<ButtonTest02 />
+				</div>
+			</section>
+			<Routers />
 		</div>
 	);
 };
