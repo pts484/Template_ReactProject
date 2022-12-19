@@ -12,8 +12,10 @@
 			"@redux/*": ["./src/redux/*"],
 			"@reducers": ["./src/redux/reducers"],
 			"@reducers/*": ["./src/redux/reducers/*"],
-			"@hook": ["./src/hook"],
-			"@hook/*": ["./src/hook/*"],
+			"@hooks": ["./src/hooks"],
+			"@hooks/*": ["./src/hooks/*"],
+			"@design": ["./src/design_system"],
+			"@design/*": ["./src/design_system/*"],
 			"@": ["./src"],
 			"@/*": ["./src/*"]
 		}

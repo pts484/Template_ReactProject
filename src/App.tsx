@@ -10,7 +10,7 @@ import {
 	_BREAKPOINT_,
 } from '@/redux/reducers/GlobalStatus.reducer';
 
-import { useDispatch, useSelector } from '@hook/useStore/useStore.hook';
+import { useDispatch, useSelector } from '@hooks/useStore/useStore.hook';
 import ButtonTest00 from './component/ButtonTest00/ButtonTest00';
 import ButtonTest01 from './component/ButtonTest01/ButtonTest01';
 import ButtonTest02 from './component/ButtonTest02/ButtonTest02';
@@ -51,20 +51,39 @@ const App = (): JSX.Element => {
 
 	return (
 		<div className="App">
-			<br />
-			{gStatus.breakpoint}
-			<br />
-			{gStatus.language}
-			<br />
-			{gStatus.languageBrowser}
-			<br />
-			{gStatus.mobile ? 'mobile' : 'desktop'}
-			<br />
-			{JSON.stringify(gStatus.orientation)}
-			<br />
-			{gStatus.platform}
 			<button
 				type="button"
+				className="btn-filled-lg"
+				onClick={() => {
+					dispatch(_LANGUAGE_('ko-KR'));
+				}}
+			>
+				ko-KR
+			</button>
+			<button
+				type="button"
+				className="btn-filled-md"
+				onClick={() => {
+					dispatch(_LANGUAGE_('en-US'));
+				}}
+			>
+				en-US
+			</button>
+			<button
+				type="button"
+				className="btn-filled-xs"
+				onClick={() => {
+					dispatch(_LANGUAGE_('en-US'));
+				}}
+			>
+				aaaaaaaaaa
+			</button>
+
+			<p> 컬러 </p>
+
+			<button
+				type="button"
+				className="btn-filled-xs bg-white"
 				onClick={() => {
 					dispatch(_LANGUAGE_('en-US'));
 				}}
