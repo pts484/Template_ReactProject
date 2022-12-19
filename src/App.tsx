@@ -16,6 +16,8 @@ import ButtonTest01 from './component/ButtonTest01/ButtonTest01';
 import ButtonTest02 from './component/ButtonTest02/ButtonTest02';
 import { Link, Outlet, Router } from 'react-router-dom';
 import Routers from './routers';
+import cx from 'classnames';
+import CSS from './styles/App.module.scss';
 
 const App = (): JSX.Element => {
 	const dispatch = useDispatch();
@@ -103,6 +105,12 @@ const App = (): JSX.Element => {
 					<ButtonTest00 />
 					<ButtonTest01 />
 					<ButtonTest02 />
+					<button
+						type="button"
+						className={cx('btn-filled-sm', CSS['btn-filled-sm'], CSS.font_yellow, CSS.styling)}
+					>
+						ko-KR
+					</button>
 				</div>
 			</section>
 			<Routers />

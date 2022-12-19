@@ -4,22 +4,18 @@
 
 .fade-enter {
 	opacity: 0;
-	z-index: -1;
 }
 
 .fade-enter-active {
-	z-index: 1;
 	opacity: 1;
 	transition: 0.5s;
 }
 
 .fade-exit {
-	z-index: 1;
 	opacity: 1;
 }
 
 .fade-exit-active {
-	z-index: -1;
 	opacity: 0;
 	transition: 0.5s;
 }

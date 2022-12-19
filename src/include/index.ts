@@ -6,6 +6,7 @@
  **************************************************************************************/
 
 // import '';
+/** 현석 테스트 중인 import 구문, tailwind도 포함. */
 import '@/styles/_import.scss';
 
 /** Bootstrap 5 */
@@ -25,6 +26,7 @@ import '@design/import.scss';
 import $ from 'jquery';
 import toastr from 'toastr';
 import 'toastr/build/toastr.css';
+import { basename } from 'path';
 
 declare global {
 	interface Window {
