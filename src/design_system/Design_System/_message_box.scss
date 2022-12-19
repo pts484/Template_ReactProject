@@ -1,0 +1,54 @@
+[class*='message-'] {
+    img,
+    svg {
+        margin-right: 7px;
+    }
+}
+
+.message-error-box {
+    display: flex;
+    align-items: center;
+
+    p {
+        color: $danger-main;
+        font-weight: 400;
+        font-size: 0.75rem;
+        line-height: 18px;
+        letter-spacing: -0.006em;
+    }
+}
+
+.message-success-box {
+    display: flex;
+    align-items: center;
+
+    p {
+        color: $suc-main;
+        font-weight: 400;
+        font-size: 0.75rem;
+        line-height: 18px;
+        letter-spacing: -0.006em;
+    }
+}
+
+.message-info-box {
+    display: flex;
+    align-items: center;
+
+    p,
+    span {
+        color: $text-700;
+        font-weight: 400;
+        font-size: 0.75rem;
+        line-height: 18px;
+        letter-spacing: -0.006em;
+    }
+}
+
+@media (max-width: 599px) {
+    .message-info-box {
+        p {
+            max-width: 70%;
+        }
+    }
+}

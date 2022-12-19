@@ -1,0 +1,91 @@
+/* 폰트 설정 *********************************************************************************************************/
+
+// @font-face {
+//     font-family: 'Pretendard';
+//     font-weight: 400;
+//     src: url('./fonts/Pretendard/Pretendard-Regular.ttf') format('ttf');
+// }
+
+// @font-face {
+//     font-family: 'Pretendard';
+//     font-weight: 600;
+//     src: url('./fonts/Pretendard/Pretendard-SemiBold.ttf') format('ttf');
+// }
+// @font-face {
+//     font-family: 'Pretendard';
+//     font-weight: 700;
+//     src: url('./fonts/Pretendard/Pretendard-Bold.ttf') format('ttf');
+// }
+
+/* 글로벌 폰트 설정 *********************************************************************************************************/
+
+@font-face {
+    font-family: 'SUIT';
+    font-weight: 200;
+<<<<<<< HEAD
+    src: url('../../fonts/SUIT/SUIT-Light.woff2') format('woff2'),
+        // src: url('./../fonts/SUIT/SUIT-Light.woff2') format('woff2'),
+        url('../../fonts/SUIT/SUIT-Light.otf') format('truetype');
+=======
+    src: url('./fonts/SUIT/SUIT-Light.woff2') format('woff2'), url('./fonts/SUIT/SUIT-Light.otf') format('truetype');
+>>>>>>> develop
+}
+@font-face {
+    font-family: 'SUIT';
+    font-weight: 400;
+<<<<<<< HEAD
+    src: url('../../fonts/SUIT/SUIT-Regular.woff2') format('woff2'),
+        url('../../fonts/SUIT/SUIT-Regular.otf') format('truetype');
+=======
+    src: url('./fonts/SUIT/SUIT-Regular.woff2') format('woff2'), url('./fonts/SUIT/SUIT-Regular.otf') format('truetype');
+>>>>>>> develop
+}
+@font-face {
+    font-family: 'SUIT';
+    font-weight: 500;
+<<<<<<< HEAD
+    src: url('../../fonts/SUIT/SUIT-Medium.woff2') format('woff2'),
+        url('../../fonts/SUIT/SUIT-Medium.otf') format('truetype');
+=======
+    src: url('./fonts/SUIT/SUIT-Medium.woff2') format('woff2'), url('./fonts/SUIT/SUIT-Medium.otf') format('truetype');
+>>>>>>> develop
+}
+@font-face {
+    font-family: 'SUIT';
+    font-weight: 600;
+<<<<<<< HEAD
+    src: url('../../fonts/SUIT/SUIT-SemiBold.woff2') format('woff2'),
+        url('../../fonts/SUIT/SUIT-SemiBold.otf') format('truetype');
+=======
+    src: url('./fonts/SUIT/SUIT-SemiBold.woff2') format('woff2'),
+        url('./fonts/SUIT/SUIT-SemiBold.otf') format('truetype');
+>>>>>>> develop
+}
+@font-face {
+    font-family: 'SUIT';
+    font-weight: 700;
+<<<<<<< HEAD
+    src: url('../../fonts/SUIT/SUIT-Bold.woff2') format('woff2'),
+        url('../../fonts/SUIT/SUIT-Bold.otf') format('truetype');
+}
+@font-face {
+    font-family: 'TossFaceFontMac';
+    src: url('../../fonts/TossFaceFontMac.ttf') format('ttf'), url('../../fonts/TossFaceFontMac.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'icomoon';
+    src: url('./webfonts/icomoon.eot');
+    src: url('webfonts/icomoon.eot?8f3wug#iefix') format('embedded-opentype'),
+        url('./webfonts/icomoon.ttf') format('truetype'), url('./webfonts/icomoon.woff') format('woff'),
+        url('./webfonts/icomoon.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+=======
+    src: url('./fonts/SUIT/SUIT-Bold.woff2') format('woff2'), url('./fonts/SUIT/SUIT-Bold.otf') format('truetype');
+}
+@font-face {
+    font-family: 'TossFaceFontMac';
+    src: url('./../fonts/TossFaceFontMac.ttf') format('ttf'), url('./../fonts/TossFaceFontMac.ttf') format('truetype');
+>>>>>>> develop
+}

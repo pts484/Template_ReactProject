@@ -1,0 +1,499 @@
+// renewal klaymint Desigin system
+.btn-filled-lg,
+.btn-filled-md,
+.btn-filled-sm,
+.btn-filled-xs {
+    img {
+        vertical-align: bottom;
+    }
+}
+
+/** *************************************
+ * filled Button Styles
+ ************************************* **/
+.btn-filled-lg {
+    background-color: var(--brand-bl-900);
+    color: $white;
+    border-radius: $border-radius-large;
+    border: 1px solid var(--brand-bl-900);
+    padding: 1.125rem 1.5rem;
+    width: 100%;
+    display: inline-block;
+    align-self: center;
+    @include subhead-03;
+}
+
+.btn-filled-md {
+    background-color: var(--brand-bl-900);
+    color: $white;
+    border-radius: $border-radius-large;
+    border: 1px solid var(--brand-bl-900);
+    padding: 1.0625rem 0.234375rem; //17px 24px;
+    // padding: 1rem 3.75rem;
+    display: inline-block;
+    align-self: center;
+    @include subhead-03;
+}
+.btn-filled-sm {
+    background-color: var(--brand-bl-900);
+    color: $white;
+    border-radius: $border-radius-xsmall;
+    border: 1px solid var(--brand-bl-900);
+    padding: 0.75rem 1.5rem; //12px 24px
+    display: inline-block;
+    align-self: center;
+    @include subhead-02;
+}
+.btn-filled-xs {
+    background-color: var(--brand-bl-900);
+    color: $white;
+    border-radius: $border-radius-small;
+    border: 1px solid var(--brand-bl-900);
+    padding: 0.5rem 1.22rem;
+    display: inline-block;
+    align-self: center;
+    @include subhead-02;
+}
+.btn-filled-sqr {
+    height: 2.5rem;
+    min-width: 2.5rem;
+    width: 2.5rem;
+    padding: 0;
+    line-height: normal;
+    background-color: var(--brand-bl-900);
+    border-radius: $border-radius-small;
+    border: 1px solid var(--brand-bl-900);
+}
+
+/** *************************************
+ * Border Line Button Styles
+ ************************************* **/
+
+.btn-line-lg {
+    background-color: $white-bg;
+    color: var(--brand-bl-900);
+    border-radius: $border-radius-large;
+    border: 1px solid var(--brand-bl-900);
+    padding: 1.125rem 1.5rem;
+    width: 100%;
+    display: inline-block;
+    align-self: center;
+    @include subhead-03;
+}
+.btn-line-md {
+    background-color: $white-bg;
+    color: var(--brand-bl-900);
+    border-radius: $border-radius-large;
+    border: 1px solid var(--brand-bl-900);
+    padding: 1rem 3.6rem;
+    display: inline-block;
+    align-self: center;
+    @include subhead-03;
+}
+.btn-line-sm {
+    background-color: $white-bg;
+    color: var(--brand-bl-900);
+    border-radius: $border-radius-small;
+    border: 1px solid var(--brand-bl-900);
+    padding: 0.68rem 1.67rem;
+    display: inline-block;
+    align-self: center;
+    @include subhead-03;
+}
+.btn-line-xs {
+    background: none;
+    color: var(--brand-bl-900);
+    border-radius: $border-radius-small;
+    border: 1px solid var(--brand-bl-900);
+    padding: 0.44rem 1.16rem;
+    display: inline-block;
+    align-self: center;
+    @include subhead-02;
+}
+.btn-line-sqr {
+    height: 2.5rem;
+    min-width: 2.5rem;
+    width: 2.5rem;
+    padding: 0;
+    line-height: normal;
+    background-color: $white-bg;
+    border-radius: $border-radius-small;
+    border: 1px solid var(--brand-bl-900);
+}
+
+/** *************************************
+ * Border line gray Color Button Styles
+ ************************************* **/
+
+.btn-grayline-lg {
+    background-color: $white-bg;
+    color: $text-900;
+    border-radius: $border-radius-large;
+    border: 1px solid $gray-200;
+    padding: 1.125rem 1.5rem;
+    width: 18.625rem;
+    height: 3.75rem;
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    @include subhead-03;
+}
+
+.btn-grayline-md {
+    background-color: $white-bg;
+    color: $text-900;
+    border-radius: $border-radius-large;
+    border: 1px solid $gray-200;
+    width: 12.063rem;
+    padding: 1rem 1.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    @include subhead-03;
+}
+
+.btn-grayline-sm {
+    background-color: $white-bg;
+    color: $text-900;
+    border-radius: $border-radius-small;
+    border: 1px solid $gray-200;
+    padding: 0.68rem 1.67rem;
+    display: inline-block;
+    align-self: center;
+    @include subhead-03;
+}
+.btn-grayline-xs {
+    background-color: $white-bg;
+    color: $text-900;
+    border-radius: $border-radius-small;
+    border: 1px solid $gray-200;
+    padding: 0.44rem 1.16rem;
+    display: inline-block;
+    align-self: center;
+    @include subhead-02;
+}
+#btn-grayline-xs {
+    background-color: $white-bg;
+    color: $text-900;
+    border-radius: $border-radius-small;
+    border: 1px solid $gray-200;
+    padding: 0.44rem 1.16rem;
+    display: inline-block;
+    align-self: center;
+    @include subhead-02;
+}
+
+.btn-grayline-no-border {
+    background-color: $white-bg;
+    color: $text-900;
+    padding: 0.44rem 1.16rem;
+    border-radius: $border-radius-small;
+    border: 1px solid $white;
+    display: inline-block;
+    align-self: center;
+    @include subhead-02;
+    img {
+        width: 16px;
+    }
+}
+
+.btn-grayline-sqr {
+    height: 2.5rem;
+    min-width: 2.5rem;
+    width: 2.5rem;
+    padding: 0;
+    line-height: normal;
+    background-color: $white-bg;
+    border-radius: $border-radius-small;
+    border: 1px solid $gray-200;
+}
+
+/** *************************************
+ * Hover Button Styles
+ ************************************* **/
+
+.btn-hover-lg {
+    background-color: $gray-50;
+    color: $text-900;
+    border-radius: $border-radius-large;
+    border: 1px solid $gray-200;
+    padding: 1.125rem 1.5rem;
+    width: 100%;
+    display: inline-block;
+    align-self: center;
+    @include subhead-03;
+}
+
+.btn-hover-md {
+    background-color: $gray-50;
+    color: $text-900;
+    border-radius: $border-radius-large;
+    border: 1px solid $gray-200;
+    padding: 1rem 3.6rem;
+    display: inline-block;
+    align-self: center;
+    @include subhead-03;
+}
+
+.btn-hover-sm {
+    background-color: $gray-50;
+    color: $text-900;
+    border-radius: $border-radius-small;
+    border: 1px solid $gray-200;
+    padding: 0.68rem 1.67rem;
+    display: inline-block;
+    align-self: center;
+    @include subhead-03;
+}
+
+.btn-hover-xs {
+    background-color: $gray-50;
+    color: $text-900;
+    border-radius: $border-radius-small;
+    border: 1px solid $gray-200;
+    padding: 0.44rem 1.16rem;
+    display: inline-block;
+    align-self: center;
+    @include subhead-02;
+}
+
+.btn-hover-sqr {
+    height: 2.5rem;
+    min-width: 2.5rem;
+    width: 2.5rem;
+    padding: 0;
+    line-height: normal;
+    background-color: $gray-50;
+    border-radius: $border-radius-small;
+    border: 1px solid $gray-200;
+}
+
+/** *************************************
+ * gray Color Button Styles
+ ************************************* **/
+
+.btn-grayfilled-lg {
+    background-color: $gray-100;
+    color: $text-900;
+    border-radius: $border-radius-large;
+    border: 1px solid $gray-100;
+    padding: 1.125rem 1.5rem;
+    width: 100%;
+    display: inline-block;
+    align-self: center;
+    @include subhead-03;
+}
+
+.btn-grayfilled-md {
+    background-color: $gray-100;
+    color: $text-900;
+    border-radius: $border-radius-large;
+    border: 1px solid $gray-100;
+    padding: 1rem 3.75rem;
+    display: inline-block;
+    align-self: center;
+    @include subhead-03;
+}
+.btn-grayfilled-sm {
+    background-color: $gray-100;
+    color: $text-900;
+    border-radius: $border-radius-small;
+    border: 1px solid $gray-100;
+    padding: 0.75rem 1.5rem; //12px 24px
+    display: inline-block;
+    align-self: center;
+    @include subhead-03;
+}
+.btn-grayfilled-xs {
+    background-color: $gray-100;
+    color: $text-900;
+    border-radius: $border-radius-small;
+    border: 1px solid $gray-100;
+    padding: 0.5rem 1.22rem;
+    display: inline-block;
+    align-self: center;
+    @include subhead-02;
+}
+
+.btn-grayfilled-sqr {
+    background-color: $gray-100;
+    color: $text-900;
+    border-radius: $border-radius-small;
+    border: 1px solid $gray-100;
+    padding: 0;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    width: 2.5rem;
+    display: inline-block;
+    align-self: center;
+}
+
+/** *************************************
+ * Disabled Button Styles
+ ************************************* **/
+
+.btn-disabled-lg {
+    background-color: $gray-100;
+    color: $text-550;
+    border-radius: $border-radius-large;
+    border: 1px solid $gray-100;
+    padding: 1.125rem 1.5rem;
+    width: 100%;
+    display: inline-block;
+    align-self: center;
+
+    svg {
+        fill: $text-550;
+    }
+}
+
+.btn-disabled-md {
+    background-color: $gray-100;
+    color: $text-550;
+    border-radius: $border-radius-large;
+    border: 1px solid $gray-100;
+    padding: 1rem 3.75rem;
+    display: inline-block;
+    align-self: center;
+
+    svg {
+        fill: $text-550;
+    }
+}
+.btn-disabled-sm {
+    background-color: $gray-100;
+    color: $text-550;
+    border-radius: $border-radius-small;
+    border: 1px solid $gray-100;
+    padding: 0.743rem 1.732rem;
+    display: inline-block;
+    align-self: center;
+
+    svg {
+        fill: $text-550;
+    }
+}
+.btn-disabled-xs {
+    background-color: $gray-100;
+    color: $text-550;
+    border-radius: $border-radius-small;
+    border: 1px solid $gray-100;
+    padding: 0.5rem 1.22rem;
+    display: inline-block;
+    align-self: center;
+
+    // svg {
+    //     fill: $text-550;
+    // }
+}
+
+.btn-disabled-sqr {
+    background-color: $gray-100;
+    color: $text-550;
+    border-radius: $border-radius-small;
+    border: 1px solid $gray-100;
+    padding: 0;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    width: 2.5rem;
+    display: inline-block;
+    align-self: center;
+
+    svg {
+        fill: $text-550;
+    }
+}
+//Main_Index 에서 쓰이는 select drop
+.main-select-btn {
+    gap: 8px;
+    padding: 0.5rem 0.75rem !important;
+
+    img,
+    svg {
+        width: 20px;
+    }
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #fff;
+}
+
+/** *************************************
+ *  (footer에 적용 돼 있음)
+ ************************************* **/
+.btn-focus {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+}
+.dropdown-toggle:focus {
+    background: rgba(111, 111, 111, 0.06);
+    border: 2px solid #c1c1c1;
+    border-radius: 8px;
+    color: #c1c1c1;
+}
+/** *************************************
+ * btn background none
+ ************************************* **/
+.btn-bg-none {
+    background: none;
+}
+
+/** *************************************
+ * 조건부 키워드 스타일
+ ************************************* **/
+[class*='btn-filled'] {
+    // btn-filled-가 hover일때 color: inherit;
+    // &:hover {
+    //     color: inherit;
+    // }
+}
+
+[class*='btn-gray'] {
+    //btn-어쩌고-어쩌고가 hover일때 바뀌는  background-color 컬러
+    &:hover {
+        @include btn-hover;
+        & [class*='ic-']::before {
+            color: $text-900;
+        }
+    }
+}
+
+[class*='btn-disabled-'] {
+    //btn-disabled- 가 disabled일때 text 스타일
+    & {
+        @include subhead-02;
+        color: $text-550;
+    }
+}
+
+[class*='btn-outline-'] {
+    border: $border;
+    padding: $padding-btn-vertical - 1 $padding-round-horizontal - 1;
+    background-color: $transparent-bg;
+}
+
+[class*='btn-outline-'],
+.btn-link {
+    &.disabled,
+    &:disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            background-color: $transparent-bg;
+        }
+    }
+}
