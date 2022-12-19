@@ -3,23 +3,23 @@ import React from 'react';
 import { ReactComponent as ethereum } from './Design_System/logos/logo_ethereum_dk.svg';
 import { ReactComponent as kaikas } from './Design_System/logos/logo_kaikas_dk.svg';
 import { ReactComponent as klay } from './Design_System/logos/logo_klay_dk.svg';
-import { ReactComponent as klay_bg } from './Design_System/logos/logo_klay_bg_dk.svg';
+import { ReactComponent as klayBg } from './Design_System/logos/logo_klay_bg_dk.svg';
 import { ReactComponent as klip } from './Design_System/logos/logo_klip_wt.svg';
-import { ReactComponent as km_img } from './Design_System/logos/logo_km_img_dk.svg';
-import { ReactComponent as km_dk } from './Design_System/logos/logo_km_two_dk.svg';
-import { ReactComponent as km_wt } from './Design_System/logos/logo_km_two_wt.svg';
-import { ReactComponent as km_v2_two } from './Design_System/logos/logo_km_v2_two_wt.svg';
-import { ReactComponent as km_v3_two } from './Design_System/logos/logo_km_v3_two_wt.svg';
+import { ReactComponent as kmImg } from './Design_System/logos/logo_km_img_dk.svg';
+import { ReactComponent as kmDk } from './Design_System/logos/logo_km_two_dk.svg';
+import { ReactComponent as kmWt } from './Design_System/logos/logo_km_two_wt.svg';
+import { ReactComponent as kmV2Two } from './Design_System/logos/logo_km_v2_two_wt.svg';
+import { ReactComponent as kmV3Two } from './Design_System/logos/logo_km_v3_two_wt.svg';
 import { ReactComponent as metamask } from './Design_System/logos/logo_metamask_dk.svg';
 import { ReactComponent as per } from './Design_System/logos/logo_per_dk.svg';
-import { ReactComponent as per_bg } from './Design_System/logos/logo_per_bg_dk.svg';
+import { ReactComponent as perBg } from './Design_System/logos/logo_per_bg_dk.svg';
 import { ReactComponent as wklay } from './Design_System/logos/logo_wklay_dk.svg';
-import { ReactComponent as wklay_bg } from './Design_System/logos/logo_wklay_bg_dk.svg';
+import { ReactComponent as wklayBg } from './Design_System/logos/logo_wklay_bg_dk.svg';
 import { ReactComponent as profile } from './Design_System/logos/logo_profile_dk.svg';
-import { ReactComponent as logo_chin } from './Design_System/logos/logo-chin-rec.svg';
-import { ReactComponent as logo_sqr } from './Design_System/logos/logo-chin-sqr.svg';
+import { ReactComponent as logoChin } from './Design_System/logos/logo-chin-rec.svg';
+import { ReactComponent as logoSqr } from './Design_System/logos/logo-chin-sqr.svg';
 import { ReactComponent as swapscanner } from './Design_System/logos/logo_swapscanner.svg';
-import { ReactComponent as swapscanner_full } from './Design_System/logos/logo_swapscanner_full.svg';
+import { ReactComponent as swapscannerFull } from './Design_System/logos/logo_swapscanner_full.svg';
 
 const ethereumImg = (props): JSX.Element => (
 	<img width={24} {...props} src={require('./Design_System/logos/logo_ethereum_dk.png')} />
@@ -80,23 +80,23 @@ const twitterImg = (props): JSX.Element => (
 );
 
 export default {
-	swapscanner_full,
+	swapscannerFull,
 	swapscanner,
 	ethereum,
 	kaikas,
 	klay,
-	klay_bg,
+	klayBg,
 	klip,
-	km_img,
-	km_dk,
-	km_wt,
-	km_v2_two,
-	km_v3_two,
+	kmImg,
+	kmDk,
+	kmWt,
+	kmV2Two,
+	kmV3Two,
 	metamask,
 	per,
 	wklay,
-	per_bg,
-	wklay_bg,
+	perBg,
+	wklayBg,
 	profile,
 	ethereumImg,
 	kaikasImg,
@@ -106,7 +106,7 @@ export default {
 	perImg,
 	wklayImg,
 	channelinImg,
-	logo_chin,
-	logo_sqr,
+	logoChin,
+	logoSqr,
 	tokenImg,
 };
