@@ -1,6 +1,28 @@
-@import './global.scss';
-@import './transition.scss';
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import './global.scss';
+@import './transition.scss';
+
+// ?? 테일윈드 @apply 코드 추합
+
+.test-title {
+	@apply my-10;
+}
+
+.test-card__wrap_01 {
+	@apply w-5/12 mx-auto p-6 bg-all-white rounded-xl shadow-lg flex justify-around items-center;
+}
+
+.test-card__title {
+	@apply text-xl font-bold text-brand-bl-900;
+}
+
+.test-card__wrap_02 {
+	@apply w-5/12 my-10 py-8 px-8 mx-auto bg-all-white rounded-xl shadow-lg flex justify-around items-center;
+}
+
+.test-card__button {
+	@apply px-4 py-1 text-sm text-brand-orange-01 font-semibold rounded-full border border-brand-orange-01 hover:text-all-white hover:bg-brand-yellow-01 hover:border-transparent focus:outline-none focus:ring-brand-orange-02 focus:ring-offset-2 transition-all;
+}

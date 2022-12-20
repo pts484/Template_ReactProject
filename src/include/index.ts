@@ -10,7 +10,7 @@
 import '@/styles/_import.scss';
 
 /** Bootstrap 5 */
-import 'bootstrap/scss/bootstrap.scss'; // SCSS
+// import 'bootstrap/scss/bootstrap.scss'; // SCSS
 
 /** 디자인 시스템 */
 import '@design/import.scss';

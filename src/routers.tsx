@@ -1,10 +1,12 @@
 import React from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
-import Main from './pages/Main';
-import NotFound from './pages/NotFound';
-import Page01 from './pages/Page01';
-import Page02 from './pages/Page02';
+import Main from './pages/Main/Main';
+import NotFound from './pages/NotFound/NotFound';
+import Page01 from './pages/Page_TransitionGroup01/Page01';
+import Page02 from './pages/Page_TransitionGroup02/Page02';
 import { CSSTransition, TransitionGroup, Transition, SwitchTransition } from 'react-transition-group';
+import Tailwind from './pages/Page_Tailwind/Tailwind';
+import CSSModules from './pages/Page_CSS_Modules/CSSModules';
 
 /**
  *  react-transition-group 라이브러리 사용 테스트.
@@ -31,6 +33,8 @@ const Routers = (): JSX.Element => {
 					<Route path="/page01" element={<Page01 />} />
 					<Route path="/page02" element={<Page02 />} />
 					<Route path="/*" element={<NotFound />} />
+					<Route path="/cssmodules" element={<CSSModules />} />
+					<Route path="/tailwind" element={<Tailwind />} />
 				</Routes>
 			</CSSTransition>
 		</TransitionGroup>

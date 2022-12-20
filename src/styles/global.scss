@@ -1,17 +1,21 @@
 body {
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 .button-wrap {
-	border: 0.5px solid blue;
-	margin: 2rem 0;
-	padding: 3rem 0;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	margin: 2rem;
+	padding: 2rem 1rem;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
+	align-items: center;
 }
 
 .button {
+	margin: 0.5rem 1rem;
 	padding: 1rem 1.5rem;
+	display: block;
 	border: none;
 	outline: none;
 	border-radius: 5px;
@@ -21,6 +25,7 @@ body {
 	font-weight: bold;
 	background: rgb(131, 58, 180);
 	background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+	font-size: 0.75rem;
 
 	&:hover {
 		scale: 1.2;
@@ -52,8 +57,7 @@ body {
 }
 
 .gnb {
-	margin-top: 5rem;
-	padding: 1.5rem 1rem;
+	margin: 5rem 0;
 	display: flex;
 	justify-content: space-around;
 
@@ -73,13 +77,14 @@ body {
 
 .page {
 	position: absolute;
+	top: 3rem;
 	padding: 3rem;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
-	gap: rem;
+	gap: 2rem;
 	z-index: -1;
 
 	&.pink {
@@ -92,9 +97,5 @@ body {
 
 	&.orange {
 		background: orange;
-	}
-
-	p {
-		width: 500px;
 	}
 }
