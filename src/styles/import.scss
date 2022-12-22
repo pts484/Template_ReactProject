@@ -1,31 +1,33 @@
 // =========================================================
 // * UI Kit 취합한 파일입니다! 😄
 // =========================================================
-@import 'Design_System/_root';
+@import 'design_system/_root';
 
-@import 'Design_System/reset';
+@import 'design_system/reset';
 
-@import 'Design_System/variables';
-@import 'Design_System/mixins';
+@import 'design_system/variables';
+@import 'design_system/mixins';
 // // Core CSS
-@import 'Design_System/buttons';
-@import 'Design_System/typography';
-@import 'Design_System/inputs';
-@import 'Design_System/checkboxes-radio';
-@import 'Design_System/badges';
-@import 'Design_System/color';
-@import 'Design_System/table';
-@import 'Design_System/accordion';
-@import 'Design_System/message_box';
-@import 'Design_System/toggle';
-@import 'Design_System/radio';
-@import 'Design_System/checkbox';
-@import 'Design_System/tooltip';
-@import 'Design_System/modal_layout';
-@import 'Design_System/textarea';
-@import 'Design_System/media_query';
-@import 'Design_System/toast';
-@import 'Design_System/popup';
+@import 'design_system/buttons';
+@import 'design_system/typography';
+@import 'design_system/inputs';
+@import 'design_system/checkboxes-radio';
+@import 'design_system/badges';
+@import 'design_system/color';
+@import 'design_system/table';
+@import 'design_system/accordion';
+@import 'design_system/message_box';
+@import 'design_system/toggle';
+@import 'design_system/radio';
+@import 'design_system/checkbox';
+@import 'design_system/tooltip';
+@import 'design_system/modal_layout';
+@import 'design_system/textarea';
+@import 'design_system/media_query';
+@import 'design_system/toast';
+@import 'design_system/popup';
+
+// @import 'design_system/tooltip.scss';
 
 /********************** modals ******************/
 // @import '../../_components/modals/step_swap_modal.module.scss';
@@ -36,14 +38,14 @@
 /********************** components ******************/
 // @import "Design_System/t0abs";
 // @import "Design_System/navbar";
-@import 'Design_System/dropdown';
+@import 'design_system/dropdown';
 // @import "Design_System/images";
 // @import "Design_System/alerts";
 // @import "Design_System/popups";
 // @import "Design_System/modals";
 // @import "Design_System/carousel";
 // @import "Design_System/footers";
-@import 'Design_System/nft';
+@import 'design_system/nft';
 
 // /********************** Fattern ***********************/
 // @import './global_fattern.scss';

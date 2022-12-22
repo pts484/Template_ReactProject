@@ -6,7 +6,6 @@
 @import './transition.scss';
 
 // ?? 테일윈드 @apply 코드 추합
-
 .test-title {
 	@apply my-10;
 }
@@ -24,5 +23,9 @@
 }
 
 .test-card__button {
-	@apply px-4 py-1 text-sm text-brand-orange-01 font-semibold rounded-full border border-brand-orange-01 hover:text-all-white hover:bg-brand-yellow-01 hover:border-transparent focus:outline-none focus:ring-brand-orange-02 focus:ring-offset-2 transition-all;
+	@apply px-4 py-1;
+	@apply text-sm text-brand-orange-01 font-semibold hover:text-all-white;
+	@apply border rounded-full border-brand-orange-01 hover:border-transparent focus:outline-none;
+	@apply hover:bg-brand-yellow-01;
+	@apply transition-all;
 }

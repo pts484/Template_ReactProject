@@ -1,0 +1,28 @@
+.cic-checkbox {
+	display: none;
+}
+
+.cic-checkbox,
+.cic-checkbox-label {
+	cursor: pointer;
+}
+
+.cic-checkbox + .cic-checkbox-label:before {
+	content: '';
+	background: #fff;
+	border: 2px solid $gray-200;
+	border-radius: 6px;
+	display: inline-block;
+	vertical-align: middle;
+	width: 1.5rem; //24px
+	height: 1.5rem; //24px
+	// // text-align: center;
+	// display: flex;
+	// justify-content: center;
+}
+
+.cic-checkbox:checked + .cic-checkbox-label:before {
+	content: url(../../assets/icons/ic_checkbox_fill_dk.svg);
+	background: var(--brand-bl-900);
+	border: 2px solid var(--brand-bl-900);
+}

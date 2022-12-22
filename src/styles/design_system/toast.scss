@@ -1,0 +1,57 @@
+.toast {
+	--bs-toast-border-color: rgb(0 0 0 / 0%);
+
+	--bs-toast-box-shadow: rgb(0 0 0 / 0%);
+}
+.toast-body {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 14px 16px;
+	gap: 12px;
+	background: $gray-800;
+	border: 0px !important;
+}
+.toast-body > div {
+	display: flex;
+	width: 100%;
+}
+.toast-detail {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px;
+	gap: 12px;
+	width: 100%;
+}
+
+.start-40 {
+	left: 40%;
+}
+
+.top-10 {
+	top: 10%;
+}
+
+// DesignSystems view
+.cic-toast-body {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 14px 16px;
+	gap: 12px;
+	background: $gray-800;
+	border-radius: 12px;
+}
+.cic-toast-body > div {
+	display: flex;
+	width: 100%;
+}
+.cic-toast-detail {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px;
+	gap: 12px;
+	width: 100%;
+}

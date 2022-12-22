@@ -1,0 +1,37 @@
+.cic-popup-wrap {
+	display: flex;
+	flex-direction: column;
+	width: 21.4375em; //343px
+	height: 9.625em; //154px
+	background: #ffffff;
+	box-shadow: 0px 4px 16px rgba(46, 12, 84, 0.15);
+	border-radius: 12px;
+}
+.cic-popup-info-area {
+	display: flex;
+	padding: 14px;
+
+	.cic-popup-nft-img {
+		width: 5.625em; //90px
+		height: 5.625em; //90px
+		background: #ececec;
+		border-radius: 12px;
+	}
+	.cic-popup-mixing-info {
+		display: flex;
+		flex-direction: column;
+		padding: 0px 0px 0px 12px;
+		gap: 4px;
+
+		.cic-info-txt-01 {
+			display: flex;
+			gap: 4px;
+		}
+	}
+}
+.cic-popup-btn-area {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 0px;
+}

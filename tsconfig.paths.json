@@ -16,8 +16,13 @@
 			"@hooks/*": ["./src/hooks/*"],
 			"@design": ["./src/design_system"],
 			"@design/*": ["./src/design_system/*"],
+			"@assets": ["./src/assets"],
+			"@assets/*": ["./src/assets/*"],
 			"@": ["./src"],
-			"@/*": ["./src/*"]
+			"@/*": ["./src/*"],
+			"mixins": ["./src/styles/design_system/mixins"],
+			"design_system": ["./src/styles/design_system"],
+			"@hyeonseok": ["./src/pages"]
 		}
 	}
 }
