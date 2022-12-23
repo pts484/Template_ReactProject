@@ -7,6 +7,7 @@ import Page02 from './pages/Page_TransitionGroup02/Page02';
 import { CSSTransition, TransitionGroup, Transition, SwitchTransition } from 'react-transition-group';
 import Tailwind from './pages/Page_Tailwind/Tailwind';
 import CSSModules from './pages/Page_CSS_Modules/CSSModules';
+import DesignSystem from './Components/index';
 
 /**
  *  react-transition-group 라이브러리 사용 테스트.
@@ -35,6 +36,7 @@ const Routers = (): JSX.Element => {
 					<Route path="/*" element={<NotFound />} />
 					<Route path="/cssmodules" element={<CSSModules />} />
 					<Route path="/tailwind" element={<Tailwind />} />
+					<Route path="/designsystem" element={<DesignSystem />} />
 				</Routes>
 			</CSSTransition>
 		</TransitionGroup>

@@ -95,6 +95,7 @@ const App = (): JSX.Element => {
 					<Link to="/page02">Transition2</Link>
 					<Link to="/tailwind">Tailwind</Link>
 					<Link to="/cssmodules">CSS Modules</Link>
+					<Link to="/designsystem">designsystem</Link>
 				</nav>
 			</section>
 			<Routers />
