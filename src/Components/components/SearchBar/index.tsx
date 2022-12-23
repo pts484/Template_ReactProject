@@ -105,7 +105,7 @@ const SearchBar: React.FC<any> = (props: SEARCH_BAR): JSX.Element => {
 								{item?.icon ? (
 									<img className="icon" src={item?.icon} />
 								) : (
-									<ICONS.empty_thumb className="icon" />
+									<ICONS.emptyThumb className="icon" />
 								)}
 								<span className="name subhead-02 text-800">{item.name}</span>
 								{item.count && <span className="subhead-02 text-600">{item.count} items</span>}

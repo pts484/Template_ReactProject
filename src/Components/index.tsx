@@ -6,11 +6,11 @@ import MessageBox from './view/MessageBox';
 import ModalLayout from './view/ModalLayout';
 import Toast from './view/Toast';
 import Selections from './view/Selections';
-import Select from './view/Select';
+// import Select from './view/Select';
 import SearchBar from './view/SearchBar';
 import ColorsTable from './logic/ColorsTable';
 import Icons from './logic/Icons';
-import Input from './logic/Input';
+// import Input from './logic/Input';
 import Tooltip from './view/Tooltip';
 
 const Designsystem: React.FC<any> = (): JSX.Element => {
@@ -25,9 +25,7 @@ const Designsystem: React.FC<any> = (): JSX.Element => {
 				</div>
 			</div>
 			<div className="container mt-5 pb-5">
-				<div className="mt-5">
-					<Input />
-				</div>
+				<div className="mt-5">{/* <Input /> */}</div>
 			</div>
 			<div className="container mt-5 pb-5">
 				<div className="mt-5">
@@ -45,9 +43,7 @@ const Designsystem: React.FC<any> = (): JSX.Element => {
 				</div>
 			</div>
 			<div className="container mt-5 pb-5">
-				<div className="mt-5">
-					<Select />
-				</div>
+				<div className="mt-5">{/* <Select /> */}</div>
 			</div>
 			<div className="container mt-5 pb-5">
 				<div className="mt-5">

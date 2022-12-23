@@ -25,6 +25,11 @@ module.exports = {
 		'@typescript-eslint/explicit-function-return-type': 'off',
 		'@typescript-eslint/prefer-optional-chain': 'warn',
 		'@typescript-eslint/naming-convention': 'warn',
+		'@typescript-eslint/restrict-template-expressions': 'error',
+		'@typescript-eslint/restrict-plus-operands': 'error',
+		'no-unused-expressions': 'off',
+		'@typescript-eslint/no-unused-expressions': 'warn',
+		'@typescript-eslint/no-invalid-void-type': 'warn',
 
 		'no-unused-vars': 0,
 		'@typescript-eslint/no-unused-vars': 0,
