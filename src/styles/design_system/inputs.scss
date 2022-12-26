@@ -92,7 +92,7 @@
 	letter-spacing: -0.006em;
 
 	&:hover {
-		border-color: $gray-500;
+		border-color: var(--gray-scale-02); //$gray-500;
 	}
 
 	input {
@@ -109,7 +109,7 @@
 		// letter-spacing: -0.006em;
 
 		&::placeholder {
-			color: $gray-350;
+			color: var(--gray-scale-08); //$gray-08;
 		}
 
 		&:focus-visible {
@@ -162,7 +162,7 @@
 	letter-spacing: -0.006em;
 
 	&:hover {
-		border-color: $gray-500;
+		border-color: var(--gray-scale-02); //$gray-500;
 	}
 
 	input {
@@ -171,12 +171,12 @@
 		width: 100%;
 		border: none;
 		background-color: rgba(0, 0, 0, 0);
-		color: $text-800;
+		color: var(--light-text-02); //$text-800;
 		line-height: 24px;
 		letter-spacing: -0.006em;
 
 		&::placeholder {
-			color: $gray-350;
+			color: var(--gray-scale-08); //$gray-08;
 		}
 
 		&:focus-visible {
@@ -214,7 +214,7 @@
 	}
 	input:nth-child(1) {
 		width: 25% !important;
-		border-right: 1px solid $gray-200 !important;
+		border-right: 1px solid var(--gray-scale-06) !important; //$gray-200;
 	}
 	input:nth-child(2) {
 		padding-left: 16px;
@@ -237,7 +237,7 @@
 	padding: 12px 16px;
 
 	&:hover {
-		border-color: $gray-500;
+		border-color: var(--gray-scale-02); //$gray-500;
 	}
 
 	input {
@@ -246,12 +246,12 @@
 		width: 100%;
 		border: none;
 		background-color: rgba(0, 0, 0, 0);
-		color: $text-800;
+		color: var(--light-text-02); //$text-800;
 		line-height: 24px;
 		letter-spacing: -0.006em;
 
 		&::placeholder {
-			color: $gray-350;
+			color: var(--gray-scale-08); //$gray-08;
 		}
 
 		&:focus-visible {
@@ -267,13 +267,13 @@
 }
 
 .cic-input-default-focus {
-	border: 1px solid $gray-500 !important;
+	border: 1px solid var(--gray-scale-02); //$gray-500;
 	background-color: #ffffff !important;
 }
 
 .cic-input-default-read-only {
 	border: transparent !important;
-	background-color: $gray-150; //gray-150
+	background-color: var(--gray-scale-05); //var(--gray-scale-05); //$gray-150;
 	&:hover,
 	&:focus,
 	&:active {
@@ -289,8 +289,8 @@
 }
 
 .cic-input-info-focus {
-	border: 1px solid $gray-500 !important;
-	background-color: $white-bg !important;
+	border: 1px solid var(--gray-scale-02); //$gray-500 !important;
+	background-color: var(--white) !important;
 }
 /** 
    * 에러 상태
@@ -305,7 +305,7 @@
 }
 
 .cic-input-error-focus {
-	border: 1px solid $gray-500 !important; //grat_500
+	border: 1px solid var(--gray-scale-02); //$gray-500 !important; //grat_500
 	background-color: $danger-bg !important;
 }
 
@@ -323,7 +323,7 @@
 }
 
 .cic-input-success-focus {
-	border: 1px solid $gray-500 !important; //grat_500
+	border: 1px solid var(--gray-scale-02); //$gray-500 !important; //grat_500
 	background-color: $suc-bg !important;
 }
 
@@ -338,8 +338,8 @@
 	.select-filled-default-btn {
 		@include select-filled-default-btn();
 		&:focus {
-			background-color: $white;
-			border: 1px solid $gray-500;
+			background-color: var(--white);
+			border: 1px solid var(--gray-scale-02); //$gray-500;
 		}
 		// &::after {
 		//     content: url(./icons/ic_chevron_down_fill_dk.svg);
@@ -350,8 +350,8 @@
 	.select-default-btn {
 		@include select-default-btn();
 		&:focus {
-			background-color: $white;
-			border: 1px solid $gray-500;
+			background-color: var(--white);
+			border: 1px solid var(--gray-scale-02); //$gray-500;
 		}
 		// &::after {
 		//     content: url(./icons/ic_chevron_down_fill_dk.svg);

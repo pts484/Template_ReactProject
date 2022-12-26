@@ -33,5 +33,5 @@
 .cic-radio:checked + .cic-radio-label:before {
 	content: '';
 	background: #fff;
-	border: 6px solid $bl-900;
+	border: 6px solid var(--brand-bl-900);
 }

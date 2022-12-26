@@ -16,7 +16,7 @@
 				transition: 0.4s ease;
 				height: 1.75rem; //28px
 				width: 3rem; //48px
-				background-color: $gray-200;
+				background-color: var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
 				border-radius: 60px;
 
 				&:before {
@@ -33,7 +33,7 @@
 					//● 토글버튼 스타일
 					@include inactive-mixin;
 					@include after-animation;
-					background-color: $white;
+					background-color: var(--white);
 					height: 1.5rem; //24px
 					width: 1.5rem; //24px
 					top: 2px;
@@ -44,7 +44,7 @@
 			// When Active
 			&:checked {
 				& + label:before {
-					background: $bl-900; // Active Color
+					background: var(--brand-bl-900); // Active Color
 					-moz-transition: width 0.2s cubic-bezier(0, 0, 0, 0.1);
 					-o-transition: width 0.2s cubic-bezier(0, 0, 0, 0.1);
 					-webkit-transition: width 0.2s cubic-bezier(0, 0, 0, 0.1);
