@@ -19,73 +19,39 @@
 
 /* 글로벌 폰트 설정 *********************************************************************************************************/
 
+// 채널iN 에서는 'SUIT' 폰트가 적용이 들어갑니다. TossFaceFontMac 은 KlayMint에서 프로젝트 이동 간 가져온 폰트이나,
+// 실질적으로 운용되지 않았던 폰트로 확인되어 제거했고, 필요할 때 추가 해 주세요. - 현석 20221223 -
+
 @font-face {
-    font-family: 'SUIT';
-    font-weight: 200;
-<<<<<<< HEAD
-    src: url('../../fonts/SUIT/SUIT-Light.woff2') format('woff2'),
-        // src: url('./../fonts/SUIT/SUIT-Light.woff2') format('woff2'),
-        url('../../fonts/SUIT/SUIT-Light.otf') format('truetype');
-=======
-    src: url('./fonts/SUIT/SUIT-Light.woff2') format('woff2'), url('./fonts/SUIT/SUIT-Light.otf') format('truetype');
->>>>>>> develop
+	font-family: 'SUIT';
+	font-weight: 200;
+	src: url('../../assets/fonts/SUIT/SUIT-Light.woff2') format('woff2'),
+		url('../../assets/fonts/SUIT/SUIT-Light.otf') format('truetype');
+	src: url('../../assets/fonts/SUIT/SUIT-Light.woff2') format('woff2'),
+		url('../../assets/fonts/SUIT/SUIT-Light.otf') format('truetype');
+}
+
+@font-face {
+	font-family: 'SUIT';
+	font-weight: 400;
+	src: url('../../assets/fonts/SUIT/SUIT-Regular.woff2') format('woff2'),
+		url('../../assets/fonts/SUIT/SUIT-Regular.otf') format('truetype');
 }
 @font-face {
-    font-family: 'SUIT';
-    font-weight: 400;
-<<<<<<< HEAD
-    src: url('../../fonts/SUIT/SUIT-Regular.woff2') format('woff2'),
-        url('../../fonts/SUIT/SUIT-Regular.otf') format('truetype');
-=======
-    src: url('./fonts/SUIT/SUIT-Regular.woff2') format('woff2'), url('./fonts/SUIT/SUIT-Regular.otf') format('truetype');
->>>>>>> develop
+	font-family: 'SUIT';
+	font-weight: 500;
+	src: url('../../assets/fonts/SUIT/SUIT-Medium.woff2') format('woff2'),
+		url('../../assets/fonts/SUIT/SUIT-Medium.otf') format('truetype');
 }
 @font-face {
-    font-family: 'SUIT';
-    font-weight: 500;
-<<<<<<< HEAD
-    src: url('../../fonts/SUIT/SUIT-Medium.woff2') format('woff2'),
-        url('../../fonts/SUIT/SUIT-Medium.otf') format('truetype');
-=======
-    src: url('./fonts/SUIT/SUIT-Medium.woff2') format('woff2'), url('./fonts/SUIT/SUIT-Medium.otf') format('truetype');
->>>>>>> develop
+	font-family: 'SUIT';
+	font-weight: 600;
+	src: url('../../assets/fonts/SUIT/SUIT-SemiBold.woff2') format('woff2'),
+		url('../../assets/fonts/SUIT/SUIT-SemiBold.otf') format('truetype');
 }
 @font-face {
-    font-family: 'SUIT';
-    font-weight: 600;
-<<<<<<< HEAD
-    src: url('../../fonts/SUIT/SUIT-SemiBold.woff2') format('woff2'),
-        url('../../fonts/SUIT/SUIT-SemiBold.otf') format('truetype');
-=======
-    src: url('./fonts/SUIT/SUIT-SemiBold.woff2') format('woff2'),
-        url('./fonts/SUIT/SUIT-SemiBold.otf') format('truetype');
->>>>>>> develop
-}
-@font-face {
-    font-family: 'SUIT';
-    font-weight: 700;
-<<<<<<< HEAD
-    src: url('../../fonts/SUIT/SUIT-Bold.woff2') format('woff2'),
-        url('../../fonts/SUIT/SUIT-Bold.otf') format('truetype');
-}
-@font-face {
-    font-family: 'TossFaceFontMac';
-    src: url('../../fonts/TossFaceFontMac.ttf') format('ttf'), url('../../fonts/TossFaceFontMac.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'icomoon';
-    src: url('./webfonts/icomoon.eot');
-    src: url('webfonts/icomoon.eot?8f3wug#iefix') format('embedded-opentype'),
-        url('./webfonts/icomoon.ttf') format('truetype'), url('./webfonts/icomoon.woff') format('woff'),
-        url('./webfonts/icomoon.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-=======
-    src: url('./fonts/SUIT/SUIT-Bold.woff2') format('woff2'), url('./fonts/SUIT/SUIT-Bold.otf') format('truetype');
-}
-@font-face {
-    font-family: 'TossFaceFontMac';
-    src: url('./../fonts/TossFaceFontMac.ttf') format('ttf'), url('./../fonts/TossFaceFontMac.ttf') format('truetype');
->>>>>>> develop
+	font-family: 'SUIT';
+	font-weight: 700;
+	src: url('../../assets/fonts/SUIT/SUIT-Bold.woff2') format('woff2'),
+		url('../../assets/fonts/SUIT/SUIT-Bold.otf') format('truetype');
 }

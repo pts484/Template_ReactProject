@@ -1,132 +1,112 @@
-button,
-input,
-optgroup,
-select,
-textarea {
-    font-family: $sans-serif-family;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: $font-weight-regular;
-}
-
-small {
-    font-size: 60%;
-}
-
 /*               Title              */
-
 h1,
 .font-h1 {
-    font-size: $font-h1 !important;
-    line-height: 3.25rem !important;
-    letter-spacing: -0.6px !important;
-    font-weight: $font-weight-semi !important;
+	font-size: $font-h1;
+	line-height: 3.25rem;
+	letter-spacing: -0.6px;
+	font-weight: $font-weight-semi;
 }
 h2,
 .font-h2 {
-    font-size: $font-h2 !important;
-    line-height: 2.875rem !important;
-    letter-spacing: -0.6px !important;
-    font-weight: $font-weight-semi !important;
+	font-size: $font-h2;
+	line-height: 2.875rem;
+	letter-spacing: -0.6px;
+	font-weight: $font-weight-semi;
 }
 h3,
 .font-h3 {
-    font-size: $font-h3 !important;
-    line-height: 2.625rem !important;
-    letter-spacing: -0.6px !important;
-    font-weight: $font-weight-semi !important;
+	font-size: $font-h3;
+	line-height: 2.625rem;
+	letter-spacing: -0.6px;
+	font-weight: $font-weight-semi;
 }
 h4,
 .font-h4 {
-    font-size: $font-h4 !important;
-    line-height: 2.375rem !important;
-    letter-spacing: -0.6px !important;
-    font-weight: $font-weight-semi !important;
+	font-size: $font-h4;
+	line-height: 2.375rem;
+	letter-spacing: -0.6px;
+	font-weight: $font-weight-semi;
 }
 h5,
 .font-h5 {
-    font-size: $font-h5 !important;
-    line-height: 2.125rem !important;
-    letter-spacing: -0.6px !important;
-    font-weight: $font-weight-semi !important;
+	font-size: $font-h5;
+	line-height: 2.125rem;
+	letter-spacing: -0.6px;
+	font-weight: $font-weight-semi;
 }
 h6,
 .font-h6 {
-    font-size: $font-h6 !important;
-    line-height: 1.75rem !important;
-    letter-spacing: -0.6px !important;
-    font-weight: $font-weight-semi !important;
+	font-size: $font-h6;
+	line-height: 1.75rem;
+	letter-spacing: -0.6px;
+	font-weight: $font-weight-semi;
 }
 
 .subhead-03 {
-    font-weight: $font-weight-semi;
-    font-size: 1rem; //16px
-    line-height: 1.375rem; //22px
-    letter-spacing: -0.6px;
+	font-weight: $font-weight-semi;
+	font-size: 1rem; //16px
+	line-height: 1.375rem; //22px
+	letter-spacing: -0.6px;
 }
 .subhead-long-03 {
-    font-weight: $font-weight-semi;
-    font-size: 1rem; //16px
-    line-height: 1.75rem; //28px
-    letter-spacing: -0.6px;
+	font-weight: $font-weight-semi;
+	font-size: 1rem; //16px
+	line-height: 1.75rem; //28px
+	letter-spacing: -0.6px;
 }
 .subhead-02 {
-    font-weight: $font-weight-semi;
-    font-size: 0.875rem; //14px
-    line-height: 1.25rem; //20px
-    letter-spacing: -0.6px;
+	font-weight: $font-weight-semi;
+	font-size: 0.875rem; //14px
+	line-height: 1.25rem; //20px
+	letter-spacing: -0.6px;
 }
 .subhead-long-02 {
-    font-weight: $font-weight-semi;
-    font-size: 0.875rem; //14px
-    line-height: 1.5rem; //24px
-    letter-spacing: -0.6px;
+	font-weight: $font-weight-semi;
+	font-size: 0.875rem; //14px
+	line-height: 1.5rem; //24px
+	letter-spacing: -0.6px;
 }
 .subhead-01 {
-    font-weight: $font-weight-semi;
-    font-size: 0.75rem; //12px
-    line-height: 1.125rem; //18px
-    letter-spacing: -0.6px;
+	font-weight: $font-weight-semi;
+	font-size: 0.75rem; //12px
+	line-height: 1.125rem; //18px
+	letter-spacing: -0.6px;
 }
+
 /*                 Body                */
 .body-02 {
-    font-weight: $font-weight-medium;
-    font-size: 1rem; //16px
-    line-height: 1.5rem; //24px
-    letter-spacing: -0.6px;
+	font-weight: $font-weight-medium;
+	font-size: 1rem; //16px
+	line-height: 1.5rem; //24px
+	letter-spacing: -0.6px;
 }
 .body-02-rg {
-    font-weight: $font-weight-regular;
-    font-size: 1rem; //16px
-    line-height: 1.5rem; //24px
-    letter-spacing: -0.6px;
+	font-weight: $font-weight-regular;
+	font-size: 1rem; //16px
+	line-height: 1.5rem; //24px
+	letter-spacing: -0.6px;
 }
 .body-long-02 {
-    font-weight: $font-weight-medium;
-    font-size: 1rem; //16px
-    line-height: 1.75rem; //28px
-    letter-spacing: -0.6px;
+	font-weight: $font-weight-medium;
+	font-size: 1rem; //16px
+	line-height: 1.75rem; //28px
+	letter-spacing: -0.6px;
 }
 .body-01 {
-    font-weight: $font-weight-medium;
-    font-size: 0.875rem; //14px
-    line-height: 1.5rem; //24px
-    letter-spacing: -0.6px;
+	font-weight: $font-weight-medium;
+	font-size: 0.875rem; //14px
+	line-height: 1.5rem; //24px
+	letter-spacing: -0.6px;
 }
 .body-long-01 {
-    font-weight: $font-weight-medium;
-    font-size: 0.75rem; //12px
-    line-height: 1.25rem; //20px
-    letter-spacing: -0.6px;
+	font-weight: $font-weight-medium;
+	font-size: 0.75rem; //12px
+	line-height: 1.25rem; //20px
+	letter-spacing: -0.6px;
 }
 .caption {
-    font-weight: $font-weight-medium;
-    font-size: 0.75rem; //12px
-    line-height: 1.125rem; //18px
-    letter-spacing: -0.6px;
+	font-weight: $font-weight-medium;
+	font-size: 0.75rem; //12px
+	line-height: 1.125rem; //18px
+	letter-spacing: -0.6px;
 }

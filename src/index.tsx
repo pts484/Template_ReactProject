@@ -8,9 +8,6 @@ import { Store } from '@redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
 import { BrowserRouter } from 'react-router-dom';
 
-// import bootstrap from './assets/bootstrap-5.1.2/js/bootstrap';
-import bootstrap from 'bootstrap';
-
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
 	// <React.StrictMode>

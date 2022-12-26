@@ -1,7 +1,9 @@
 import React from 'react';
+import cx from 'classnames';
+import './NotFound.module.scss';
 
 const NotFound = (): JSX.Element => {
-	return <div className="page">ㅠㅠㅠㅠㅠ외않뒈</div>;
+	return <section>404 페이지</section>;
 };
 
 export default NotFound;

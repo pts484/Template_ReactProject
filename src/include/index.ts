@@ -6,16 +6,13 @@
  **************************************************************************************/
 
 // import '';
-/** 현석 테스트 중인 import 구문, tailwind도 포함. */
-import '@/styles/test/_import.scss';
 
 /** Bootstrap 5 */
 // import 'bootstrap/scss/bootstrap.scss'; // SCSS
 
 /** 디자인 시스템 */
-// import '@design/import.scss';
+import '@/styles/_import.scss';
 
-import '@/styles/import.scss';
 /**************************************************************************************
  *
  * npm install로 설치된 라이브러리 또는 그 외 라이브러리를 전역 개체에 미리 import 하여 사용하고 싶을 경우

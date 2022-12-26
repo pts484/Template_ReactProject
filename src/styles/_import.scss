@@ -1,0 +1,41 @@
+// =========================================================
+// * UI Kit 취합한 파일입니다! 😄
+// =========================================================
+@import 'design_system/mixins';
+@import 'design_system/variables';
+@import 'design_system/reset';
+@import 'design_system/root';
+
+@import 'design_system/buttons';
+@import 'design_system/typography';
+@import 'design_system/inputs';
+@import 'design_system/checkboxes-radio';
+@import 'design_system/badges';
+@import 'design_system/color';
+@import 'design_system/table';
+@import 'design_system/accordion';
+@import 'design_system/message_box';
+@import 'design_system/toggle';
+@import 'design_system/radio';
+@import 'design_system/checkbox';
+@import 'design_system/tooltip';
+@import 'design_system/modal_layout';
+@import 'design_system/textarea';
+@import 'design_system/media_query';
+@import 'design_system/toast';
+@import 'design_system/popup';
+// @import 'design_system/tooltip.scss';
+
+/********************** modals ******************/
+
+/********************** components ******************/
+@import 'design_system/dropdown';
+@import 'design_system/nft';
+
+// /********************** Fattern ***********************/
+// @import './global_fattern.scss';
+
+// /********************** Layout ***********************/
+// @import './_layout.module';
+
+// /********************** modals ***********************/

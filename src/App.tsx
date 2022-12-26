@@ -13,6 +13,8 @@ import {
 import { useDispatch, useSelector } from '@hooks/useStore/useStore.hook';
 import { Link, Outlet, Router, useLocation } from 'react-router-dom';
 import Routers from './routers';
+import CSS from './App.module.scss';
+import cx from 'classnames';
 
 const App = (): JSX.Element => {
 	const dispatch = useDispatch();
@@ -88,20 +90,13 @@ const App = (): JSX.Element => {
 			>
 				aaaaaaaaaa
 			</button> */}
-			<section>
-				<nav className="gnb">
-					<Link to="/">Main</Link>
-					<Link to="/page01">Transition1</Link>
-					<Link to="/page02">Transition2</Link>
-					<Link to="/tailwind">Tailwind</Link>
-					<Link to="/cssmodules">CSS Modules</Link>
+			<header>
+				<nav className={cx(CSS.gnb)}>
+					<Link to="/">main</Link>
+					<Link to="/designsystem">Design System</Link>
 				</nav>
-			</section>
+			</header>
 			<Routers />
-
-			<footer className="text-center py-3 bg-lime-300">
-				<code>position:absolute;</code>를 가진 section에 따라 위 아래로 이동하는 <code>Footer</code>
-			</footer>
 		</div>
 	);
 };
