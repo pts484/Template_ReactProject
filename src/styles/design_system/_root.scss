@@ -67,7 +67,21 @@
 	--red-scale-red-01: #f5511d;
 	--red-scale-red-02: #f05c2e;
 
-	--header-height: 8vh;
+	/*         Success         */
+	--suc-main: #21725e;
+	--suc-bg: #f8fffd;
+
+	/*         Warning         */
+	--warn-main: #ffc600;
+	--warn-bg: #fff7dd;
+
+	/*         Danger         */
+	--danger-main: #ce0f3d;
+	--danger-bg: #fff2f5;
+
+	/*         Info         */
+	--info-main: #f8f7f9;
+	--info-bg: #f8f7f9;
 
 	--padding-btn-vertical: 0.6875rem; // 11px
 	--padding-btn-horizontal: 1.375rem; // 22px

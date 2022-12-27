@@ -1,107 +1,4 @@
-// 🧸 여기서부터
-// 리뉴얼클레이민트 디자인시스템 입니다. 컴포넌트에 상속 돼 있어 가져옴.
-$sans-serif-family: 'SUIT' !default;
-
-$white-color: #ffffff !default;
-$white-bg: #ffffff !default;
-$black-color: #000 !default;
-$black-bg: #000 !default;
-$transparency-bg: #ffffff00 !default;
-$transparent-bg: #ffffff00 !default;
-
-$default-color: #ffffff !default;
-
-$light-gray: #e3e3e3 !default;
-
-$suc-main: #21725e !default;
-$suc-bg: #f8fffd !default;
-$info-main: #f8f7f9 !default;
-$info-bg: #f8f7f9 !default;
-$warn-main: #ffc600 !default;
-$warn-bg: #fff7dd !default;
-$danger-main: #ce0f3d !default;
-$danger-bg: #fff2f5 !default;
-
-$opacity-gray-3: rgba(222, 222, 222, 0.3) !default;
-
-/*     brand Colors              */
-$brand-info: $info-main !default;
-$brand-success: $suc-main !default;
-$brand-warning: $warn-main !default;
-$brand-danger: $danger-main !default;
-// $brand-inverse: $black-color !default;
-
-/*      Neutral colors         */
-$black: var(--all-black) !default;
-$gray-900: var(--gray-900) !default;
-$gray-800: var(--gray-800) !default;
-$gray-600: var(--gray-600) !default;
-$gray-500: var(--gray-500) !default;
-$gray-400: var(--gray-400) !default;
-$gray-350: var(--gray-350) !default;
-$gray-300: var(--gray-300) !default;
-$gray-200: var(--gray-200) !default;
-$gray-150: var(--gray-150) !default; //border
-$gray-100: var(--gray-100) !default;
-$gray-50: var(--gray-50) !default;
-$white: var(--all-white) !default;
-
-/*      Text colors         */
-$text-900: var(--text-900) !default;
-$text-800: var(--text-800) !default;
-$text-700: var(--text-700) !default;
-$text-650: var(--text-650) !default;
-$text-600: var(--text-600) !default;
-$text-550: var(--text-550) !default;
-$text-500: var(--text-500) !default;
-$text-450: var(--text-450) !default;
-$text-400: var(--text-400) !default;
-$text-50: var(--text-50) !default;
-
-/*      Primary colors         */
-$pu-900: var(--pu-900) !default;
-$pu-800: var(--pu-800) !default;
-$pu-700: var(--pu-700) !default; //pressed
-$pu-650: var(--pu-650) !default;
-$pu-600: var(--pu-600) !default; //main
-$pu-500: var(--pu-500) !default;
-$pu-400: var(--pu-400) !default; //hover
-$pu-300: var(--pu-300) !default;
-$pu-200: var(--pu-200) !default; //border
-$pu-100: var(--pu-100) !default;
-$pu-25: var(--pu-25) !default; //bg color
-
-/*      Secondary colors         */
-$pk-900: var(--pk-900) !default;
-$pk-800: var(--pk-800) !default;
-$pk-700: var(--pk-700) !default; //pressed
-$pk-400: var(--pk-400) !default; //main
-$pk-300: var(--pk-300) !default;
-$pk-200: var(--pk-200) !default;
-$pk-100: var(--pk-100) !default; //hover
-$pk-50: var(--pk-50) !default; //border
-$pk-25: var(--pk-25) !default; //bg color
-
-/*      Third colors(채널IN)         */
-$bl-900: var(--bl-900) !default;
-$bl-800: var(--bl-800) !default;
-$bl-600: var(--bl-600) !default;
-$bl-100: var(--bl-100) !default;
-$bl-50: var(--bl-50) !default;
-
-/*        Gold colors         */
-
-/*        ETC colors         */
-$og-600: var(--og-600) !default;
-$yw-600: var(--yw-600) !default;
-$gr-rise: var(--gr-rise) !default;
-$rd-drop: var(--rd-drop) !default;
-
 //== Components ==//
-$padding-btn-vertical: 11px !default;
-$padding-round-horizontal: 23px !default;
-
-$border: 1px solid !default;
 $border-radius-xsmall: 0.5rem !default; //8px
 $border-radius-small: 0.75rem !default; ////12px
 $border-radius-large: 1rem !default; //16px
@@ -113,14 +10,8 @@ $font-h4: 1.75rem !default; // 28px
 $font-h5: 1.5rem !default; // 24px
 $font-h6: 1.25rem !default; // 20px
 
-$font-size-base: 1em !default;
-
 $font-weight-light: 300 !default;
 $font-weight-regular: 400 !default;
 $font-weight-medium: 500 !default;
 $font-weight-semi: 600 !default;
 $font-weight-bold: 700 !default;
-
-.succecss-color {
-	background: $suc-main !important;
-}
