@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { CSSTransition, TransitionGroup, Transition, SwitchTransition } from 'react-transition-group';
 import DesignSystem from './pages/_designsystems/index';
-import DesignSystem02 from './pages/_designsystems copy/index';
+import DesignSystem02 from './pages/_designsystems02/index';
 import App from './App';
 import Main from './pages/Main';
 
