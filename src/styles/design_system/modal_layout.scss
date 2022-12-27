@@ -1,40 +1,41 @@
-// 공동 modal 레이아웃 스타일
+//bootstrap 오버라이딩
+.modal-dialog {
+	justify-content: center;
+	//부트스트랩 modal-dialog-centered 속성 ↓ (화면서 가운데 위치하게 하는 스타일)
+	display: flex;
+	align-items: center;
+	min-height: calc(100% - var(--bs-modal-margin) * 2);
+}
 
+// 공동 modal 레이아웃 스타일
 .cic-modal-container {
-	// width: 23.625rem;
-	padding: 2em 0 0;
+	width: 23.625rem; // 클레이민트 리뉴얼 디자인 시안에 공통적인 모달 width입니다.
 	height: auto;
 	border-radius: 1rem;
 	border: none;
+	background-color: #fff;
 }
 .cic-modal-header {
 	padding: 2rem;
-	padding-top: 0;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 }
 .cic-modal-body {
-	padding: 8px 24px 24px;
-	// padding: 8px 24px !important;
+	padding: 0px 32px 24px;
 	gap: 8px;
-	position: relative;
-	flex: 1 1 auto;
-	background: #fff;
 	height: 100%;
-	border-radius: 1rem;
 }
-.cic-modal-btn-cont {
-	padding: 20px 24px 32px !important;
+.cic-modal-footer {
+	padding: 20px 24px 32px;
 	display: flex;
 	flex-direction: column;
-	padding: 0px;
 	gap: 14px;
 }
 .cic-modal-headback-btn {
 	// 전 모달로 이동하는 모달 헤더 btn. --2depth
 	background: #fff;
 	border: none;
+	display: flex;
+	align-items: center;
+	padding: 0;
 
 	svg {
 		margin-right: 8px; // < 아이콘

@@ -1,11 +1,33 @@
 import React from 'react';
+import Tooltip from '@/pages/_designsystems02/components/Tooltip/index';
 
-const Tooltip: React.FC = (): JSX.Element => {
+const DesignSystemTooltip: React.FC = (): JSX.Element => {
 	return (
-		<article>
-			<h6 className="bl-900">ToolTip</h6>
-		</article>
+		<div className="container">
+			<h1 className="mb-3">Tooltip</h1>
+			<span className="subhead-long-03 gray-500">설명</span>
+			<br />
+			<br />
+			<hr />
+			<div className="col row row-cols-4">
+				<div className="col">
+					<Tooltip className="myclass" title={`툴팁 컴포넌트 입니다. 내용을 입력해 주십셩`}>
+						Example Tooltip with Bootstrap5
+					</Tooltip>
+				</div>
+				<div>
+					<Tooltip
+						className="myclass"
+						html={true}
+						customClass="balloon-box"
+						title={`툴팁 컴포넌트 입니다. 내용을 입력해 주십셩`}
+					>
+						Example Tooltip with Bootstrap5
+					</Tooltip>
+				</div>
+			</div>
+		</div>
 	);
 };
 
-export default Tooltip;
+export default DesignSystemTooltip;
