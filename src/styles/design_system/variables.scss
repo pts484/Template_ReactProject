@@ -1,19 +1,4 @@
-$sans-serif-family: 'SUIT' !default;
-
-$suc-main: #21725e !default;
-$suc-bg: #f8fffd !default;
-$info-main: #f8f7f9 !default;
-$info-bg: #f8f7f9 !default;
-$warn-main: #ffc600 !default;
-$warn-bg: #fff7dd !default;
-$danger-main: #ce0f3d !default;
-$danger-bg: #fff2f5 !default;
-
 //== Components ==//
-$padding-btn-vertical: 11px !default;
-$padding-round-horizontal: 23px !default;
-
-$border: 1px solid !default;
 $border-radius-xsmall: 0.5rem !default; //8px
 $border-radius-small: 0.75rem !default; ////12px
 $border-radius-large: 1rem !default; //16px
@@ -25,13 +10,8 @@ $font-h4: 1.75rem !default; // 28px
 $font-h5: 1.5rem !default; // 24px
 $font-h6: 1.25rem !default; // 20px
 
-$font-size-base: 1em !default;
-
 $font-weight-light: 300 !default;
 $font-weight-regular: 400 !default;
 $font-weight-medium: 500 !default;
 $font-weight-semi: 600 !default;
 $font-weight-bold: 700 !default;
-
-.succecss-color {
-}

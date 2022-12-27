@@ -10,7 +10,7 @@
 	align-items: center;
 
 	p {
-		color: $danger-main;
+		color: var(--danger-main);
 		font-weight: 400;
 		font-size: 0.75rem;
 		line-height: 18px;
@@ -23,7 +23,7 @@
 	align-items: center;
 
 	p {
-		color: $suc-main;
+		color: var(--suc-main);
 		font-weight: 400;
 		font-size: 0.75rem;
 		line-height: 18px;

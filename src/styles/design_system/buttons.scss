@@ -50,7 +50,7 @@
 	color: var(--white);
 	border-radius: $border-radius-small;
 	border: 1px solid var(--brand-bl-900);
-	padding: 0.5rem 1.22rem;
+	padding: 0.625rem 1rem; //10px 16px
 	display: inline-block;
 	align-self: center;
 	@include subhead-02;
@@ -98,7 +98,7 @@
 	color: var(--brand-bl-900);
 	border-radius: $border-radius-small;
 	border: 1px solid var(--brand-bl-900);
-	padding: 0.68rem 1.67rem;
+	padding: 0.75rem 1.5rem; //12px 24px
 	display: inline-block;
 	align-self: center;
 	@include subhead-03;
@@ -109,7 +109,7 @@
 	color: var(--brand-bl-900);
 	border-radius: $border-radius-small;
 	border: 1px solid var(--brand-bl-900);
-	padding: 0.44rem 1.16rem;
+	padding: 0.625rem 1rem; //10px 16px
 	display: inline-block;
 	align-self: center;
 	@include subhead-02;
@@ -165,7 +165,7 @@
 	color: var(--gray-scale-15); //$gray-900;
 	border-radius: $border-radius-small;
 	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
-	padding: 0.68rem 1.67rem;
+	padding: 0.75rem 1.5rem; //12px 24px
 	display: inline-block;
 	align-self: center;
 	@include subhead-03;
@@ -175,7 +175,7 @@
 	color: var(--gray-scale-15); //$gray-900;
 	border-radius: $border-radius-small;
 	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
-	padding: 0.44rem 1.16rem;
+	padding: 0.625rem 1rem; //10px 16px
 	display: inline-block;
 	align-self: center;
 	@include subhead-02;
@@ -248,7 +248,7 @@
 	color: var(--gray-scale-15); //$gray-900;
 	border-radius: $border-radius-small;
 	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
-	padding: 0.68rem 1.67rem;
+	padding: 0.75rem 1.5rem; //12px 24px
 	display: inline-block;
 	align-self: center;
 	@include subhead-03;
@@ -259,7 +259,7 @@
 	color: var(--gray-scale-15); //$gray-900;
 	border-radius: $border-radius-small;
 	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
-	padding: 0.44rem 1.16rem;
+	padding: 0.625rem 1rem; //10px 16px
 	display: inline-block;
 	align-self: center;
 	@include subhead-02;
@@ -316,7 +316,7 @@
 	color: var(--gray-scale-15); //$gray-900;
 	border-radius: $border-radius-small;
 	border: 1px solid var(--gray-scale-03); //$gray-100
-	padding: 0.5rem 1.22rem;
+	padding: 0.625rem 1rem; //10px 16px
 	display: inline-block;
 	align-self: center;
 	@include subhead-02;
@@ -371,7 +371,7 @@
 	color: var(--gray-scale-08); //$text-550;
 	border-radius: $border-radius-small;
 	border: 1px solid var(--gray-scale-03); //$gray-100
-	padding: 0.743rem 1.732rem;
+	padding: 0.75rem 1.5rem; //12px 24px
 	display: inline-block;
 	align-self: center;
 
@@ -384,7 +384,7 @@
 	color: var(--gray-scale-08); //$text-550;
 	border-radius: $border-radius-small;
 	border: 1px solid var(--gray-scale-03); //$gray-100
-	padding: 0.5rem 1.22rem;
+	padding: 0.625rem 1rem; //10px 16px
 	display: inline-block;
 	align-self: center;
 
@@ -446,6 +446,7 @@
  ************************************* **/
 .btn-bg-none {
 	background: none;
+	border: none;
 }
 
 /** *************************************
@@ -459,7 +460,7 @@
 }
 
 [class*='btn-gray'] {
-	//btn-어쩌고-어쩌고가 hover일때 바뀌는  background-color 컬러
+	//btn-gray-... 가 hover일때 바뀌는  background-color 컬러
 	&:hover {
 		@include btn-hover;
 		& [class*='ic-']::before {
@@ -474,11 +475,6 @@
 		@include subhead-02;
 		color: var(--gray-scale-08); //$text-550;
 	}
-}
-
-[class*='btn-outline-'] {
-	border: $border;
-	padding: $padding-btn-vertical - 1 $padding-round-horizontal - 1;
 }
 
 [class*='btn-outline-'],

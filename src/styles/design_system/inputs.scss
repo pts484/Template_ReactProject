@@ -285,7 +285,7 @@
    * 인포 상태
    */
 .cic-input-info {
-	background-color: $info-bg !important;
+	background-color: var(--info-bg);
 }
 
 .cic-input-info-focus {
@@ -296,35 +296,35 @@
    * 에러 상태
    */
 .cic-input-error {
-	border: 1px solid $danger-main !important; //danger_main
-	background-color: $danger-bg !important; //danger_bg
-	color: $danger-main !important; //danger_main
+	border: 1px solid var(--danger-main);
+	background-color: var(--danger-bg);
+	color: var(--danger-main);
 	input {
-		color: $danger-main !important; //danger_main
+		color: var(--danger-main);
 	}
 }
 
 .cic-input-error-focus {
 	border: 1px solid var(--gray-scale-02); //$gray-500 !important; //grat_500
-	background-color: $danger-bg !important;
+	background-color: var(--danger-bg);
 }
 
 /** 
    * 성공 상태
    */
 .cic-input-success {
-	border: 1px solid $suc-main !important; //suc_main
-	background-color: $suc-bg !important; //suc_bg
-	color: $suc-main !important; //suc_main
+	border: 1px solid var(--suc-main);
+	background-color: var(--suc-bg);
+	color: var(--suc-main);
 
 	input {
-		color: $suc-main !important; //suc_main
+		color: var(--suc-main);
 	}
 }
 
 .cic-input-success-focus {
 	border: 1px solid var(--gray-scale-02); //$gray-500 !important; //grat_500
-	background-color: $suc-bg !important;
+	background-color: var(--suc-bg);
 }
 
 /**
