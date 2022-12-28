@@ -71,7 +71,7 @@ audio,
 video {
 	margin: 0;
 	padding: 0;
-	font-family: var(--sans-serif-family);
+	font-family: 'SUIT', sans-serif;
 	// box-sizing: border-box; // 프로젝트에 부트스트랩 제거 시, 주석제거.
 }
 
@@ -130,6 +130,8 @@ kbd,
 samp {
 	font-family: monospace, monospace; /* 1 */
 	font-size: 1em; /* 2 */
+	color: var(--black);
+	font-weight: 300;
 }
 
 /**
@@ -137,22 +139,6 @@ samp {
  */
 small {
 	font-size: 80%;
-}
-
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
-
-button,
-input,
-optgroup,
-select,
-textarea {
-	font-family: inherit; /* 1 */
-	font-size: 100%; /* 1 */
-	line-height: 1.15; /* 1 */
-	margin: 0; /* 2 */
 }
 
 /**

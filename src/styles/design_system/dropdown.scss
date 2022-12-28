@@ -46,7 +46,7 @@
 		}
 	}
 
-	.dropdown & {
+	.dropdown {
 		@include transform-translate-y-dropdown(-25px);
 		visibility: hidden;
 		display: block;
