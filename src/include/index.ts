@@ -9,6 +9,7 @@
 
 /** Bootstrap 5 */
 import 'bootstrap/scss/bootstrap.scss'; // SCSS
+import 'bootstrap/dist/js/bootstrap.bundle';
 
 /** 디자인 시스템 */
 import '@/styles/_import.scss';

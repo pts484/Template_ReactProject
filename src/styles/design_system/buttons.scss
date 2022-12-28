@@ -420,12 +420,11 @@
 	}
 }
 
-.dropdown-toggle {
-	display: flex;
-	align-items: center;
-	gap: 4px;
-	color: #fff;
-}
+// .dropdown-toggle {
+// 	display: flex;
+// 	align-items: center;
+// 	gap: 4px;
+// }
 
 /** *************************************
  *  (footer에 적용 돼 있음)
@@ -435,12 +434,12 @@
 	align-items: center;
 	padding: 10px 16px;
 }
-.dropdown-toggle:focus {
-	background: rgba(111, 111, 111, 0.06);
-	border: 2px solid #c1c1c1;
-	border-radius: 8px;
-	color: #c1c1c1;
-}
+// .dropdown-toggle:focus {
+// 	background: rgba(111, 111, 111, 0.06);
+// 	border: 2px solid #c1c1c1;
+// 	border-radius: 8px;
+// 	color: #c1c1c1;
+// }
 /** *************************************
  * btn background none
  ************************************* **/
