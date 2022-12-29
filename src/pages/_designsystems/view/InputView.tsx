@@ -1,12 +1,49 @@
 import React from 'react';
 import LOGOS from '@/assets/logos';
-import InputSelect from '../components/InputSelect';
+import InputSelect from '../components/InputSelect2';
+
+import InputContainer from '@/components/input/input_container';
+import Input from '@/components/input/input';
+import Input2 from '@/components/input/input2';
+import Select from '@/components/input/select';
 
 const InputView = (): JSX.Element => {
 	return (
 		<>
 			<div className="container">
+				<h1>EXAMPLE</h1>
+
+				{/* <Input type="number" onChange2={(e) => console.log(e)} /> 오류로 주석처리 해둠. */}
+				<InputContainer>
+					<Input separator="left" />
+					<Input />
+					<Input separator="left" />
+					<Input />
+				</InputContainer>
+
+				<InputSelect
+					readOnly={true}
+					selects={[
+						{
+							icon: <></>,
+							name: 'aaa',
+							value: 'aaa',
+						},
+						{
+							icon: <></>,
+							name: 'bbb',
+							value: 'aaa',
+						},
+						{
+							icon: <></>,
+							name: 'ccc',
+							value: 'aaa',
+						},
+					]}
+				/>
+
 				<h1>Input</h1>
+
 				<span className="subhead-long-03 gray-500">
 					﹗ input은 <code className="mx-3">width: 100%; padding: 0.75rem 1rem;</code>을 기본적으로 포함하고
 					있습니다.
@@ -153,6 +190,16 @@ const InputView = (): JSX.Element => {
 								{ icon: <LOGOS.ethereumImg width="20" />, name: 'ethereum', value: 'ethereum' },
 							]}
 						/>
+
+						<div>
+							<input></input>
+							<input></input>
+							<select>
+								<option></option>
+								<option></option>
+								<option></option>
+							</select>
+						</div>
 					</div>
 				</div>
 				<br />
