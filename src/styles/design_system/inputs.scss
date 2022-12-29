@@ -87,10 +87,10 @@
  * 오버라이딩 없이 유동적으로 변경할 수 있도록 변경함.
  *******************************************************************/
 
-/**
-   * input에 디폴트로 적용되는 @mixin
+/***********************************************************
+   * input에 디폴트로 적용되는 @mixin과 default 클래스
 	 * 클래스명은 input이지만 input을 감싸고 있는 div에 주는 클래스임!!
-   */
+   **********************************************************/
 
 @mixin cic-input-default {
 	display: flex;
@@ -106,15 +106,16 @@
 	letter-spacing: -0.006em;
 
 	&:hover {
-		border-color: var(--gray-scale-10);
+		border-color: var(--gray-scale-08);
 	}
 
 	// 자식요소가 focus 되면 해당 클래스를 가진 부모요소는 아래와 같은 속성이 적용 됨.
 	&:focus-within {
-		border-color: var(--gray-scale-10);
+		border-color: var(--gray-scale-08);
 		background-color: #ffffff;
 	}
 
+	// 자식요소 input default style
 	input {
 		margin: 0;
 		padding: 0;
@@ -135,10 +136,55 @@
 		}
 	}
 
+	.separate {
+		border: 0.5px solid var(--gray-scale-08);
+		height: 18px;
+		margin-right: 0.5rem;
+	}
+
 	input[type='number']::-webkit-outer-spin-button,
 	input[type='number']::-webkit-inner-spin-button {
 		-webkit-appearance: none;
 		margin: 0;
+	}
+
+	button {
+		margin: 0;
+		gap: 0.5rem;
+		padding-left: 2rem;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		width: fit-content;
+		border: none;
+		background-color: rgba(0, 0, 0, 0);
+
+		+ ul {
+			padding: 0;
+			border: transparent;
+			top: 13px !important;
+			left: -13px !important;
+			box-shadow: 0 4px 16px rgb(0 0 0 / 15%);
+
+			li {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				width: inherit;
+				gap: 0.5rem;
+				padding: 0.75rem;
+				transition: 0.2s;
+			}
+			li:first-child {
+				border-top-left-radius: 0.375rem;
+				border-top-right-radius: 0.375rem;
+			}
+			li:last-child {
+				border-bottom-left-radius: 0.375rem;
+				border-bottom-right-radius: 0.375rem;
+			}
+		}
 	}
 }
 
@@ -148,7 +194,7 @@
 
 .cic-input-focus {
 	@include cic-input-default;
-	border-color: var(--gray-scale-10);
+	border-color: var(--gray-scale-08);
 }
 
 .cic-input-read-only {
@@ -163,10 +209,10 @@
 	}
 }
 
-/**
+/***********************************************************
    * 성공(success) 클래스(class)
 	 * input을 감싸는 div에 success에 해당하는 기본적인 스타일링을 지정함.
-   */
+   **********************************************************/
 
 @mixin cic-input-success {
 	@include cic-input-default;
@@ -178,7 +224,7 @@
 	}
 	// 자식요소가 focus 되면 해당 클래스를 가진 부모요소는 아래와 같은 속성이 적용 됨.
 	&:focus-within {
-		border-color: inherit;
+		border-color: var(--gray-scale-08);
 	}
 
 	input {
@@ -203,10 +249,10 @@ div.cic-input-success {
 	}
 }
 
-/**
+/**********************************************************
    * 에러,실패(error) 클래스(class)
 	 * input을 감싸는 div에 error에 해당하는 기본적인 스타일링을 지정함.
-   */
+   **********************************************************/
 
 @mixin cic-input-error {
 	@include cic-input-default;
@@ -218,7 +264,7 @@ div.cic-input-success {
 	}
 	// 자식요소가 focus 되면 해당 클래스를 가진 부모요소는 아래와 같은 속성이 적용 됨.
 	&:focus-within {
-		border-color: inherit;
+		border-color: var(--gray-scale-08);
 	}
 
 	input {
@@ -242,52 +288,3 @@ div.cic-input-error {
 		background-color: var(--danger-bg);
 	}
 }
-
-/**
-   * 에러 상태 @mixin cic-input-default @include 해오면서 조잡해진게 많아짐.
-	 * 변수 선언 부분을 다시 조정 해 볼 필요가 있을 듯 함.
-   */
-
-// @include cic-input-default(1px solid var(--danger-main), var(--danger-bg), 1px solid var(--danger-main));
-
-/**
-   * 성공 상태 @mixin cic-input-default @include 해오면서 조잡해진게 많아짐.
-	 * 변수 선언 부분을 다시 조정 해 볼 필요가 있을 듯 함.
-   */
-
-// .cic-input-error {
-// 	border: 1px solid var(--danger-main);
-// 	background-color: var(--danger-bg);
-// 	color: var(--danger-main);
-// 	input {
-// 		color: var(--danger-main);
-// 	}
-// }
-
-// .cic-input-error-focus {
-// 	border: 1px solid var(--gray-scale-02); //$gray-500 !important; //grat_500
-// 	background-color: var(--danger-bg);
-// }
-
-/**
-		 * 성공 상태
-		 */
-
-// .cic-input-success {
-// 	border: 1px solid var(--suc-main);
-// 	background-color: var(--suc-bg);
-// 	color: var(--suc-main);
-
-// 	input {
-// 		color: var(--suc-main);
-// 	}
-// }
-
-// .cic-input-success-focus {
-// 	border: 1px solid var(--gray-scale-02); //$gray-500 !important; //grat_500
-// 	background-color: var(--suc-bg);
-// }
-
-/*******************************************************************
- * Input + Select 재 정의.
- *******************************************************************/

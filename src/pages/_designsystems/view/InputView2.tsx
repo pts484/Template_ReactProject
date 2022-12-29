@@ -3,6 +3,8 @@ import LOGOS from '@/assets/logos';
 import InputSelect from '../components/InputSelect';
 import InputContainer from '../components/Input/InputContainer';
 import Input from '../components/Input/Input';
+import Separate from '../components/Input/Seperate';
+import SelectToken from '../components/Input/SelectToken';
 
 const InputView2 = (): JSX.Element => {
 	return (
@@ -29,7 +31,7 @@ const InputView2 = (): JSX.Element => {
 				<hr />
 				<br />
 
-				{/* default - header */}
+				{/* single input - header */}
 				<ul className="row mb-3">
 					<li className="col-1"></li>
 					<li className="col text-start">
@@ -45,7 +47,8 @@ const InputView2 = (): JSX.Element => {
 						<span className="subhead-02">readonly</span>
 					</li>
 				</ul>
-				{/* default - single input */}
+
+				{/* single input - default */}
 				<ul className="row mb-3">
 					<li className="col-1 d-flex justify-content-center align-items-center text-center">single input</li>
 					<li className="col">
@@ -56,41 +59,35 @@ const InputView2 = (): JSX.Element => {
 					</li>
 					<li className="col">
 						<InputContainer focus>
-							<Input placeholder="cic-input-focus" />
+							<Input placeholder="focus" />
 						</InputContainer>
 						{/* <input className="cic-input-default" placeholder="cic-input-default" /> */}
 					</li>
 					<li className="col">
 						<InputContainer>
-							<Input defaultValue="cic-input-default" />
+							<Input defaultValue="defaultValue" />
 						</InputContainer>
 						{/* <input className="cic-input-default" placeholder="cic-input-default" /> */}
 					</li>
 					<li className="col">
 						<InputContainer readOnly>
-							<Input placeholder="cic-input-default" />
+							<Input placeholder="readOnly" />
 						</InputContainer>
 						{/* <input className="cic-input-default" placeholder="cic-input-default" /> */}
 					</li>
 				</ul>
 
-				{/* success - header */}
+				{/* single input success/error - header */}
 				<ul className="row mb-3">
 					<li className="col-1"></li>
 					<li className="col text-start">
 						<span className="subhead-02">success - default</span>
 					</li>
 					<li className="col text-start">
-						<span className="subhead-02">success - readonly</span>
-					</li>
-					<li className="col text-start">
 						<span className="subhead-02">error - default</span>
 					</li>
-					<li className="col text-start">
-						<span className="subhead-02">error - readonly</span>
-					</li>
 				</ul>
-				{/* success - single input */}
+				{/* single input - success/error */}
 				<ul className="row mb-3">
 					<li className="col-1"></li>
 					<li className="col w-100">
@@ -98,20 +95,60 @@ const InputView2 = (): JSX.Element => {
 							<Input placeholder="cic-input-default" />
 						</InputContainer>
 					</li>
-					<li className="col w-100">
-						<InputContainer success readOnly>
-							<Input placeholder="cic-input-default" />
-						</InputContainer>
-					</li>
+					<li className="col w-100"></li>
 					<li className="col w-100">
 						<InputContainer error>
 							<Input placeholder="cic-input-default" />
 						</InputContainer>
 					</li>
-					<li className="col w-100">
-						<InputContainer error readOnly>
-							<Input placeholder="cic-input-default" />
+					<li className="col w-100"></li>
+				</ul>
+
+				<br />
+				<hr />
+				<br />
+
+				{/* multiple input default - header */}
+				<ul className="row mb-3">
+					<li className="col-1"></li>
+					<li className="col text-start">
+						<span className="subhead-02">two input</span>
+					</li>
+					<li className="col text-start">
+						<span className="subhead-02"></span>
+					</li>
+					<li className="col text-start">
+						<span className="subhead-02"></span>
+					</li>
+					<li className="col text-start">
+						<span className="subhead-02"></span>
+					</li>
+				</ul>
+				{/* default - single input */}
+				<ul className="row mb-3">
+					<li className="col-1 d-flex justify-content-center align-items-center text-center">
+						multiple input
+					</li>
+					<li className="col">
+						<InputContainer>
+							<Input type="number" placeholder="수량" />
+							<Separate />
+							<Input type="number" placeholder="개당 가격" />
+							<SelectToken
+								selects={[
+									{ icon: <LOGOS.klayImg width="20" />, name: 'KLAY', value: 'klay' },
+									{ icon: <LOGOS.perImg width="20" />, name: 'PER', value: 'per' },
+									{ icon: <LOGOS.ethereumImg width="20" />, name: 'ethereum', value: 'ethereum' },
+								]}
+							/>
 						</InputContainer>
+						{/* <input className="cic-input-default" placeholder="cic-input-default" /> */}
+					</li>
+					<li className="col">
+						<InputContainer focus>
+							<Input placeholder="focus" />
+						</InputContainer>
+						{/* <input className="cic-input-default" placeholder="cic-input-default" /> */}
 					</li>
 				</ul>
 			</div>

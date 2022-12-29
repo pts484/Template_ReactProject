@@ -1,8 +1,8 @@
 import React from 'react';
 import cx from 'classnames';
-
 declare interface Container {
-	children: JSX.Element;
+	children: JSX.Element | JSX.Element[];
+	// children: JSX.Element;
 	className?: string;
 	readOnly?: boolean;
 	focus?: boolean;
@@ -11,7 +11,7 @@ declare interface Container {
 }
 
 const InputContainer = (props: Container): JSX.Element => {
-	const { children, className, readOnly, focus, success, error } = props;
+	const { className, readOnly, focus, success, error, children } = props;
 	return (
 		<div
 			className={cx(
@@ -22,7 +22,7 @@ const InputContainer = (props: Container): JSX.Element => {
 				error && 'cic-input-error',
 			)}
 		>
-			{React.cloneElement(children, { readOnly })}
+			{React.Children.map(children, (child) => React.cloneElement(child, { readOnly }))}
 		</div>
 	);
 };
