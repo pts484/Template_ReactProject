@@ -22,7 +22,7 @@ declare interface CAPTION_MESSAGE {
 }
 
 const InputSelect = (props: INPUT): JSX.Element => {
-	const { selects, caption, onValue, register, ...spreadProps } = props;
+	const { selects, caption, onValue, ...spreadProps } = props;
 	const [selectItem, setSelectItem] = useState<any>(props?.selects?.length > 0 ? props?.selects[0].name : null);
 	const inputRef = useRef<HTMLInputElement>(null);
 	const [focus, setFocus] = useState<boolean>(false);
@@ -57,7 +57,7 @@ const InputSelect = (props: INPUT): JSX.Element => {
 	return (
 		<>
 			<div className={cx('cic-input-default', inputState(), props.className)}>
-				<input placeholder="cic-input-default" ref={inputRef} {...props?.register} {...spreadProps} />
+				<input placeholder="cic-input-default" ref={inputRef} {...spreadProps} />
 				<button
 					className="dropdown-toggle cic-input-select"
 					type="button"

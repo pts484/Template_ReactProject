@@ -1,76 +1,76 @@
 /**
- * Search Bar Style
+* Search Bar Style
  * 디자인 시스템에 맞게 코드 이동, 파일생성 해주세요.
  **/
 
-.searchbar {
-	position: relative;
-	width: 100%;
-	height: 2.5em;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	border: 1px solid var(--brand-bl-50);
-	border-radius: 12px;
-	padding: 0.75rem 1rem;
-	background-color: var(--brand-bl-50);
+// .searchbar {
+// 	position: relative;
+// 	width: 100%;
+// 	height: 2.5em;
+// 	display: flex;
+// 	justify-content: space-between;
+// 	align-items: center;
+// 	border: 1px solid var(--brand-bl-50);
+// 	border-radius: 12px;
+// 	padding: 0.75rem 1rem;
+// 	background-color: var(--brand-bl-50);
 
-	&:hover {
-		border-color: #78727f;
-	}
+// 	&:hover {
+// 		border-color: #78727f;
+// 	}
 
-	div:first-child {
-		padding-right: 0.875rem;
-	}
+// 	div:first-child {
+// 		padding-right: 0.875rem;
+// 	}
 
-	input {
-		width: 100%;
-		background-color: var(--brand-bl-50);
-		border: 1px solid transparent;
-		font-weight: 400;
-		line-height: 24px;
-		letter-spacing: -0.006em;
-		color: var(--light-text-04);
+// 	input {
+// 		width: 100%;
+// 		background-color: var(--brand-bl-50);
+// 		border: 1px solid transparent;
+// 		font-weight: 400;
+// 		line-height: 24px;
+// 		letter-spacing: -0.006em;
+// 		color: var(--light-text-04);
 
-		&::placeholder {
-			color: var(--light-text-04);
-		}
+// 		&::placeholder {
+// 			color: var(--light-text-04);
+// 		}
 
-		&:focus-visible {
-			border: none;
-			outline: none;
-		}
-	}
+// 		&:focus-visible {
+// 			border: none;
+// 			outline: none;
+// 		}
+// 	}
 
-	.clear {
-		padding-left: 14px;
+// 	.clear {
+// 		padding-left: 14px;
 
-		button {
-			margin: 0;
-			background-color: rgba(0, 0, 0, 0);
-			border: none;
-		}
-	}
-	.search-btn {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		padding: 2px;
+// 		button {
+// 			margin: 0;
+// 			background-color: rgba(0, 0, 0, 0);
+// 			border: none;
+// 		}
+// 	}
+// 	.search-btn {
+// 		display: flex;
+// 		flex-direction: row;
+// 		justify-content: center;
+// 		align-items: center;
+// 		padding: 2px;
 
-		width: 24px;
-		height: 24px;
+// 		width: 24px;
+// 		height: 24px;
 
-		/* ch-IN/BL-900 */
+// 		/* ch-IN/BL-900 */
 
-		background: #3366ff;
-		border-radius: 4px;
-	}
-}
+// 		background: #3366ff;
+// 		border-radius: 4px;
+// 	}
+// }
 
-.searchbar-focus {
-	border-color: #78727f;
-}
+// .searchbar-focus {
+// 	border-color: #78727f;
+// }
 
 /*******************************************************************************************
  * Input Style by pts
@@ -88,10 +88,11 @@
  *******************************************************************/
 
 /**
-   * single input에 디폴트로 적용되는 @mixin
+   * input에 디폴트로 적용되는 @mixin
+	 * 클래스명은 input이지만 input을 감싸고 있는 div에 주는 클래스임!!
    */
 
-@mixin cic-input-default($border, $bgcolor, $hover) {
+@mixin cic-input-default {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -108,19 +109,10 @@
 		border-color: var(--gray-scale-10);
 	}
 
-	&:focus {
+	// 자식요소가 focus 되면 해당 클래스를 가진 부모요소는 아래와 같은 속성이 적용 됨.
+	&:focus-within {
 		border-color: var(--gray-scale-10);
 		background-color: #ffffff;
-	}
-
-	&:read-only {
-		border: $border;
-		background-color: $bgcolor;
-		&:hover,
-		&:focus,
-		&:active {
-			border: $hover;
-		}
 	}
 
 	input {
@@ -129,13 +121,13 @@
 		width: 100%;
 		border: transparent;
 		border-radius: 0;
-		text-align: right;
-		background-color: rgba(0, 0, 0, 0);
+		text-align: left;
+		background-color: transparent;
 		color: var(--light-text-02);
 
-		// &::placeholder {
-		// 	color: var(--gray-scale-08);
-		// }
+		&::placeholder {
+			color: var(--gray-scale-08);
+		}
 
 		&:focus-visible {
 			border: none;
@@ -150,31 +142,104 @@
 	}
 }
 
-input.cic-input-default,
-input.cic-input-default-focus,
-input.cic-input-default-filled,
-input.cic-input-default-read-only {
-	@include cic-input-default(transparent, var(--gray-scale-05), transparent);
+.cic-input-default {
+	@include cic-input-default;
 }
 
-/**
-   * input / select 생성 간 div에 해당 클래스 부여 시, div의 자체적인 readonly 처리문제로
-   * readonly에 선언해둔 속성으로 넘어가는 문제를 방지.
-   */
+.cic-input-focus {
+	@include cic-input-default;
+	border-color: var(--gray-scale-10);
+}
 
-div.cic-input-default,
-div.cic-input-default-focus,
-div.cic-input-default-filled {
-	@include cic-input-default(1px solid transparent, var(--brand-bl-50), 1px solid transparent);
-	input {
-		text-align: left;
+.cic-input-read-only {
+	@include cic-input-default;
+	background-color: var(--gray-scale-05);
+	&:hover {
+		border-color: transparent;
+	}
+	&:focus-within {
+		border-color: transparent;
+		background-color: var(--gray-scale-05);
 	}
 }
 
-div.cic-input-default-read-only {
-	@include cic-input-default(1px solid transparent, var(--gray-scale-05), 1px solid transparent);
+/**
+   * 성공(success) 클래스(class)
+	 * input을 감싸는 div에 success에 해당하는 기본적인 스타일링을 지정함.
+   */
+
+@mixin cic-input-success {
+	@include cic-input-default;
+	border-color: var(--suc-main);
+	background-color: var(--suc-bg);
+	color: var(--suc-main);
+	&:hover {
+		border-color: var(--suc-main);
+	}
+	// 자식요소가 focus 되면 해당 클래스를 가진 부모요소는 아래와 같은 속성이 적용 됨.
+	&:focus-within {
+		border-color: inherit;
+	}
+
 	input {
-		text-align: left;
+		color: inherit;
+		&::placeholder {
+			color: inherit;
+		}
+	}
+}
+
+.cic-input-success {
+	@include cic-input-success;
+}
+
+div.cic-input-success {
+	&:hover {
+		background-color: var(--suc-bg);
+	}
+	// 자식요소가 focus 되면 해당 클래스를 가진 부모요소는 아래와 같은 속성이 적용 됨.
+	&:focus-within {
+		background-color: var(--suc-bg);
+	}
+}
+
+/**
+   * 에러,실패(error) 클래스(class)
+	 * input을 감싸는 div에 error에 해당하는 기본적인 스타일링을 지정함.
+   */
+
+@mixin cic-input-error {
+	@include cic-input-default;
+	border-color: var(--danger-main);
+	background-color: var(--danger-bg);
+	color: var(--danger-main);
+	&:hover {
+		border-color: var(--danger-main);
+	}
+	// 자식요소가 focus 되면 해당 클래스를 가진 부모요소는 아래와 같은 속성이 적용 됨.
+	&:focus-within {
+		border-color: inherit;
+	}
+
+	input {
+		color: inherit;
+		&::placeholder {
+			color: inherit;
+		}
+	}
+}
+
+.cic-input-error {
+	@include cic-input-error;
+}
+
+div.cic-input-error {
+	&:hover {
+		background-color: var(--danger-bg);
+	}
+	// 자식요소가 focus 되면 해당 클래스를 가진 부모요소는 아래와 같은 속성이 적용 됨.
+	&:focus-within {
+		background-color: var(--danger-bg);
 	}
 }
 
@@ -183,86 +248,13 @@ div.cic-input-default-read-only {
 	 * 변수 선언 부분을 다시 조정 해 볼 필요가 있을 듯 함.
    */
 
-@mixin cic-input-error {
-	@include cic-input-default(1px solid var(--danger-main), var(--danger-bg), 1px solid var(--danger-main));
-
-	background-color: var(--danger-bg);
-	color: var(--danger-main);
-
-	&:hover {
-		border-color: inherit;
-	}
-
-	&:focus {
-		border-color: inherit;
-		background-color: var(--danger-bg);
-	}
-
-	&::placeholder {
-		color: inherit;
-	}
-}
-
-input.cic-input-error,
-input.cic-input-error-focus,
-input.cic-input-error-filled {
-	@include cic-input-error;
-}
-input.cic-input-error-read-only {
-	@include cic-input-error;
-
-	&:read-only {
-		border: none;
-		&:hover,
-		&:focus,
-		&:active {
-			border: none;
-		}
-	}
-}
+// @include cic-input-default(1px solid var(--danger-main), var(--danger-bg), 1px solid var(--danger-main));
 
 /**
    * 성공 상태 @mixin cic-input-default @include 해오면서 조잡해진게 많아짐.
 	 * 변수 선언 부분을 다시 조정 해 볼 필요가 있을 듯 함.
    */
 
-@mixin cic-input-success {
-	@include cic-input-default(1px solid var(--suc-main), var(--suc-bg), 1px solid var(--suc-main));
-
-	background-color: var(--suc-bg);
-	color: var(--suc-main);
-
-	&:hover {
-		border-color: inherit;
-	}
-
-	&:focus {
-		border-color: inherit;
-		background-color: var(--suc-bg);
-	}
-
-	&::placeholder {
-		color: inherit;
-	}
-}
-
-input.cic-input-success,
-input.cic-input-success-focus,
-input.cic-input-success-filled {
-	@include cic-input-success;
-}
-input.cic-input-success-read-only {
-	@include cic-input-success;
-
-	&:read-only {
-		border: none;
-		&:hover,
-		&:focus,
-		&:active {
-			border: none;
-		}
-	}
-}
 // .cic-input-error {
 // 	border: 1px solid var(--danger-main);
 // 	background-color: var(--danger-bg);
@@ -299,240 +291,3 @@ input.cic-input-success-read-only {
 /*******************************************************************
  * Input + Select 재 정의.
  *******************************************************************/
-.cic-input-select {
-	margin: 0;
-	gap: 0.5rem;
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	width: fit-content;
-	border: none;
-	background-color: rgba(0, 0, 0, 0);
-
-	&:hover {
-		color: var(--gray-scale-10);
-	}
-
-	&:focus {
-		border: none;
-		background-color: transparent;
-	}
-
-	+ ul {
-		padding: 0;
-		border: none;
-		top: 14px !important;
-		left: -58px !important;
-		box-shadow: 0 0 12px rgb(46 12 84 / 15%);
-
-		li {
-			display: flex;
-			justify-content: flex-start;
-			align-items: center;
-			width: inherit;
-			gap: 0.5rem;
-			padding: 0.75rem;
-			transition: 0.2s;
-		}
-		li:first-child {
-			border-top-left-radius: 0.375rem;
-			border-top-right-radius: 0.375rem;
-		}
-		li:last-child {
-			border-bottom-left-radius: 0.375rem;
-			border-bottom-right-radius: 0.375rem;
-		}
-	}
-
-	// span {
-	// 	width: fit-content;
-	// 	padding: 0px 4px;
-	// 	overflow: hidden;
-	// 	text-overflow: ellipsis;
-	// 	white-space: nowrap;
-	// }
-}
-// // 좌측에 icon이 들어가는 인풋
-// .cic-icon-input {
-// 	border-right: 1px solid var(--gray-200) !important;
-// 	border-radius: 0;
-// 	padding-right: 8px;
-// }
-
-// // 스몰 인풋
-// .cic-small-input {
-// 	width: 3.75rem; //60px
-// 	height: 40px;
-// 	border-radius: 12px;
-// 	padding: 12px 16px;
-
-// 	&:hover {
-// 		border-color: var(--gray-scale-02); //$gray-500;
-// 	}
-
-// 	input {
-// 		margin: 0;
-// 		padding: 12px 16px;
-// 		width: 100%;
-// 		border: none;
-// 		background-color: rgba(0, 0, 0, 0);
-// 		color: var(--light-text-02); //$text-800;
-// 		line-height: 24px;
-// 		letter-spacing: -0.006em;
-
-// 		&::placeholder {
-// 			color: var(--gray-scale-08); //$gray-08;
-// 		}
-
-// 		&:focus-visible {
-// 			border: none;
-// 			outline: none;
-// 		}
-// 	}
-// 	input[type='number']::-webkit-outer-spin-button,
-// 	input[type='number']::-webkit-inner-spin-button {
-// 		-webkit-appearance: none;
-// 		margin: 0;
-// 	}
-// }
-
-// // 더블 인풋
-// .cic-double-input {
-// 	display: flex;
-// 	align-items: center;
-// 	justify-content: space-between;
-// 	width: 100%;
-// 	border: none;
-// 	border-radius: 16px;
-// 	padding: 13px 16px;
-// 	background-color: #f8f7f9;
-// 	font-weight: 400;
-// 	line-height: 24px;
-// 	letter-spacing: -0.006em;
-
-// 	&:hover {
-// 		border-color: var(--gray-scale-02); //$gray-500;
-// 	}
-
-// 	input {
-// 		margin: 0;
-// 		padding: 0;
-// 		width: 100%;
-// 		border: none;
-// 		background-color: rgba(0, 0, 0, 0);
-// 		color: var(--light-text-02); //$text-800;
-// 		line-height: 24px;
-// 		letter-spacing: -0.006em;
-
-// 		&::placeholder {
-// 			color: var(--gray-scale-08); //$gray-08;
-// 		}
-
-// 		&:focus-visible {
-// 			border: none;
-// 			outline: none;
-// 		}
-// 	}
-// 	input[type='number']::-webkit-outer-spin-button,
-// 	input[type='number']::-webkit-inner-spin-button {
-// 		-webkit-appearance: none;
-// 		margin: 0;
-// 	}
-
-// 	button {
-// 		margin: 0;
-// 		position: relative;
-// 		display: flex;
-// 		align-items: center;
-// 		justify-content: flex-end;
-// 		width: fit-content;
-// 		border: none;
-// 		background-color: rgba(0, 0, 0, 0);
-
-// 		&:hover {
-// 			color: var(--gray-500);
-// 		}
-
-// 		span {
-// 			width: fit-content;
-// 			padding: 0px 4px;
-// 			overflow: hidden;
-// 			text-overflow: ellipsis;
-// 			white-space: nowrap;
-// 		}
-// 	}
-// 	input:nth-child(1) {
-// 		width: 25% !important;
-// 		border-right: 1px solid var(--gray-scale-06) !important; //$gray-200;
-// 	}
-// 	input:nth-child(2) {
-// 		padding-left: 16px;
-// 	}
-// 	.cic-icon-input-p-2 {
-// 		padding-left: 8px !important;
-// 	}
-// }
-
-/**
-   * 인포 상태
-   */
-
-.cic-input-info {
-	background-color: var(--info-bg);
-}
-
-.cic-input-info-focus {
-	border: 1px solid var(--gray-scale-02); //$gray-500 !important;
-	background-color: var(--white) !important;
-}
-
-// /**
-//  * 커스텀 셀렉트 드롭다운 리스트 스타일
-//  *
-//  **/
-
-// .select-default {
-// 	position: relative;
-
-// 	.select-filled-default-btn {
-// 		@include select-filled-default-btn();
-// 		&:focus {
-// 			background-color: var(--white);
-// 			border: 1px solid var(--gray-scale-02); //$gray-500;
-// 		}
-// 		// &::after {
-// 		//     content: url(./icons/ic_chevron_down_fill_dk.svg);
-// 		//     // position: absolute;
-// 		// }
-// 	}
-
-// 	.select-default-btn {
-// 		@include select-default-btn();
-// 		&:focus {
-// 			background-color: var(--white);
-// 			border: 1px solid var(--gray-scale-02); //$gray-500;
-// 		}
-// 		// &::after {
-// 		//     content: url(./icons/ic_chevron_down_fill_dk.svg);
-// 		//     // position: absolute;
-// 		//     // right: 1%;
-// 		// }
-// 	}
-
-// 	//select-disabled Dropdown 스타일
-
-// 	.select-disabled-btn {
-// 		@include select-disabled-btn();
-// 		// &::after {
-// 		//     content: url(./icons/ic_chevron_down_fill_dk.svg);
-// 		//     // position: absolute;
-// 		//     // right: 3%;
-// 		// }
-// 	}
-
-// 	.dropdown-menu > .dropdown-item,
-// 	.dropdown-menu > .detail {
-// 		padding: 16px;
-// 	}
-// }
