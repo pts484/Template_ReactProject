@@ -5,10 +5,16 @@ import Tooltip from './view/Tooltip';
 import Selections from './view/Selections';
 import ModalLayout from './view/ModalLayout';
 import Toast from './view/Toast';
+import Select from './view/Select';
 
 const DesignSystem02 = (): JSX.Element => {
 	return (
 		<>
+			<div className="container mt-5 pb-5">
+				<div className="mt-5">
+					<Select />
+				</div>
+			</div>
 			<div className="container mt-5 pb-5">
 				<div className="mt-5">
 					<Button />

@@ -27,7 +27,7 @@ const Selections = () => (
 
 				<label>
 					<input type="radio" name="contact" value="sec" defaultChecked />
-					<span>라디오 2 checked</span>
+					<span>라디오 2 defaultChecked</span>
 				</label>
 
 				<label>
@@ -44,7 +44,7 @@ const Selections = () => (
 
 				<label>
 					<input type="checkbox" name="contact" value="sec" defaultChecked />
-					<span>체크박스 2 checked</span>
+					<span>체크박스 2 defaultChecked</span>
 				</label>
 
 				<label>
