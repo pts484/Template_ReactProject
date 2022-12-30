@@ -31,8 +31,12 @@
 		border-color: var(--gray-scale-08);
 	}
 }
+// 셀렉트 버튼 disabled 스타일
 .cic-select-default {
 	background-color: var(--gray-scale-05);
+}
+.cic-select-default:focus {
+	border: 1px solid var(--gray-scale-06);
 }
 
 // 셀렉트 표출 되는 리스트들
@@ -66,7 +70,7 @@
 	}
 }
 
-// 디저블일때 list가 표출 안되게끔
+// disabled일 경우 list가 표출 안되게끔
 .cic-dropdown-pannel.disabled {
 	display: none !important;
 }
