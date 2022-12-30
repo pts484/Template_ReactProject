@@ -46,23 +46,6 @@ const Toast = () => (
 				</div>
 			</div>
 		</div>
-		<div className="toast" role="alert" aria-live="assertive" aria-atomic="true">
-			<div className={'cic-toast-body show'}>
-				<strong className="me-auto">
-					<i className="" />
-				</strong>
-
-				{/* <small className="text-muted">2 seconds ago</small> */}
-				<button
-					type="button"
-					className="btn-close float-end"
-					data-bs-dismiss="toast"
-					aria-label="Close"
-				></button>
-			</div>
-
-			{<div className="cic-toast-body">dfdfsdfasdf</div>}
-		</div>
 	</div>
 );
 export default Toast;

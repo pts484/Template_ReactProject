@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Button from './view/Button';
 import Tooltip from './view/Tooltip';

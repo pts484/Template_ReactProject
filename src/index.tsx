@@ -7,18 +7,21 @@ import { Provider } from 'react-redux';
 import { Store } from '@redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
 import { BrowserRouter } from 'react-router-dom';
+import { DarkModeProvider } from './styles/Theme/DarkModeContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
-	// <React.StrictMode>
-	<Provider store={Store}>
-		{/* <PersistGate loading={null} persistor={persistor}> */}
-		<BrowserRouter>
-			<App />
-			{/* </PersistGate> */}
-		</BrowserRouter>
-	</Provider>,
-	// </React.StrictMode>,
+	<React.StrictMode>
+		<DarkModeProvider>
+			<Provider store={Store}>
+				{/* <PersistGate loading={null} persistor={persistor}> */}
+				<BrowserRouter>
+					<App />
+					{/* </PersistGate> */}
+				</BrowserRouter>
+			</Provider>
+		</DarkModeProvider>
+	</React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function

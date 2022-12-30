@@ -1,61 +1,40 @@
 import React from 'react';
 import LOGOS from '@/assets/logos';
-import InputSelect from '../components/InputSelect2';
-
-import InputContainer from '@/components/input/input_container';
-import Input from '@/components/input/input';
-import Input2 from '@/components/input/input2';
-import Select from '@/components/input/select';
+import InputSelect from '../components/InputSelect';
+import InputContainer from '../components/Input/InputContainer';
+import Input from '../components/Input/Input';
+import Separate from '../components/Input/Seperate';
+import SelectToken from '../components/Input/SelectToken';
 
 const InputView = (): JSX.Element => {
 	return (
 		<>
 			<div className="container">
-				<h1>EXAMPLE</h1>
-
-				{/* <Input type="number" onChange2={(e) => console.log(e)} /> 오류로 주석처리 해둠. */}
-				<InputContainer>
-					<Input separator="left" />
-					<Input />
-					<Input separator="left" />
-					<Input />
-				</InputContainer>
-
-				<InputSelect
-					readOnly={true}
-					selects={[
-						{
-							icon: <></>,
-							name: 'aaa',
-							value: 'aaa',
-						},
-						{
-							icon: <></>,
-							name: 'bbb',
-							value: 'aaa',
-						},
-						{
-							icon: <></>,
-							name: 'ccc',
-							value: 'aaa',
-						},
-					]}
-				/>
-
 				<h1>Input</h1>
-
-				<span className="subhead-long-03 gray-500">
-					﹗ input은 <code className="mx-3">width: 100%; padding: 0.75rem 1rem;</code>을 기본적으로 포함하고
-					있습니다.
-					<br />﹗ default 값을 기준으로 각 상태에 따라 어떤식으로 적용되는지 표현되는 것을 나열한 내용입니다.
-				</span>
 				<br />
-				<br />
+				<p className="subhead-long-03 gray-500">
+					﹗ input은 div가 Container 된 상태로 제작 된 컴포넌트입니다.
+					<br />
+					﹗기본 운용 방식은{' '}
+					<code
+						style={{ color: '#33bba0', fontWeight: 'bold' }}
+					>{`<InputContainer> <Input/> <InputContainer/>`}</code>{' '}
+					입니다.
+					<br />
+					﹗상태 변경 방법 :{' '}
+					<code style={{ color: '#33bba0', fontWeight: 'bold' }}>{`<InputContainer>`}</code> 에 props로{' '}
+					<code style={{ color: '#4ebbf1', fontWeight: 'bold' }}>focus, readOnly, success, error</code> 를
+					순서에 상관없이 전달 해 주면 됩니다. <br />
+					﹗타입 변경 및 onChange 추가 :{' '}
+					<code style={{ color: '#33bba0', fontWeight: 'bold' }}>{`<Input/>`}</code> 에 props로{' '}
+					<code style={{ color: '#4ebbf1', fontWeight: 'bold' }}>type, onChange</code> 를 지정 후 변경 할
+					타입을 작성하거나 함수를 넣으시면 됩니다.
+				</p>
 				<br />
 				<hr />
 				<br />
 
-				{/* default - header */}
+				{/* single input - header */}
 				<ul className="row mb-3">
 					<li className="col-1"></li>
 					<li className="col text-start">
@@ -65,155 +44,184 @@ const InputView = (): JSX.Element => {
 						<span className="subhead-02">focus</span>
 					</li>
 					<li className="col text-start">
-						<span className="subhead-02">filled(value)</span>
+						<span className="subhead-02">filled(defaultValue)</span>
 					</li>
 					<li className="col text-start">
 						<span className="subhead-02">readonly</span>
 					</li>
 				</ul>
-				{/* default - single input */}
+
+				{/* single input - default */}
 				<ul className="row mb-3">
 					<li className="col-1 d-flex justify-content-center align-items-center text-center">single input</li>
-					<li className="col w-100">
-						<input className="cic-input-default" placeholder="cic-input-default" />
+					<li className="col">
+						<InputContainer>
+							<Input placeholder="cic-input-default" />
+						</InputContainer>
+						{/* <input className="cic-input-default" placeholder="cic-input-default" /> */}
 					</li>
-					<li className="col w-100">
-						<input className="cic-input-default-focus" placeholder="cic-input-default" />
+					<li className="col">
+						<InputContainer focus>
+							<Input placeholder="focus" />
+						</InputContainer>
+						{/* <input className="cic-input-default" placeholder="cic-input-default" /> */}
 					</li>
-					<li className="col w-100">
-						<input className="cic-input-default-filled" defaultValue="cic-input-default" />
+					<li className="col">
+						<InputContainer>
+							<Input defaultValue="defaultValue" />
+						</InputContainer>
+						{/* <input className="cic-input-default" placeholder="cic-input-default" /> */}
 					</li>
-					<li className="col w-100">
-						<input className="cic-input-default-read-only" placeholder="cic-input-default" readOnly />
+					<li className="col">
+						<InputContainer readOnly>
+							<Input placeholder="readOnly" />
+						</InputContainer>
+						{/* <input className="cic-input-default" placeholder="cic-input-default" /> */}
 					</li>
 				</ul>
 
-				{/* success - header */}
+				{/* single input success/error - header */}
 				<ul className="row mb-3">
 					<li className="col-1"></li>
 					<li className="col text-start">
 						<span className="subhead-02">success - default</span>
 					</li>
 					<li className="col text-start">
-						<span className="subhead-02">success - focus</span>
-					</li>
-					<li className="col text-start">
-						<span className="subhead-02">success - filled(value)</span>
-					</li>
-					<li className="col text-start">
 						<span className="subhead-02">success - readonly</span>
 					</li>
-				</ul>
-				{/* success - single input */}
-				<ul className="row mb-3">
-					<li className="col-1"></li>
-					<li className="col w-100">
-						<input className="cic-input-success" placeholder="cic-input-success" />
-					</li>
-					<li className="col w-100">
-						<input className="cic-input-success-focus" placeholder="cic-input-success" />
-					</li>
-					<li className="col w-100">
-						<input className="cic-input-success-filled" defaultValue="cic-input-success" />
-					</li>
-					<li className="col w-100">
-						<input className="cic-input-success-read-only" placeholder="cic-input-success" readOnly />
-					</li>
-				</ul>
-
-				{/* error - header */}
-				<ul className="row mb-3">
-					<li className="col-1"></li>
 					<li className="col text-start">
 						<span className="subhead-02">error - default</span>
-					</li>
-					<li className="col text-start">
-						<span className="subhead-02">error - focus</span>
-					</li>
-					<li className="col text-start">
-						<span className="subhead-02">error - filled(value)</span>
 					</li>
 					<li className="col text-start">
 						<span className="subhead-02">error - readonly</span>
 					</li>
 				</ul>
-				{/* error - single input */}
+				{/* single input - success/error */}
 				<ul className="row mb-3">
 					<li className="col-1"></li>
 					<li className="col w-100">
-						<input className="cic-input-error" placeholder="cic-input-error" />
+						<InputContainer success>
+							<Input placeholder="cic-input-default" />
+						</InputContainer>
 					</li>
 					<li className="col w-100">
-						<input className="cic-input-error-focus" placeholder="cic-input-error" />
+						<InputContainer success readOnly>
+							<Input placeholder="cic-input-default" />
+						</InputContainer>
 					</li>
 					<li className="col w-100">
-						<input className="cic-input-error-filled" defaultValue="cic-input-error" />
+						<InputContainer error>
+							<Input placeholder="cic-input-default" />
+						</InputContainer>
 					</li>
 					<li className="col w-100">
-						<input className="cic-input-error-read-only" placeholder="cic-input-error" readOnly />
+						<InputContainer error readOnly>
+							<Input placeholder="cic-input-default" />
+						</InputContainer>
 					</li>
 				</ul>
-				<br />
-				<hr />
-				<br />
-				{/* header */}
-				<div className="row mb-3">
-					<div className="col-1"></div>
-					<div className="col-5">
-						<span className="subhead-02">default</span>
-					</div>
-					<div className="col-5">
-						<span className="subhead-02">readonly</span>
-					</div>
-				</div>
-				{/* input / select */}
-				<div className="row mb-3">
-					<div className="col-1 d-flex justify-content-center align-items-center text-center">
-						input / select
-					</div>
-					<div className="col-5">
-						<InputSelect
-							// readOnly
-							selects={[
-								{ icon: <LOGOS.klayImg width="20" />, name: 'KLAY', value: 'klay' },
-								{ icon: <LOGOS.perImg width="20" />, name: 'PER', value: 'per' },
-								{ icon: <LOGOS.ethereumImg width="20" />, name: 'ethereum', value: 'ethereum' },
-							]}
-						/>
-					</div>
-					<div className="col-5">
-						<InputSelect
-							readOnly
-							selects={[
-								{ icon: <LOGOS.klayImg width="20" />, name: 'KLAY', value: 'klay' },
-								{ icon: <LOGOS.perImg width="20" />, name: 'PER', value: 'per' },
-								{ icon: <LOGOS.ethereumImg width="20" />, name: 'ethereum', value: 'ethereum' },
-							]}
-						/>
 
-						<div>
-							<input></input>
-							<input></input>
-							<select>
-								<option></option>
-								<option></option>
-								<option></option>
-							</select>
-						</div>
-					</div>
-				</div>
 				<br />
 				<hr />
 				<br />
-				{/* input 3 */}
-				<div className="row mb-3">
-					<div className="col-1 d-flex justify-content-center align-items-center text-center">
-						two input / select
-					</div>
-					<div className="col w-100">
-						<input className="cic-input-default" placeholder="cic-input-default" />
-					</div>
-				</div>
+
+				{/* multiple input default - header */}
+				<ul className="row mb-3">
+					<li className="col-1"></li>
+					<li className="col text-start">
+						<span className="subhead-02">two input</span>
+					</li>
+					<li className="col text-start">
+						<span className="subhead-02"></span>
+					</li>
+					<li className="col text-start">
+						<span className="subhead-02">readonly</span>
+					</li>
+					<li className="col text-start">
+						<span className="subhead-02"></span>
+					</li>
+				</ul>
+				{/* default - single input */}
+				<ul className="row mb-3">
+					<li className="col-1 d-flex justify-content-center align-items-center text-center">
+						multiple input
+					</li>
+					<li className="col">
+						<InputContainer>
+							<Input type="number" placeholder="수량" />
+							<Separate />
+							<Input type="number" placeholder="개당 가격" />
+							<SelectToken
+								selects={[
+									{ icon: <LOGOS.klayImg width="20" />, name: 'KLAY', value: 'klay' },
+									{ icon: <LOGOS.perImg width="20" />, name: 'PER', value: 'per' },
+									{ icon: <LOGOS.ethereumImg width="20" />, name: 'ethereum', value: 'ethereum' },
+								]}
+							/>
+						</InputContainer>
+						{/* <input className="cic-input-default" placeholder="cic-input-default" /> */}
+					</li>
+					<li className="col">
+						<InputContainer readOnly>
+							<Input type="number" placeholder="수량" />
+							<Separate />
+							<Input type="number" placeholder="개당 가격" />
+							<SelectToken
+								selects={[
+									{ icon: <LOGOS.klayImg width="20" />, name: 'KLAY', value: 'klay' },
+									{ icon: <LOGOS.perImg width="20" />, name: 'PER', value: 'per' },
+									{ icon: <LOGOS.ethereumImg width="20" />, name: 'ethereum', value: 'ethereum' },
+								]}
+							/>
+						</InputContainer>
+						{/* <input className="cic-input-default" placeholder="cic-input-default" /> */}
+					</li>
+				</ul>
+
+				{/* multiple input success/error - header */}
+				<ul className="row mb-3">
+					<li className="col-1"></li>
+					<li className="col text-start">
+						<span className="subhead-02">success - multiple</span>
+					</li>
+					<li className="col text-start">
+						<span className="subhead-02">error - multiple</span>
+					</li>
+				</ul>
+				{/* multiple input - success/error */}
+				<ul className="row mb-3">
+					<li className="col-1"></li>
+					<li className="col">
+						<InputContainer success>
+							<Input type="number" placeholder="수량" />
+							<Separate />
+							<Input type="number" placeholder="개당 가격" />
+							<SelectToken
+								selects={[
+									{ icon: <LOGOS.klayImg width="20" />, name: 'KLAY', value: 'klay' },
+									{ icon: <LOGOS.perImg width="20" />, name: 'PER', value: 'per' },
+									{ icon: <LOGOS.ethereumImg width="20" />, name: 'ethereum', value: 'ethereum' },
+								]}
+							/>
+						</InputContainer>
+						{/* <input className="cic-input-default" placeholder="cic-input-default" /> */}
+					</li>
+					<li className="col">
+						<InputContainer error>
+							<Input type="number" placeholder="수량" />
+							<Separate />
+							<Input type="number" placeholder="개당 가격" />
+							<SelectToken
+								selects={[
+									{ icon: <LOGOS.klayImg width="20" />, name: 'KLAY', value: 'klay' },
+									{ icon: <LOGOS.perImg width="20" />, name: 'PER', value: 'per' },
+									{ icon: <LOGOS.ethereumImg width="20" />, name: 'ethereum', value: 'ethereum' },
+								]}
+							/>
+						</InputContainer>
+						{/* <input className="cic-input-default" placeholder="cic-input-default" /> */}
+					</li>
+				</ul>
 			</div>
 		</>
 	);

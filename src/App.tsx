@@ -91,7 +91,7 @@ const App = (): JSX.Element => {
 				aaaaaaaaaa
 			</button> */}
 			<header>
-				<nav className={cx(CSS.gnb)}>
+				<nav className={cx(CSS.gnb, 'container')}>
 					<Link to="/">main</Link>
 					<Link to="/designsystem">Design System</Link>
 					<Link to="/suho">Design System02</Link>

@@ -24,7 +24,8 @@ import '@/styles/_import.scss';
 
 import $ from 'jquery';
 import toastr from 'toastr';
-import 'toastr/build/toastr.css';
+// import 'toastr/build/toastr.css';
+import '@styles/design_system/toast.scss';
 import { basename } from 'path';
 
 declare global {

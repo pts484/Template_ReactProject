@@ -1,98 +1,15 @@
-/**
-* Search Bar Style
- * 디자인 시스템에 맞게 코드 이동, 파일생성 해주세요.
- **/
-
-// .searchbar {
-// 	position: relative;
-// 	width: 100%;
-// 	height: 2.5em;
-// 	display: flex;
-// 	justify-content: space-between;
-// 	align-items: center;
-// 	border: 1px solid var(--brand-bl-50);
-// 	border-radius: 12px;
-// 	padding: 0.75rem 1rem;
-// 	background-color: var(--brand-bl-50);
-
-// 	&:hover {
-// 		border-color: #78727f;
-// 	}
-
-// 	div:first-child {
-// 		padding-right: 0.875rem;
-// 	}
-
-// 	input {
-// 		width: 100%;
-// 		background-color: var(--brand-bl-50);
-// 		border: 1px solid transparent;
-// 		font-weight: 400;
-// 		line-height: 24px;
-// 		letter-spacing: -0.006em;
-// 		color: var(--light-text-04);
-
-// 		&::placeholder {
-// 			color: var(--light-text-04);
-// 		}
-
-// 		&:focus-visible {
-// 			border: none;
-// 			outline: none;
-// 		}
-// 	}
-
-// 	.clear {
-// 		padding-left: 14px;
-
-// 		button {
-// 			margin: 0;
-// 			background-color: rgba(0, 0, 0, 0);
-// 			border: none;
-// 		}
-// 	}
-// 	.search-btn {
-// 		display: flex;
-// 		flex-direction: row;
-// 		justify-content: center;
-// 		align-items: center;
-// 		padding: 2px;
-
-// 		width: 24px;
-// 		height: 24px;
-
-// 		/* ch-IN/BL-900 */
-
-// 		background: #3366ff;
-// 		border-radius: 4px;
-// 	}
-// }
-
-// .searchbar-focus {
-// 	border-color: #78727f;
-// }
-
-/*******************************************************************************************
- * Input Style by pts
- * 디자인 시스템에 맞게 코드 이동, 파일생성 해주세요.
- **/
-
 /*******************************************************************
- * Single Input 재 정의.
- * input에 직접 클래스를 부여했을 때와
- * input을 감싼 div에 클래스를 부여했을 때 상황이 다른 점을 감안해서
- * input.cic-input-default 와 div.cic-input-default 로 분리.
- *
- * mixin의 프로퍼티는 div가 read-only로 인식되는 점이 있어서
- * 오버라이딩 없이 유동적으로 변경할 수 있도록 변경함.
+	* Input 컴포넌트 재작업.
+	* mixin의 프로퍼티는 div가 read-only로 인식되는 점이 있어서
+	* 오버라이딩 없이 유동적으로 변경할 수 있도록 변경함.
  *******************************************************************/
 
 /***********************************************************
-   * input에 디폴트로 적용되는 @mixin과 default 클래스
-	 * 클래스명은 input이지만 input을 감싸고 있는 div에 주는 클래스임!!
-   **********************************************************/
+	* input에 디폴트로 적용되는 @mixin과 default 클래스
+	* 클래스명은 input이지만 input을 감싸고 있는 div에 주는 클래스임!!
+	******************************************************************/
 
-@mixin cic-input-default {
+@mixin input-default-styling {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -138,8 +55,8 @@
 
 	.separate {
 		border: 0.5px solid var(--gray-scale-08);
-		height: 18px;
-		margin-right: 0.5rem;
+		height: 1.5rem;
+		margin-right: 1rem;
 	}
 
 	input[type='number']::-webkit-outer-spin-button,
@@ -189,16 +106,16 @@
 }
 
 .cic-input-default {
-	@include cic-input-default;
+	@include input-default-styling;
 }
 
 .cic-input-focus {
-	@include cic-input-default;
+	@include input-default-styling;
 	border-color: var(--gray-scale-08);
 }
 
 .cic-input-read-only {
-	@include cic-input-default;
+	@include input-default-styling;
 	background-color: var(--gray-scale-05);
 	&:hover {
 		border-color: transparent;
@@ -209,13 +126,26 @@
 	}
 }
 
+// success와 error에 read-only가 붙을 때 .cic-input-read-only의 focus-within에 border-color: transparent 가 적용되는 부분을 방지
+.cic-input-success.cic-input-read-only {
+	&:focus-within {
+		border-color: var(--suc-main);
+	}
+}
+
+.cic-input-error.cic-input-read-only {
+	&:focus-within {
+		border-color: var(--danger-main);
+	}
+}
+
 /***********************************************************
    * 성공(success) 클래스(class)
 	 * input을 감싸는 div에 success에 해당하는 기본적인 스타일링을 지정함.
    **********************************************************/
 
 @mixin cic-input-success {
-	@include cic-input-default;
+	@include input-default-styling;
 	border-color: var(--suc-main);
 	background-color: var(--suc-bg);
 	color: var(--suc-main);
@@ -255,7 +185,7 @@ div.cic-input-success {
    **********************************************************/
 
 @mixin cic-input-error {
-	@include cic-input-default;
+	@include input-default-styling;
 	border-color: var(--danger-main);
 	background-color: var(--danger-bg);
 	color: var(--danger-main);

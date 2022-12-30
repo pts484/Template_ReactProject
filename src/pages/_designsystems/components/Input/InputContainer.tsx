@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-declare interface Container {
+declare interface CONTAINER {
 	children: JSX.Element | JSX.Element[];
 	// children: JSX.Element;
 	className?: string;
@@ -10,7 +10,7 @@ declare interface Container {
 	error?: boolean;
 }
 
-const InputContainer = (props: Container): JSX.Element => {
+const InputContainer = (props: CONTAINER): JSX.Element => {
 	const { className, readOnly, focus, success, error, children } = props;
 	return (
 		<div

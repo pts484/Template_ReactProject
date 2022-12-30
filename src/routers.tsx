@@ -21,7 +21,6 @@ import Main from './pages/Main';
 
 const Routers = (): JSX.Element => {
 	const location = useLocation();
-	console.log(location);
 
 	return (
 		// <TransitionGroup className="transition-group">
