@@ -94,7 +94,6 @@ const App = (): JSX.Element => {
 				<nav className={cx(CSS.gnb, 'container')}>
 					<Link to="/">main</Link>
 					<Link to="/designsystem">Design System</Link>
-					<Link to="/suho">Design System02</Link>
 				</nav>
 			</header>
 			<Routers />

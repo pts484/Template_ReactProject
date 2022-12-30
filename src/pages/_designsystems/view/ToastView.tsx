@@ -1,4 +1,6 @@
 import React from 'react';
+import ICONS from '@/assets/icons';
+
 /**
  * 해당 컴포넌트는 디자인시스템 페이지에서 '뷰' 용도로 사용되는 컴포넌트입니다.
  * 따라서 실질적인 운용방법 및 설정 src/include/index.ts 를 참고 해 주세요.
@@ -8,6 +10,7 @@ import React from 'react';
  * 2) 실패 시 토스트 window.toastr.error('TEXT')
  * 3) 정보전달 또는 안내사항 window.toastr.info('TEXT')
  */
+
 const ToastView = (): JSX.Element => {
 	return (
 		<>
@@ -44,19 +47,66 @@ const ToastView = (): JSX.Element => {
 				<br />
 				<hr />
 				<br />
-				{/* toastr - header */}
-				<ul className="row mb-3">
-					<li className="col-1">toast</li>
-					<li className="col text-start">
-						<span className="subhead-02">info</span>
-					</li>
-				</ul>
 
-				{/* toast - info */}
+				{/* 안내 토스트 */}
+				<div className="row my-3">
+					<span className="col">Design System Toast</span>
+				</div>
+				<div className="row mb-3 text-start">
+					<span className="subhead-02">info</span>
+				</div>
+				<div id="" className="" role="alert" aria-live="assertive" aria-atomic="true">
+					<div className="cic-toast-body">
+						<div className="cic-toast-detail">
+							<ICONS.toastInfo />
+							<div>
+								<div className="body-02 text-white">안내 토스트</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br />
+				{/* 성공 토스트 */}
+				<div className="row mb-3 text-start">
+					<span className="subhead-02">success</span>
+				</div>
+				<div id="" className="" role="alert" aria-live="assertive" aria-atomic="true">
+					<div className="cic-toast-body">
+						<div className="cic-toast-detail">
+							<ICONS.toastSuccess />
+							<div>
+								<div className="body-02 text-white">성공 토스트</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br />
+				{/* 실패 토스트 */}
+				<div className="row mb-3 text-start">
+					<span className="subhead-02">error</span>
+				</div>
+				<div id="" className="" role="alert" aria-live="assertive" aria-atomic="true">
+					<div className="cic-toast-body">
+						<div className="cic-toast-detail">
+							<ICONS.toastError />
+							<div>
+								<div className="body-02 text-white">실패 토스트</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br />
+				<br />
+				{/* Channel-iN toastr - header */}
+				<div className="row my-3">
+					<span className="col">Channel-iN Design</span>
+				</div>
+				<div className="row mb-3 text-start">
+					<span className="subhead-02">info</span>
+				</div>
+
+				{/* Channel-iN toast - info */}
 				<ul className="row mb-3">
-					<li className="col-1 d-flex justify-content-center align-items-center text-center">
-						{/* 여백의 미 **/}
-					</li>
 					<li className="col">
 						<div id="toast-container" style={{ position: 'relative' }}>
 							<div className="toast toast-info" style={{ display: 'block', width: '100%' }}>
@@ -66,17 +116,11 @@ const ToastView = (): JSX.Element => {
 					</li>
 				</ul>
 
-				{/* toast - success */}
+				{/* Channel-iN toast - success */}
+				<div className="row mb-3 text-start">
+					<span className="subhead-02">success</span>
+				</div>
 				<ul className="row mb-3">
-					<li className="col-1">{/* 여백의 미 **/}</li>
-					<li className="col text-start">
-						<span className="subhead-02">success</span>
-					</li>
-				</ul>
-				<ul className="row mb-3">
-					<li className="col-1 d-flex justify-content-center align-items-center text-center">
-						{/* 여백의 미 **/}
-					</li>
 					<li className="col">
 						<div id="toast-container" style={{ position: 'relative' }}>
 							<div className="toast toast-success" style={{ display: 'block', width: '100%' }}>
@@ -86,17 +130,11 @@ const ToastView = (): JSX.Element => {
 					</li>
 				</ul>
 
-				{/* toast - error */}
+				{/* Channel-iN toast - error */}
+				<div className="row mb-3 text-start">
+					<span className="subhead-02">error</span>
+				</div>
 				<ul className="row mb-3">
-					<li className="col-1">{/* 여백의 미 **/}</li>
-					<li className="col text-start">
-						<span className="subhead-02">error</span>
-					</li>
-				</ul>
-				<ul className="row mb-3">
-					<li className="col-1 d-flex justify-content-center align-items-center text-center">
-						{/* 여백의 미 **/}
-					</li>
 					<li className="col">
 						<div id="toast-container" style={{ position: 'relative' }}>
 							<div className="toast toast-error" style={{ display: 'block', width: '100%' }}>

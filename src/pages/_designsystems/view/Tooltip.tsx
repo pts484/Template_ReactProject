@@ -1,5 +1,5 @@
 import React from 'react';
-import Tooltip from '@/pages/_designsystems02/components/Tooltip/index';
+import Tooltip from '@/pages/_designsystems/components/Tooltip/index';
 
 const DesignSystemTooltip: React.FC = (): JSX.Element => {
 	return (
