@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import DesignSystem from './pages/_designsystems/index';
-import Main from './pages/Main';
+import Main from './pages/Main/Main';
 
 const Routers = (): JSX.Element => {
 	const location = useLocation();

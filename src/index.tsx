@@ -7,20 +7,17 @@ import { Provider } from 'react-redux';
 import { Store } from '@redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
 import { BrowserRouter } from 'react-router-dom';
-import { DarkModeProvider } from './styles/Theme/DarkModeContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
 	<React.StrictMode>
-		<DarkModeProvider>
-			<Provider store={Store}>
-				{/* <PersistGate loading={null} persistor={persistor}> */}
-				<BrowserRouter>
-					<App />
-					{/* </PersistGate> */}
-				</BrowserRouter>
-			</Provider>
-		</DarkModeProvider>
+		<Provider store={Store}>
+			{/* <PersistGate loading={null} persistor={persistor}> */}
+			<BrowserRouter>
+				<App />
+				{/* </PersistGate> */}
+			</BrowserRouter>
+		</Provider>
 	</React.StrictMode>,
 );
 

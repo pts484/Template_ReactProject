@@ -9,6 +9,7 @@ import ICONS from '@/assets/icons';
  * 1) 성공 시 토스트 window.toastr.success('TEXT')
  * 2) 실패 시 토스트 window.toastr.error('TEXT')
  * 3) 정보전달 또는 안내사항 window.toastr.info('TEXT')
+ *
  */
 
 const ToastView = (): JSX.Element => {
@@ -22,8 +23,15 @@ const ToastView = (): JSX.Element => {
 					<br />﹗ 현재 페이지에서 보여지는 디자인은 오직{' '}
 					<code style={{ color: 'red', fontWeight: 'bold' }}>&#39;시각적인 표현&#39;</code> 만을 위한 목적으로
 					리스트업 했기 때문에 실질적인 운용은 아래와 같이 진행 해야 합니다.
-					<br />
-					﹗ Toast 세부설정은 include/index.ts 를 참고 해 주세요!
+					<br />﹗ Toast 세부설정은 include/index.ts 를 참고 해 주세요!{' '}
+					<a
+						style={{ color: 'blue', fontWeight: 'bold' }}
+						href="https://codeseven.github.io/toastr/demo.html"
+						target="_blank"
+						rel="noreferrer"
+					>
+						Toast Test
+					</a>
 					<br />
 					<br />
 					﹗ 기본 운용

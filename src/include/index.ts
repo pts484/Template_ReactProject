@@ -49,6 +49,7 @@ window.$ = $;
 // 사용법 : window.toastr
 window.toastr = toastr;
 // toastr 옵션 설정
+// preview https://codeseven.github.io/toastr/demo.html
 toastr.options = {
 	closeButton: false,
 	debug: false,

@@ -97,6 +97,7 @@ const App = (): JSX.Element => {
 				</nav>
 			</header>
 			<Routers />
+			<footer className="text-center my-5 py-2 bg-success">푸터</footer>
 		</div>
 	);
 };

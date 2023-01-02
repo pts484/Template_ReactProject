@@ -18,3 +18,7 @@
 section {
 	padding: 0 1rem;
 }
+
+body::-webkit-scrollbar {
+	display: none;
+}
