@@ -13,6 +13,7 @@ import InputView from './view/InputView';
 import SearchBarView from './view/SearchBarView';
 import MessageBoxView from './view/MessageBoxView';
 import ToastView from './view/ToastView';
+import Modal from './view/Modal';
 
 const DesignSystem = (): JSX.Element => {
 	return (
@@ -45,6 +46,11 @@ const DesignSystem = (): JSX.Element => {
 			<div className="mt-5 pb-5">
 				<div className="mt-5">
 					<ModalLayout />
+				</div>
+			</div>
+			<div className="mt-5 pb-5">
+				<div className="mt-5">
+					<Modal />
 				</div>
 			</div>
 			<br />
