@@ -13,6 +13,7 @@ import InputView from './view/InputView';
 import SearchBarView from './view/SearchBarView';
 import MessageBoxView from './view/MessageBoxView';
 import ToastView from './view/ToastView';
+import Modal from './view/Modal';
 import DropMenuView from './view/DropMenuView';
 
 const DesignSystem = (): JSX.Element => {
@@ -48,7 +49,7 @@ const DesignSystem = (): JSX.Element => {
 			<br />
 			<br />
 			<br />
-			<DropMenuView />
+			<Modal />
 			<br />
 			<br />
 			<br />
@@ -69,6 +70,11 @@ const DesignSystem = (): JSX.Element => {
 			<br />
 			<br />
 			<ToastView />
+			<br />
+			<br />
+			<br />
+			<br />
+			<DropMenuView />
 		</motion.div>
 	);
 };

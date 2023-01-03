@@ -3,6 +3,8 @@ import React from 'react';
 import LOGOS from '@/assets/logos';
 import ICONS from '@/assets/icons';
 
+import Modal from '@/pages/_designsystems/components/_TEST_Modal/Modal';
+
 const ModalLayout = () => (
 	<div className="container">
 		<h1>Modal Layout</h1>
@@ -68,6 +70,10 @@ const ModalLayout = () => (
 				</div>
 			</div>
 		</div>
+
+		<Modal id="aaa">
+			<span>닫혀라 들꺠</span>
+		</Modal>
 	</div>
 );
 export default ModalLayout;
