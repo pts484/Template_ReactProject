@@ -228,6 +228,11 @@ export default {
 	chin_mypage_accout_connect_sc_09: 'Wallet Address ',
 	chin_mypage_accout_connect_sc_10: 'Link Account',
 
+	/**
+	 * yeonji
+	 */
+	modal_tutorial_duration_close_text: 'hello',
+
 	chin_swap_modal_00: 'Swap Token',
 	chin_swap_modal_01: 'Provide',
 	chin_swap_modal_02: 'Balance',

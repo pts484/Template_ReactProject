@@ -227,6 +227,11 @@ export default {
 	chin_mypage_accout_connect_sc_10: '계정 연동',
 
 	/**
+	 * yeonji
+	 */
+	modal_tutorial_duration_close_text: '일 동안 보지 않기',
+
+	/**
 	 * 채널 iN - 03_swap_modal
 	 */
 	chin_swap_modal_00: '토큰 교환',
