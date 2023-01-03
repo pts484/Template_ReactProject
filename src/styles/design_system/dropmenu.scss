@@ -1,0 +1,101 @@
+/*******************************************************************
+	* dropmenu 컴포넌트 재작업.
+	* 탈 부트스트랩의 일환 중 하나.
+	* 오버라이딩 작업 중 탈 부트스트랩 방향으로 노선을 틀어서,
+	* 레거시 property가 있을 수 있음.
+ *******************************************************************/
+
+/***********************************************************
+	* div에 디폴트로 적용되는 @mixin
+	* 클래스명은 dropmenu이지만 button과  감싸고 있는 div에 주는 클래스임!!
+	******************************************************************/
+
+@mixin dropmenu-default-styling($border) {
+	background: #fff;
+	border: $border;
+	border-radius: 0.5rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0.5rem 1rem;
+	font-weight: 600;
+	font-size: 1rem;
+	line-height: 1.375rem;
+	letter-spacing: -0.6px;
+	color: var(--light-text-02);
+}
+
+// dropmenu를 감싸고 있는 div property
+.cic-dropmenu-wrap {
+	display: inline-block;
+	position: relative;
+}
+
+// 클릭 시, 드롭메뉴 오픈.
+.cic-dropmenu-wrap.show > ul {
+	display: block;
+}
+
+.cic-dropmenu-default {
+	@include dropmenu-default-styling(1px solid var(--gray-scale-06));
+}
+
+.cic-dropmenu-contents {
+	// ul
+	display: none;
+	position: absolute;
+	margin-top: 0.5rem;
+	padding: 0.5rem;
+	max-width: 140px;
+	min-width: fit-content;
+	width: 250%;
+	left: 50%;
+	transform: translateX(-50%);
+	border: none;
+	filter: drop-shadow(0px 0px 12px rgba(46, 12, 84, 0.15));
+	border-radius: 0.5rem;
+	background: #fff;
+}
+
+.cic-dropmenu-wrap.dropup > .cic-dropmenu-contents {
+	bottom: 120%;
+}
+
+.cic-dropmenu-content {
+	// li
+	display: flex;
+	align-items: center;
+	border-radius: 0.5rem;
+	font-size: 0.875rem;
+	font-weight: 600;
+	line-height: 1.25rem;
+	letter-spacing: -0.6px;
+	cursor: pointer;
+	transition: 0.3s;
+
+	&:hover {
+		background-color: var(--gray-scale-04);
+	}
+
+	> * {
+		display: block;
+		width: 100%;
+		text-align: left;
+		padding: 0.75rem 0.875rem;
+	}
+
+	// 자식요소로 button 받을 시 style 상속 안되는 문제 때문에 임시로 inherit 처리 함.
+
+	button {
+		border-radius: inherit;
+		color: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+		border: transparent;
+		background-color: inherit;
+	}
+}
+
+.cic-dropmenu-transparent {
+	@include dropmenu-default-styling(transparent);
+}

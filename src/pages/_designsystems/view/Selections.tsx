@@ -5,8 +5,6 @@ const Selections = () => (
 		<h1>Selections</h1>
 		<span className="subhead-long-03">토글, 라디오, 체크박스</span>
 		<br />
-		<span className="subhead-long-03"></span>
-		<br />
 		<br />
 		<hr />
 		<div className="row row-cols-1">

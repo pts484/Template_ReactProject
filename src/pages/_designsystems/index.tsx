@@ -13,6 +13,7 @@ import InputView from './view/InputView';
 import SearchBarView from './view/SearchBarView';
 import MessageBoxView from './view/MessageBoxView';
 import ToastView from './view/ToastView';
+import DropMenuView from './view/DropMenuView';
 
 const DesignSystem = (): JSX.Element => {
 	return (
@@ -22,31 +23,34 @@ const DesignSystem = (): JSX.Element => {
 			animate={{ opacity: 1 }}
 			transition={{ duration: 1 }}
 		>
-			<div className="mt-5 pb-5">
-				<div className="mt-5">
-					<Select />
-				</div>
-			</div>
-			<div className="mt-5 pb-5">
-				<div className="mt-5">
-					<Button />
-				</div>
-			</div>
-			<div className="mt-5 pb-5">
-				<div className="mt-5">
-					<Tooltip />
-				</div>
-			</div>
-			<div className="mt-5 pb-5">
-				<div className="mt-5">
-					<Selections />
-				</div>
-			</div>
-			<div className="mt-5 pb-5">
-				<div className="mt-5">
-					<ModalLayout />
-				</div>
-			</div>
+			<Select />
+			<br />
+			<br />
+			<br />
+			<br />
+			<Button />
+			<br />
+			<br />
+			<br />
+			<br />
+			<Tooltip />
+			<br />
+			<br />
+			<br />
+			<br />
+			<Selections />
+			<br />
+			<br />
+			<br />
+			<br />
+			<ModalLayout />
+			<br />
+			<br />
+			<br />
+			<br />
+			<DropMenuView />
+			<br />
+			<br />
 			<br />
 			<br />
 			<InputView />

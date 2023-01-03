@@ -21,7 +21,6 @@ const SelectBtn = () => (
 					{ icon: <LOGOS.klayImg />, name: 'KLAY', value: 'klay' },
 					{ icon: <LOGOS.perImg />, name: 'PER', value: 'per' },
 					{ icon: <LOGOS.ethereumImg />, name: 'ETH', value: 'ethereum' },
-					{ icon: <LOGOS.ethereumImg />, name: 'ETH', value: 'ethereum' },
 				]}
 			/>
 			<span>select-disabled</span>
@@ -30,7 +29,6 @@ const SelectBtn = () => (
 				selects={[
 					{ icon: <LOGOS.klayImg />, name: 'KLAY', value: 'klay' },
 					{ icon: <LOGOS.perImg />, name: 'PER', value: 'per' },
-					{ icon: <LOGOS.ethereumImg />, name: 'ETH', value: 'ethereum' },
 					{ icon: <LOGOS.ethereumImg />, name: 'ETH', value: 'ethereum' },
 				]}
 			/>
