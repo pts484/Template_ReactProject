@@ -22,7 +22,7 @@ const DesignSystem = (): JSX.Element => {
 			className="container"
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
-			transition={{ duration: 1 }}
+			transition={{ duration: 0.5 }}
 		>
 			<Select />
 			<br />
@@ -75,6 +75,10 @@ const DesignSystem = (): JSX.Element => {
 			<br />
 			<br />
 			<DropMenuView />
+			<br />
+			<br />
+			<br />
+			<br />
 		</motion.div>
 	);
 };

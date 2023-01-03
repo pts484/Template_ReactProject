@@ -19,51 +19,97 @@ const DropMenuView = (): JSX.Element => {
 				props로 <code style={{ color: '#4ebbf1', fontWeight: 'bold' }}>borderNone, dropup</code> 를 순서에
 				상관없이 전달 해 주면 됩니다. <br />
 				﹗리스트 추가 : <code style={{ color: '#33bba0', fontWeight: 'bold' }}>{`<DropMenu>`}</code> 에 props로{' '}
-				<code style={{ color: '#4ebbf1', fontWeight: 'bold' }}>type, onChange</code> 를 지정 후 변경 할 타입을
-				작성하거나 함수를 넣으시면 됩니다.
+				<code style={{ color: '#4ebbf1', fontWeight: 'bold' }}>contents</code> 를 받으며, 배열로
+				<code style={{ color: '#4ebbf1', fontWeight: 'bold' }}> content : </code>
+				<code style={{ color: '#33bba0', fontWeight: 'bold' }}> JSX.Element(ex : a, button)</code> 를 받게 되어
+				있습니다.
 			</p>
 			<br />
 			<hr />
-			<DropMenu
-				dropup
-				contents={[
-					{
-						content: (
-							<a href="https://www.naver.com" target="_blank" rel="noreferrer">
-								KlayMint
-							</a>
-						),
-					},
-					{
-						content: (
-							<a href="https://www.google.co.kr" target="_blank" rel="noreferrer">
-								PER PROJECT
-							</a>
-						),
-					},
-					{
-						content: (
-							<a href="https://www.google.co.kr" target="_blank" rel="noreferrer">
-								SUPER COMMUNITY
-							</a>
-						),
-					},
-				]}
-			>
-				Family Site
-			</DropMenu>
-			<DropMenu
-				contents={[
-					{
-						content: <button>한국어</button>,
-					},
-					{
-						content: <button>English</button>,
-					},
-				]}
-			>
-				<FontAwesomeIcon icon={faEarthAsia} />
-			</DropMenu>
+			{/* message box - header */}
+			<ul className="row mb-3">
+				<li className="col-1"></li>
+				<li className="col text-start">
+					<span className="subhead-02">default</span>
+				</li>
+				<li className="col text-start">
+					<span className="subhead-02">drop up</span>
+				</li>
+				<li className="col text-start">
+					<span className="subhead-02">border none</span>
+				</li>
+				<li className="col text-start">
+					<span className="subhead-02">{/* '여백의 미'**/}</span>
+				</li>
+			</ul>
+
+			{/* message box - default */}
+			<ul className="row mb-3">
+				<li className="col-1 d-flex justify-content-center align-items-center text-center">Drop menu</li>
+				<li className="col">
+					<DropMenu
+						contents={[
+							{
+								content: <button>한국어</button>,
+							},
+							{
+								content: <button>English</button>,
+							},
+						]}
+					>
+						<FontAwesomeIcon icon={faEarthAsia} />
+					</DropMenu>
+				</li>
+				<li className="col">
+					<DropMenu
+						dropup
+						contents={[
+							{
+								content: (
+									<a href="https://www.naver.com" target="_blank" rel="noreferrer">
+										KlayMint
+									</a>
+								),
+							},
+							{
+								content: (
+									<a href="https://www.google.co.kr" target="_blank" rel="noreferrer">
+										PER PROJECT
+									</a>
+								),
+							},
+							{
+								content: (
+									<a href="https://www.google.co.kr" target="_blank" rel="noreferrer">
+										SUPER COMMUNITY
+									</a>
+								),
+							},
+						]}
+					>
+						Family Site
+					</DropMenu>
+				</li>
+				<li className="col">
+					<DropMenu
+						borderNone
+						contents={[
+							{
+								content: <button>내 자산</button>,
+							},
+							{
+								content: <button>마이페이지</button>,
+							},
+							{
+								content: <button>지갑 연결 해제</button>,
+							},
+						]}
+					>
+						저는 여러분이 이걸 지갑 연결 버튼이라고 생각해 줬으면 좋겠어요
+					</DropMenu>
+				</li>
+				<li className="col">{/* '여백의 미'**/}</li>
+			</ul>
 		</div>
 	);
 };
