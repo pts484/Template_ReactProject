@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import cx from 'classnames';
 import { motion } from 'framer-motion';
 import Test from './Main.module.scss';
