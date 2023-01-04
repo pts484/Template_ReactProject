@@ -10,15 +10,15 @@ import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
-	<React.StrictMode>
-		<Provider store={Store}>
-			{/* <PersistGate loading={null} persistor={persistor}> */}
-			<BrowserRouter>
-				<App />
-				{/* </PersistGate> */}
-			</BrowserRouter>
-		</Provider>
-	</React.StrictMode>,
+	// <React.StrictMode>
+	<Provider store={Store}>
+		{/* <PersistGate loading={null} persistor={persistor}> */}
+		<BrowserRouter>
+			<App />
+			{/* </PersistGate> */}
+		</BrowserRouter>
+	</Provider>,
+	// </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function

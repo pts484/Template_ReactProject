@@ -1,0 +1,44 @@
+.modal-global-hide {
+	display: none !important;
+}
+
+.modal-global-show {
+	display: initial !important;
+}
+.global-model {
+	z-index: 1001;
+}
+.modal-global-default {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+.modal-global-backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-global-body {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 85vw;
+	max-width: 378px;
+	min-height: 15.625rem;
+	padding: 1.875rem;
+	background: #fff;
+	border-radius: 1rem;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.modal-global-footer {
+	margin-top: 2.5rem;
+}

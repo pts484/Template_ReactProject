@@ -95,7 +95,6 @@ const App = (): JSX.Element => {
 					<Link to="/">main</Link>
 					<Link to="/designsystem">Design System</Link>
 					<Link to="/yjpage">YJpage</Link>
-					<Link to="/event-modal">Event Modal</Link>
 				</nav>
 			</header>
 			<Routers />

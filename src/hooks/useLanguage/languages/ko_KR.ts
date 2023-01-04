@@ -229,7 +229,8 @@ export default {
 	/**
 	 * yeonji
 	 */
-	modal_tutorial_duration_close_text: '일 동안 보지 않기',
+	modal_tutorial_duration_close_text: '일 동안 그만보기',
+	modal_close_text: '닫기',
 
 	/**
 	 * 채널 iN - 03_swap_modal
