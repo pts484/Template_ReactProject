@@ -20,9 +20,12 @@ export const YJPage: React.FC<any> = (): JSX.Element => {
 					// handleSubmit={handleSubmit}
 				></ModalContainer>
 				<hr />
-				<h1>Modal</h1>
-				<span>버튼 클릭하면 나오게?</span>
-				<EventModal id="window" autoHideInterval={60 * 60 * 24 * 3} />
+				<EventModal
+					id="eventModal"
+					autoHideInterval={60 * 60 * 24 * 3}
+					link="www.naver.com"
+					img="https://picsum.photos/386/416"
+				/>
 			</div>
 		</div>
 	);
