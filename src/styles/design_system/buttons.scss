@@ -9,405 +9,139 @@
 }
 
 /** *************************************
- * filled Button Styles
+ * Button 공통 스타일링
  ************************************* **/
-.btn-filled-lg {
-	background-color: var(--brand-bl-900);
-	color: var(--white);
-	border-radius: $border-radius-large;
-	border: 1px solid var(--brand-bl-900);
+
+button[class|='btn'] {
+	display: inline-block;
+}
+
+@mixin button-styling($border, $bg, $color) {
+	border: $border;
+	background-color: $bg;
+	color: $color;
+}
+
+@mixin button-border-radius($border-radius) {
+	border-radius: $border-radius;
+}
+
+/** *************************************
+ * 클래스 중 사이즈를 제외한 스타일별 공통 스타일링 
+ * ex) button 태그에 'btn-filled- ' 가 붙은 클래스에만 적용
+ ************************************* **/
+
+button[class|='btn-disabled'] {
+	svg {
+		fill: var(--gray-scale-08); //$text-550;
+	}
+}
+
+/** *************************************
+ * 클래스 중 사이즈별 공통 스타일링 
+ * ex) button 태그에 'lg'로 끝나는 클래스에만 적용
+ ************************************* **/
+
+/** ********* 사이즈 별 너비, 높이, 패딩 적용. *********  **/
+
+button[class$='lg'] {
 	padding: 1.125rem 1.5rem; //18px 24px;
-	display: inline-block;
-	align-self: center;
-	@include subhead-03;
 }
 
-.btn-filled-md {
-	background-color: var(--brand-bl-900);
-	color: var(--white);
-	border-radius: $border-radius-large;
-	border: 1px solid var(--brand-bl-900);
+button[class$='md'] {
 	padding: 1rem 1.5rem; // 16px 24px;
-	// padding: 1rem 3.75rem;
-	display: inline-block;
-	align-self: center;
-	@include subhead-03;
 }
 
-.btn-filled-sm {
-	background-color: var(--brand-bl-900);
-	color: var(--white);
-	border-radius: $border-radius-small;
-	border: 1px solid var(--brand-bl-900);
+button[class$='sm'] {
 	padding: 0.75rem 1.5rem; //12px 24px
-	display: inline-block;
-	align-self: center;
-	@include subhead-02;
 }
 
-.btn-filled-xs {
-	background-color: var(--brand-bl-900);
-	color: var(--white);
-	border-radius: $border-radius-small;
-	border: 1px solid var(--brand-bl-900);
+button[class$='xs'] {
 	padding: 0.625rem 1rem; //10px 16px
-	display: inline-block;
-	align-self: center;
-	@include subhead-02;
 }
 
+button[class$='sqr'] {
+	padding: 0;
+	min-width: 2.5rem;
+	width: 2.5rem;
+	height: 2.5rem;
+}
+
+/** ********* 사이즈 별 font-weight,-size,line-height,letter-spacing, border radius 적용. *********  **/
+
+button[class$='lg'],
+button[class$='md'] {
+	@include subhead-03;
+	@include button-border-radius($border-radius-large);
+}
+
+button[class$='sm'],
+button[class$='xs'],
+button[class$='sqr'] {
+	@include subhead-02;
+	@include button-border-radius($border-radius-small);
+}
+
+/** ********* 색상별 border, background color, color 적용. *********  **/
+
+.btn-filled,
+.btn-filled-lg,
+.btn-filled-md,
+.btn-filled-sm,
+.btn-filled-xs,
 .btn-filled-sqr {
-	height: 2.5rem;
-	min-width: 2.5rem;
-	width: 2.5rem;
-	padding: 0;
-	line-height: normal;
-	background-color: var(--brand-bl-900);
-	border-radius: $border-radius-small;
-	border: 1px solid var(--brand-bl-900);
+	@include button-styling(1px solid var(--brand-bl-900), var(--brand-bl-900), var(--white));
 }
 
-/** *************************************
- * Border Line Button Styles
- ************************************* **/
-
-.btn-line-lg {
-	background-color: var(--white);
-	color: var(--brand-bl-900);
-	border-radius: $border-radius-large;
-	border: 1px solid var(--brand-bl-900);
-	padding: 1.125rem 1.5rem; //18px 24px;
-	display: inline-block;
-	align-self: center;
-	@include subhead-03;
-}
-
-.btn-line-md {
-	background-color: var(--white);
-	color: var(--brand-bl-900);
-	border-radius: $border-radius-large;
-	border: 1px solid var(--brand-bl-900);
-	padding: 1rem 1.5rem; // 16px 24px;
-	display: inline-block;
-	align-self: center;
-	@include subhead-03;
-}
-
-.btn-line-sm {
-	background-color: var(--white);
-	color: var(--brand-bl-900);
-	border-radius: $border-radius-small;
-	border: 1px solid var(--brand-bl-900);
-	padding: 0.75rem 1.5rem; //12px 24px
-	display: inline-block;
-	align-self: center;
-	@include subhead-03;
-}
-
-.btn-line-xs {
-	background: none;
-	color: var(--brand-bl-900);
-	border-radius: $border-radius-small;
-	border: 1px solid var(--brand-bl-900);
-	padding: 0.625rem 1rem; //10px 16px
-	display: inline-block;
-	align-self: center;
-	@include subhead-02;
-}
-
+.btn-line,
+.btn-line-lg,
+.btn-line-md,
+.btn-line-sm,
+.btn-line-xs,
 .btn-line-sqr {
-	height: 2.5rem;
-	min-width: 2.5rem;
-	width: 2.5rem;
-	padding: 0;
-	line-height: normal;
-	background-color: var(--white);
-	border-radius: $border-radius-small;
-	border: 1px solid var(--brand-bl-900);
+	@include button-styling(1px solid var(--brand-bl-900), var(--white), var(--brand-bl-900));
 }
 
-/** *************************************
- * Border line gray Color Button Styles
- ************************************* **/
-
-.btn-grayline-lg {
-	background-color: var(--white);
-	color: var(--gray-scale-15); //$gray-900;
-	border-radius: $border-radius-large;
-	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
-	padding: 1.125rem 1.5rem; //18px 24px;
-	height: 3.75rem;
-	display: flex;
-	align-self: center;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	@include subhead-03;
-}
-
-.btn-grayline-md {
-	background-color: var(--white);
-	color: var(--gray-scale-15); //$gray-900;
-	border-radius: $border-radius-large;
-	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
-	padding: 1rem 1.5rem; // 16px 24px;
-	height: 3.5rem;
-	display: flex;
-	align-self: center;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	@include subhead-03;
-}
-
-.btn-grayline-sm {
-	background-color: var(--white);
-	color: var(--gray-scale-15); //$gray-900;
-	border-radius: $border-radius-small;
-	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
-	padding: 0.75rem 1.5rem; //12px 24px
-	display: inline-block;
-	align-self: center;
-	@include subhead-03;
-}
-.btn-grayline-xs {
-	background-color: var(--white);
-	color: var(--gray-scale-15); //$gray-900;
-	border-radius: $border-radius-small;
-	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
-	padding: 0.625rem 1rem; //10px 16px
-	display: inline-block;
-	align-self: center;
-	@include subhead-02;
-}
-
-#btn-grayline-xs {
-	background-color: var(--white);
-	color: var(--gray-scale-15); //$gray-900;
-	border-radius: $border-radius-small;
-	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
-	padding: 0.44rem 1.16rem;
-	display: inline-block;
-	align-self: center;
-	@include subhead-02;
-}
-
-.btn-grayline-no-border {
-	background-color: var(--white);
-	color: var(--gray-scale-15); //$gray-900;
-	padding: 0.44rem 1.16rem;
-	border-radius: $border-radius-small;
-	border: 1px solid var(--white);
-	display: inline-block;
-	align-self: center;
-	@include subhead-02;
-	img {
-		width: 16px;
-	}
-}
-
+.btn-grayline,
+.btn-grayline-lg,
+.btn-grayline-md,
+.btn-grayline-sm,
+.btn-grayline-xs,
 .btn-grayline-sqr {
-	height: 2.5rem;
-	min-width: 2.5rem;
-	width: 2.5rem;
-	padding: 0;
-	line-height: normal;
-	background-color: var(--white);
-	border-radius: $border-radius-small;
-	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
+	@include button-styling(1px solid var(--gray-scale-06), var(--white), var(---gray-scale-15));
+	&:hover {
+		background-color: var(--gray-scale-02);
+	}
 }
 
-/** *************************************
- * Hover Button Styles
- ************************************* **/
-
-.btn-hover-lg {
-	background-color: var(--gray-scale-02); //$gray-50;
-	color: var(--gray-scale-15); //$gray-900;
-	border-radius: $border-radius-large;
-	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
-	padding: 1.125rem 1.5rem; //18px 24px;
-	display: inline-block;
-	align-self: center;
-	@include subhead-03;
-}
-
-.btn-hover-md {
-	background-color: var(--gray-scale-02); //$gray-50;
-	color: var(--gray-scale-15); //$gray-900;
-	border-radius: $border-radius-large;
-	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
-	padding: 1rem 1.5rem; // 16px 24px;
-	display: inline-block;
-	align-self: center;
-	@include subhead-03;
-}
-
-.btn-hover-sm {
-	background-color: var(--gray-scale-02); //$gray-50;
-	color: var(--gray-scale-15); //$gray-900;
-	border-radius: $border-radius-small;
-	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
-	padding: 0.75rem 1.5rem; //12px 24px
-	display: inline-block;
-	align-self: center;
-	@include subhead-03;
-}
-
-.btn-hover-xs {
-	background-color: var(--gray-scale-02); //$gray-50;
-	color: var(--gray-scale-15); //$gray-900;
-	border-radius: $border-radius-small;
-	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
-	padding: 0.625rem 1rem; //10px 16px
-	display: inline-block;
-	align-self: center;
-	@include subhead-02;
-}
-
+.btn-hover,
+.btn-hover-lg,
+.btn-hover-md,
+.btn-hover-sm,
+.btn-hover-xs,
 .btn-hover-sqr {
-	height: 2.5rem;
-	min-width: 2.5rem;
-	width: 2.5rem;
-	padding: 0;
-	line-height: normal;
-	background-color: var(--gray-scale-02); //$gray-50;
-	border-radius: $border-radius-small;
-	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
+	@include button-styling(1px solid var(--gray-scale-06), var(--gray-scale-02), var(---gray-scale-15));
 }
 
-/** *************************************
- * gray Color Button Styles
- ************************************* **/
-
-.btn-grayfilled-lg {
-	background-color: var(--gray-scale-03); //$gray-100
-	color: var(--gray-scale-15); //$gray-900;
-	border-radius: $border-radius-large;
-	border: 1px solid var(--gray-scale-03); //$gray-100
-	padding: 1.125rem 1.5rem; //18px 24px;
-	display: inline-block;
-	align-self: center;
-	@include subhead-03;
-}
-
-.btn-grayfilled-md {
-	background-color: var(--gray-scale-03); //$gray-100
-	color: var(--gray-scale-15); //$gray-900;
-	border-radius: $border-radius-large;
-	border: 1px solid var(--gray-scale-03); //$gray-100
-	padding: 1rem 1.5rem; // 16px 24px;
-	display: inline-block;
-	align-self: center;
-	@include subhead-03;
-}
-.btn-grayfilled-sm {
-	background-color: var(--gray-scale-03); //$gray-100
-	color: var(--gray-scale-15); //$gray-900;
-	border-radius: $border-radius-small;
-	border: 1px solid var(--gray-scale-03); //$gray-100
-	padding: 0.75rem 1.5rem; //12px 24px
-	display: inline-block;
-	align-self: center;
-	@include subhead-03;
-}
-.btn-grayfilled-xs {
-	background-color: var(--gray-scale-03); //$gray-100
-	color: var(--gray-scale-15); //$gray-900;
-	border-radius: $border-radius-small;
-	border: 1px solid var(--gray-scale-03); //$gray-100
-	padding: 0.625rem 1rem; //10px 16px
-	display: inline-block;
-	align-self: center;
-	@include subhead-02;
-}
-
+.btn-grayfilled,
+.btn-grayfilled-lg,
+.btn-grayfilled-md,
+.btn-grayfilled-sm,
+.btn-grayfilled-xs,
 .btn-grayfilled-sqr {
-	background-color: var(--gray-scale-03); //$gray-100
-	color: var(--gray-scale-15); //$gray-900;
-	border-radius: $border-radius-small;
-	border: 1px solid var(--gray-scale-03); //$gray-100
-	padding: 0;
-	height: 2.5rem;
-	min-width: 2.5rem;
-	width: 2.5rem;
-	display: inline-block;
-	align-self: center;
-}
-
-/** *************************************
- * Disabled Button Styles
- ************************************* **/
-
-.btn-disabled-lg {
-	background-color: var(--gray-scale-03); //$gray-100
-	color: var(--gray-scale-08); //var(--gray-scale-08); //$text-550;
-	border-radius: $border-radius-large;
-	border: 1px solid var(--gray-scale-03); //$gray-100
-	padding: 1.125rem 1.5rem; //18px 24px;
-	display: inline-block;
-	align-self: center;
-
-	svg {
-		fill: var(--gray-scale-08); //$text-550;
+	@include button-styling(1px solid var(--gray-scale-03), var(--gray-scale-03), var(---gray-scale-15));
+	&:hover {
+		border-color: var(--gray-scale-06);
 	}
 }
 
-.btn-disabled-md {
-	background-color: var(--gray-scale-03); //$gray-100
-	color: var(--gray-scale-08); //$text-550;
-	border-radius: $border-radius-large;
-	border: 1px solid var(--gray-scale-03); //$gray-100
-	padding: 1rem 1.5rem; // 16px 24px;
-	display: inline-block;
-	align-self: center;
-
-	svg {
-		fill: var(--gray-scale-08); //$text-550;
-	}
-}
-.btn-disabled-sm {
-	background-color: var(--gray-scale-03); //$gray-100
-	color: var(--gray-scale-08); //$text-550;
-	border-radius: $border-radius-small;
-	border: 1px solid var(--gray-scale-03); //$gray-100
-	padding: 0.75rem 1.5rem; //12px 24px
-	display: inline-block;
-	align-self: center;
-
-	svg {
-		fill: var(--gray-scale-08); //$text-550;
-	}
-}
+.btn-disabled,
+.btn-disabled-lg,
+.btn-disabled-md,
+.btn-disabled-sm,
+.btn-disabled-sqr,
 .btn-disabled-xs {
-	background-color: var(--gray-scale-03); //$gray-100
-	color: var(--gray-scale-08); //$text-550;
-	border-radius: $border-radius-small;
-	border: 1px solid var(--gray-scale-03); //$gray-100
-	padding: 0.625rem 1rem; //10px 16px
-	display: inline-block;
-	align-self: center;
-
-	// svg {
-	//     fill: var(--gray-scale-08); //$text-550;
-	// }
-}
-
-.btn-disabled-sqr {
-	background-color: var(--gray-scale-03); //$gray-100
-	color: var(--gray-scale-08); //$text-550;
-	border-radius: $border-radius-small;
-	border: 1px solid var(--gray-scale-03); //$gray-100
-	padding: 0;
-	height: 2.5rem;
-	min-width: 2.5rem;
-	width: 2.5rem;
-	display: inline-block;
-	align-self: center;
-
-	svg {
-		fill: var(--gray-scale-08); //$text-550;
-	}
+	@include button-styling(1px solid var(--gray-scale-03), var(--gray-scale-03), var(--gray-scale-08));
 }
 
 /** *************************************
@@ -418,54 +152,58 @@
 	align-items: center;
 	padding: 10px 16px;
 }
+
 /** *************************************
  * btn background none
  ************************************* **/
 .btn-bg-none {
-	background: none;
-	border: none;
+	background-color: transparent;
+	border: transparent;
 }
 
 /** *************************************
- * 조건부 키워드 스타일
+ * 속성 선택자 오류로 클래스에 패딩 쐐기 박기...
  ************************************* **/
-[class*='btn-filled'] {
-	// btn-filled-가 hover일때 color: inherit;
-	// &:hover {
-	//     color: inherit;
-	// }
+
+.btn-filled-lg,
+.btn-line-lg,
+.btn-grayline-lg,
+.btn-hover-lg,
+.btn-grayfilled-lg,
+.btn-disabled-lg {
+	@include subhead-03;
+	@include button-border-radius($border-radius-large);
+	padding: 1.125rem 1.5rem; //18px 24px;
 }
 
-[class*='btn-gray'] {
-	//btn-gray-... 가 hover일때 바뀌는  background-color 컬러
-	&:hover {
-		@include btn-hover;
-		& [class*='ic-']::before {
-			color: var(--gray-scale-15); //$gray-900;
-		}
-	}
+.btn-filled-md,
+.btn-line-md,
+.btn-grayline-md,
+.btn-hover-md,
+.btn-grayfilled-md,
+.btn-disabled-md {
+	@include subhead-03;
+	@include button-border-radius($border-radius-large);
+	padding: 1rem 1.5rem; // 16px 24px;
 }
 
-[class*='btn-disabled-'] {
-	//btn-disabled- 가 disabled일때 text 스타일
-	& {
-		@include subhead-02;
-		color: var(--gray-scale-08); //$text-550;
-	}
+.btn-filled-sm,
+.btn-line-sm,
+.btn-grayline-sm,
+.btn-hover-sm,
+.btn-grayfilled-sm,
+.btn-disabled-sm {
+	@include subhead-02;
+	@include button-border-radius($border-radius-small);
+	padding: 0.75rem 1.5rem; //12px 24px
 }
-
-[class*='btn-outline-'],
-.btn-link {
-	&.disabled,
-	&:disabled,
-	&[disabled],
-	fieldset[disabled] & {
-		&,
-		&:hover,
-		&:focus,
-		&.focus,
-		&:active,
-		&.active {
-		}
-	}
+.btn-filled-xs,
+.btn-line-xs,
+.btn-grayline-xs,
+.btn-hover-xs,
+.btn-grayfilled-xs,
+.btn-disabled-xs {
+	@include subhead-02;
+	@include button-border-radius($border-radius-small);
+	padding: 0.625rem 1rem; //10px 16px
 }

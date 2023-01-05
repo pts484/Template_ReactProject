@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 import Button from './view/Button';
 import Tooltip from './view/Tooltip';
-import Selections from './view/Selections';
+import SelectionsView from './view/SelectionsView';
 import ModalLayout from './view/ModalLayout';
-import Select from './view/Select';
+import SelectView from './view/SelectView';
 
 // 분리 작업한 import 내용
 
@@ -15,6 +15,7 @@ import MessageBoxView from './view/MessageBoxView';
 import ToastView from './view/ToastView';
 import ModalView from './view/ModalView';
 import DropMenuView from './view/DropMenuView';
+import ButtonView from './view/ButtonView';
 
 const DesignSystem = (): JSX.Element => {
 	return (
@@ -24,7 +25,7 @@ const DesignSystem = (): JSX.Element => {
 			animate={{ opacity: 1 }}
 			transition={{ duration: 1 }}
 		>
-			<Button />
+			<ButtonView />
 			<br />
 			<br />
 			<br />
@@ -54,14 +55,14 @@ const DesignSystem = (): JSX.Element => {
 			<br />
 			<br />
 			<br />
-			<Select />
+			<SelectView />
 			{/* <ModalLayout /> */}
 			<br />
 			<br />
 			<br />
 			<br />
-			<Selections />
-			<br />ㄴ
+			<SelectionsView />
+			<br />
 			<br />
 			<br />
 			<br />
