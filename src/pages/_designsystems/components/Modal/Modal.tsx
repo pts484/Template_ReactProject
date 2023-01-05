@@ -1,7 +1,10 @@
 import React from 'react';
 import cx from 'classnames';
 
-import './Modal.scss';
+import '@/styles/design_system/modal.scss';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faX } from '@fortawesome/free-solid-svg-icons';
 
 declare interface MODAL_LAYOUT extends React.HTMLAttributes<HTMLInputElement> {
 	id: string; // 모달이 가지는 고유 ID
@@ -84,8 +87,14 @@ const Modal = (props: MODAL_LAYOUT) => {
 	return (
 		<div id={id} className={cx(PARENT_MODAL_CLASS_NAME, 'modal-global-hide')}>
 			<div className={cx(backdrop ? 'modal-global-backdrop' : 'modal-global-default')}>
-				<div style={{ backgroundColor: 'white' }}>
+				<div className="modal-global-body">
 					{React.Children.map(children, (child) => React.cloneElement(child))}
+					<div className="modal-global-footer">
+						<button onClick={() => remoteModalCloser(id)} className="btn-grayline-md w-100 mb-2">
+							취소
+						</button>
+						<button className="btn-filled-md w-100">등록</button>
+					</div>
 				</div>
 			</div>
 		</div>
