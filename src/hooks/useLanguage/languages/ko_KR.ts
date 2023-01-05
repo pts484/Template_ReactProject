@@ -227,12 +227,6 @@ export default {
 	chin_mypage_accout_connect_sc_10: '계정 연동',
 
 	/**
-	 * yeonji
-	 */
-	modal_tutorial_duration_close_text: '일 동안 그만보기',
-	modal_close_text: '닫기',
-
-	/**
 	 * 채널 iN - 03_swap_modal
 	 */
 	chin_swap_modal_00: '토큰 교환',
@@ -325,6 +319,12 @@ export default {
 	chin_modal_profile_edit_00: '프로필 수정',
 	chin_modal_profile_edit_01: '사용자명',
 	chin_modal_profile_edit_02: '업데이트',
+
+	/**
+	 * 채널 iN - Event Modal
+	 */
+	chin_event_modal_tutorial_duration_close: '일 동안 그만보기',
+	chin_event_modal_close: '닫기',
 
 	/**
 	 * 채널 iN - Modal -> Guide Of Use

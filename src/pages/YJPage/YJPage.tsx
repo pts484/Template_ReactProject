@@ -9,7 +9,7 @@ export const YJPage: React.FC<any> = (): JSX.Element => {
 				<span>????</span>
 				<hr />
 				<EventModal
-					showNone
+					// showNone
 					id="eventModal"
 					autoHideInterval={60 * 60 * 24 * 3} // 초 분 시 일
 					link="https://www.naver.com/"

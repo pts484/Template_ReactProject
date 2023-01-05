@@ -1,11 +1,9 @@
 import { useLanguages } from '@/hooks/useLanguage/useLanguages.hook';
-import React, { useEffect, useState } from 'react';
+import React, { CSSProperties, useEffect, useState, useRef } from 'react';
 import { useSelector } from 'react-redux';
-import _, { divide } from 'lodash';
 import cx from 'classnames';
 
 export function timeUnitAt(sec: number, unit = '') {
-	// const Lang = useLanguages();
 	const seconds = sec;
 	if (seconds < 60) return `${Math.floor(seconds)} ${unit}`;
 	const minutes = seconds / 60;
@@ -22,44 +20,16 @@ export function timeUnitAt(sec: number, unit = '') {
 	return `${Math.floor(years)} ${unit}`;
 }
 
-/**
- * POPUP Widzard **************************************************************************
- * @param props
- */
-
-declare interface EVENTMODAL {
+declare interface EVENT_MODAL {
 	id: string; // 모달이 가지는 고유 ID, localStorage key 이름
 	autoHideInterval: number;
-	link: string;
+	link?: string;
 	img: string;
-	// showNone?: boolean;
+	showNone?: boolean;
 }
 
 const PARENT_MODAL_CLASS_NAME = 'global-model';
 
-// const remoteWizzardCloser = (id: string, callback = () => {}) => {
-// 	if (callback) callback();
-
-// 	const _instanceBtn = document.createElement('button');
-// 	document.body.appendChild(_instanceBtn);
-// 	_instanceBtn.setAttribute('type', 'button');
-// 	_instanceBtn.setAttribute('data-bs-dismiss', 'modal');
-// 	_instanceBtn.setAttribute('data-bs-target', '#' + id);
-// 	_instanceBtn.click();
-// 	document.body.removeChild(_instanceBtn);
-
-// 	const _backlayer = document.getElementsByClassName('modal-backdrop');
-// 	if (_.size(_backlayer) > 0) {
-// 		_.forEach(_backlayer, (el, i) => {
-// 			el.remove();
-// 		});
-// 	}
-// };
-
-/**
- * @param id // 닫으려는 모달 element id (문자열이 정확해야됨)
- * @param beforeClose //기존에 열려있는 모달을 모두 닫을지 여부 (기본값 : true 모두 닫음)
- */
 export const remoteModalCloser = (id: string, beforeClose: boolean = true) => {
 	const _modalElement = document.getElementById(id);
 	const _toggleStr = _modalElement?.getAttribute('class') ?? '';
@@ -87,30 +57,28 @@ const remoteModalCloseAll = (gModalClassName?: string) => {
 	}
 };
 
-const EventModal: React.FC<any> = (props: EVENTMODAL): JSX.Element => {
+const EventModal: React.FC<any> = (props: EVENT_MODAL): JSX.Element => {
+	const outsideRef = useRef<HTMLAnchorElement>(null);
 	const Lang = useLanguages();
 	const { language } = useSelector((store: RootState) => store.GlobalStatus);
-	const closeTime = window.localStorage.getItem(props.id); // useState 써도 되는거??
-	const { id, autoHideInterval, link, img } = props;
-
-	// const { autoHideInterval, ...divProps } = props;
+	const [closeTime, setCloseTime] = useState(window.localStorage.getItem(props.id));
+	const { id, autoHideInterval, link, img, showNone } = props;
 
 	useEffect(() => {
 		if (closeTime) {
 			// localStorage의 id가 있을 때 로직
 			const endData = closeTime; // localStorage의 id == 끝나는 날
 			const storageRemoveFlag = !(+new Date() - Number(endData) < 0); // 현재 날짜에서 - 끝나는 날 했는데 0보다 크면 true
-			if (storageRemoveFlag) window.localStorage.removeItem(id); // true일 경우 localStorage 지움
+			if (storageRemoveFlag) {
+				// true일 경우 localStorage 지움
+				window.localStorage.removeItem(id);
+				setCloseTime(''); // 이걸 안넣으면 새고 2번해야지만 팝업이 다시 뜸... 왜?
+			}
 		}
 		console.log('버튼 누른 시간 : ', closeTime);
 		console.log('현재 시간 : ', +new Date()); // + 안붙이면 Thu Jan 05 2023 11:41:45 GMT+0900 (한국 표준시) 일케 나옴. 붙이면 현재시간을 millisecond로 가져올 수 있음
 		console.log('시간 차 : ', +new Date() - Number(closeTime));
 	}, []);
-
-	/**
-	 * 몇일동안 보지 않기
-	 * @param interval (sec)   0 이면 무제한
-	 */
 
 	const setAutoHideInterval = (flag: boolean, close: boolean) => {
 		if (!flag) {
@@ -119,32 +87,78 @@ const EventModal: React.FC<any> = (props: EVENTMODAL): JSX.Element => {
 		}
 
 		window.localStorage.setItem(id, JSON.stringify(+new Date() + autoHideInterval * 1000)); // millisecond 기준이니까 1000을 곱해줌
-		remoteModalCloser(id);
-		// close && remoteWizzardCloser(props.id);
+		close && remoteModalCloser(id);
+	};
+
+	// const [motion, setMotion] = useState(false);
+	// const modalMotion = () => {
+	// 	setMotion(true);
+	// 	const box = document.querySelector('.event-modal-img-box') as HTMLElement;
+	// 	if (box != null) {
+	// 		if (motion) {
+	// 			box.style.animation = 'motion 1s';
+	// 			setMotion(false);
+	// 		}
+	// 	}
+	// };
+
+	const modalMotion = (): void => {
+		if (!outsideRef.current) return undefined;
+
+		outsideRef.current.classList;
+
+		// const box = document.querySelector('.motion') as HTMLElement;
+		// const modalClass = box?.getAttribute('class') ?? '';
+
+		outsideRef.current.classList.add('modal-motion');
+		setTimeout(() => {
+			outsideRef?.current?.classList.remove('modal-motion');
+		}, 1000);
+
+		// if (modalClass.includes('modal-motion')) {
+		// 	box?.classList.remove('modal-motion');
+		// } else {
+		// 	box?.classList.add('modal-motion');
+		// }
 	};
 
 	return (
-		<>
-			<div className={cx(PARENT_MODAL_CLASS_NAME, closeTime ? 'modal-global-hide' : 'modal-global-show')}>
-				<div className="event-modal">
-					<div className="event-modal-content">
-						<a href={link} target="_blank" rel="noopener noreferrer" className="event-modal-img-box">
-							<img src={img} alt="" />
-						</a>
-						<div className="close-set-interval-box event-modal-footer">
-							<button className="btn" onClick={(e) => setAutoHideInterval(true, true)}>
-								{language !== 'en-US'
-									? `${timeUnitAt(autoHideInterval)} ${Lang.modal_tutorial_duration_close_text} `
-									: `${Lang.modal_tutorial_duration_close_text} ${timeUnitAt(autoHideInterval)}`}
-							</button>
-							<button className="btn" onClick={() => remoteModalCloser(id)}>
-								{Lang.modal_close_text}
-							</button>
-						</div>
-					</div>
+		<div
+			className={cx(
+				PARENT_MODAL_CLASS_NAME,
+				'event-modal',
+				closeTime || showNone ? 'modal-global-hide' : 'modal-global-show',
+			)}
+			onClick={modalMotion}
+		>
+			<div
+				className="event-modal-content"
+				onClick={(e) => {
+					e.stopPropagation();
+				}}
+			>
+				<a
+					ref={outsideRef}
+					href={link}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="motion event-modal-img-box"
+				>
+					<img src={img} alt="popup image" />
+				</a>
+				<div className="close-set-interval-box event-modal-footer">
+					<button className="btn" onClick={(e) => setAutoHideInterval(true, true)}>
+						{language !== 'en-US'
+							? `${timeUnitAt(autoHideInterval)} ${Lang.chin_event_modal_tutorial_duration_close} `
+							: `${Lang.chin_event_modal_tutorial_duration_close} ${timeUnitAt(autoHideInterval)} day`}
+					</button>
+					|
+					<button className="btn" onClick={() => remoteModalCloser(id)}>
+						{language !== 'en-US' ? `${Lang.chin_event_modal_close}` : `${Lang.chin_event_modal_close}`}
+					</button>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 

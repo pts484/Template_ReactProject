@@ -228,11 +228,6 @@ export default {
 	chin_mypage_accout_connect_sc_09: 'Wallet Address ',
 	chin_mypage_accout_connect_sc_10: 'Link Account',
 
-	/**
-	 * yeonji
-	 */
-	modal_tutorial_duration_close_text: 'hello',
-
 	chin_swap_modal_00: 'Swap Token',
 	chin_swap_modal_01: 'Provide',
 	chin_swap_modal_02: 'Balance',
@@ -329,6 +324,12 @@ export default {
 	chin_modal_profile_edit_00: 'Edit Profile',
 	chin_modal_profile_edit_01: 'Username',
 	chin_modal_profile_edit_02: 'Update',
+
+	/**
+	 * 채널 iN - Event Modal
+	 */
+	chin_event_modal_tutorial_duration_close: 'Do not show for the next',
+	chin_event_modal_close: 'close',
 
 	/**
 	 * 채널 iN - Modal -> Guide Of Use
