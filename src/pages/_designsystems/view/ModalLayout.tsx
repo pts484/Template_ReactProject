@@ -3,7 +3,7 @@ import React from 'react';
 import LOGOS from '@/assets/logos';
 import ICONS from '@/assets/icons';
 
-import Modal from '@/pages/_designsystems/components/_TEST_Modal/Modal';
+import Modal from '@/pages/_designsystems/components/Modal/Modal';
 
 const ModalLayout = () => (
 	<div className="container">

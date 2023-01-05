@@ -3,7 +3,7 @@ import Modal, {
 	remoteModalOpener,
 	remoteModalCloser,
 	remoteModalToggler,
-} from '@/pages/_designsystems/components/_TEST_Modal/Modal';
+} from '@/pages/_designsystems/components/Modal/Modal';
 
 const DesignSystemTooltip: React.FC = (): JSX.Element => {
 	const idModal1 = 'sample-modals-1';
@@ -33,9 +33,9 @@ const DesignSystemTooltip: React.FC = (): JSX.Element => {
 
 			<button onClick={() => remoteModalOpener(idModal2, false)}>모달2만 열기</button>
 			<button onClick={() => remoteModalCloser(idModal2, false)}>모달2만 닫기</button>
-			<button onClick={() => remoteModalToggler(idModal2, false)}>모달2만 토글</button>
+			<button onClick={() => remoteModalToggler(idModal2, false)}>모달2만 토글</button> */}
 
-			<br /> */}
+			<br />
 			<hr />
 			<button onClick={() => remoteModalOpener(idModal1)} className="btn-line-md me-2">
 				backdrop 없는 모달

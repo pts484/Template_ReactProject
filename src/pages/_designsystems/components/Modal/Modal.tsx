@@ -1,7 +1,10 @@
 import React from 'react';
 import cx from 'classnames';
 
-import './Modal.scss';
+import '@/styles/design_system/modal.scss';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faX } from '@fortawesome/free-solid-svg-icons';
 
 declare interface MODAL_LAYOUT extends React.HTMLAttributes<HTMLInputElement> {
 	id: string; // 모달이 가지는 고유 ID
