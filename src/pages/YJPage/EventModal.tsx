@@ -1,5 +1,5 @@
 import { useLanguages } from '@/hooks/useLanguage/useLanguages.hook';
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import _, { divide } from 'lodash';
 import cx from 'classnames';
@@ -27,11 +27,12 @@ export function timeUnitAt(sec: number, unit = '') {
  * @param props
  */
 
-declare interface WizzardParams {
+declare interface EVENTMODAL {
 	id: string; // 모달이 가지는 고유 ID, localStorage key 이름
 	autoHideInterval: number;
 	link: string;
 	img: string;
+	// showNone?: boolean;
 }
 
 const PARENT_MODAL_CLASS_NAME = 'global-model';
@@ -86,22 +87,23 @@ const remoteModalCloseAll = (gModalClassName?: string) => {
 	}
 };
 
-const EventModal: React.FC<any> = (props: WizzardParams): JSX.Element => {
+const EventModal: React.FC<any> = (props: EVENTMODAL): JSX.Element => {
 	const Lang = useLanguages();
 	const { language } = useSelector((store: RootState) => store.GlobalStatus);
 	const closeTime = window.localStorage.getItem(props.id); // useState 써도 되는거??
+	const { id, autoHideInterval, link, img } = props;
 
-	const { autoHideInterval, ...divProps } = props;
+	// const { autoHideInterval, ...divProps } = props;
 
 	useEffect(() => {
 		if (closeTime) {
 			// localStorage의 id가 있을 때 로직
 			const endData = closeTime; // localStorage의 id == 끝나는 날
 			const storageRemoveFlag = !(+new Date() - Number(endData) < 0); // 현재 날짜에서 - 끝나는 날 했는데 0보다 크면 true
-			if (storageRemoveFlag) window.localStorage.removeItem(props.id); // true일 경우 localStorage 지움
+			if (storageRemoveFlag) window.localStorage.removeItem(id); // true일 경우 localStorage 지움
 		}
 		console.log('버튼 누른 시간 : ', closeTime);
-		console.log('현재 시간 : ', +new Date());
+		console.log('현재 시간 : ', +new Date()); // + 안붙이면 Thu Jan 05 2023 11:41:45 GMT+0900 (한국 표준시) 일케 나옴. 붙이면 현재시간을 millisecond로 가져올 수 있음
 		console.log('시간 차 : ', +new Date() - Number(closeTime));
 	}, []);
 
@@ -112,49 +114,35 @@ const EventModal: React.FC<any> = (props: WizzardParams): JSX.Element => {
 
 	const setAutoHideInterval = (flag: boolean, close: boolean) => {
 		if (!flag) {
-			window.localStorage.removeItem(props.id);
+			window.localStorage.removeItem(id);
 			return;
 		}
 
-		window.localStorage.setItem(props.id, JSON.stringify(+new Date() + props.autoHideInterval * 1000));
-		remoteModalCloser(props.id);
+		window.localStorage.setItem(id, JSON.stringify(+new Date() + autoHideInterval * 1000)); // millisecond 기준이니까 1000을 곱해줌
+		remoteModalCloser(id);
 		// close && remoteWizzardCloser(props.id);
 	};
 
 	return (
 		<>
-			<div {...divProps} className={cx(PARENT_MODAL_CLASS_NAME, 'modal-global-show')}>
-				{closeTime ? (
-					//
-					<p>아직 modal 닫혀있는 기간임</p>
-				) : (
-					<div className="event-modal">
-						<div className="event-modal-content">
-							<a
-								href={props.link}
-								target="_blank"
-								rel="noopener noreferrer"
-								className="event-modal-img-box"
-							>
-								<img src={props.img} alt="" />
-							</a>
-							<div className="close-set-interval-box event-modal-footer">
-								<button className="btn" onClick={(e) => setAutoHideInterval(true, true)}>
-									{language !== 'en-US'
-										? `${timeUnitAt(props.autoHideInterval)} ${
-												Lang.modal_tutorial_duration_close_text
-										  } `
-										: `${Lang.modal_tutorial_duration_close_text} ${timeUnitAt(
-												props.autoHideInterval,
-										  )}`}
-								</button>
-								<button className="btn" onClick={() => remoteModalCloser(props.id)}>
-									{Lang.modal_close_text}
-								</button>
-							</div>
+			<div className={cx(PARENT_MODAL_CLASS_NAME, closeTime ? 'modal-global-hide' : 'modal-global-show')}>
+				<div className="event-modal">
+					<div className="event-modal-content">
+						<a href={link} target="_blank" rel="noopener noreferrer" className="event-modal-img-box">
+							<img src={img} alt="" />
+						</a>
+						<div className="close-set-interval-box event-modal-footer">
+							<button className="btn" onClick={(e) => setAutoHideInterval(true, true)}>
+								{language !== 'en-US'
+									? `${timeUnitAt(autoHideInterval)} ${Lang.modal_tutorial_duration_close_text} `
+									: `${Lang.modal_tutorial_duration_close_text} ${timeUnitAt(autoHideInterval)}`}
+							</button>
+							<button className="btn" onClick={() => remoteModalCloser(id)}>
+								{Lang.modal_close_text}
+							</button>
 						</div>
 					</div>
-				)}
+				</div>
 			</div>
 		</>
 	);

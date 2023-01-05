@@ -1,28 +1,17 @@
 import React from 'react';
 import EventModal from './EventModal';
-import { ModalContainer } from './ModalContainer';
 
 export const YJPage: React.FC<any> = (): JSX.Element => {
-	// const handleSubmit = () => {
-	// 	window.toastr.success('전송완료');
-	// 	console.log('성공');
-	// };
-
 	return (
 		<div>
 			<div className="container">
-				<h1>Modal</h1>
-				<span>버튼 클릭하면 나오게?</span>
-				<hr />
-				<ModalContainer
-					titleValue="이건 제목임"
-					contentValue="이건 내용"
-					// handleSubmit={handleSubmit}
-				></ModalContainer>
+				<h1>Event Modal</h1>
+				<span>????</span>
 				<hr />
 				<EventModal
+					showNone
 					id="eventModal"
-					autoHideInterval={60 * 60 * 24 * 3}
+					autoHideInterval={60 * 60 * 24 * 3} // 초 분 시 일
 					link="https://www.naver.com/"
 					img="https://picsum.photos/386/416"
 				/>
