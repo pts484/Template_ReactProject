@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ICONS from '@assets/icons';
 import cx from 'classnames';
+import { motion } from 'framer-motion';
 
 declare interface SELECT extends React.InputHTMLAttributes<HTMLInputElement> {
 	children?: JSX.Element;
@@ -34,8 +35,10 @@ const Select: React.FC<any> = (props: SELECT): JSX.Element => {
 				<button
 					className={cx(className || 'cic-select-default-btn', disabled && 'cic-select-default')}
 					type="button"
-					data-bs-toggle="dropdown"
-					aria-expanded="false"
+					onClick={() => {
+						setView(!view);
+						console.log(view);
+					}}
 				>
 					{props.children ? (
 						props.children
@@ -49,22 +52,24 @@ const Select: React.FC<any> = (props: SELECT): JSX.Element => {
 						</div>
 					)}
 				</button>
-				<ul className={cx('dropdown-menu cic-dropdown-pannel', props.disabled ? 'disabled' : null)}>
-					{props?.selects.map((item, i): JSX.Element => {
-						return (
-							<li
-								key={i}
-								onClick={(e) => {
-									setValue(item);
-									props.onValue?.(item);
-								}}
-							>
-								{item?.icon && item.icon}
-								<span className="name">{item.name}</span>
-							</li>
-						);
-					})}
-				</ul>
+				{view ? (
+					<ul className={cx('cic-dropdown-pannel', props.disabled ? 'disabled' : null)}>
+						{props?.selects.map((item, i): JSX.Element => {
+							return (
+								<li
+									key={i}
+									onClick={(e) => {
+										setValue(item);
+										props.onValue?.(item);
+									}}
+								>
+									{item?.icon && item.icon}
+									<span className="name">{item.name}</span>
+								</li>
+							);
+						})}
+					</ul>
+				) : null}
 			</div>
 		</>
 	);

@@ -13,8 +13,8 @@ const DesignSystemTooltip: React.FC = (): JSX.Element => {
 		<div className="container">
 			<h1 className="mb-3">Modal</h1>
 			<p className="subhead-long-03 gray-500">
-				<code style={{ color: '#33bba0', fontWeight: 'bold' }}>{`<Modal>`}</code>에 props로 id와 backdrop
-				입력하여 사용합니다.
+				﹗<code style={{ color: '#33bba0', fontWeight: 'bold' }}>{`<Modal>`}</code>에 props로{' '}
+				<code style={{ color: '#4ebbf1', fontWeight: 'bold' }}>id , backdrop</code>을 입력하여 사용합니다.
 			</p>
 			{/* 
 			<button onClick={() => remoteModalOpener(idModal1)}>모달1 열기</button>
@@ -37,7 +37,7 @@ const DesignSystemTooltip: React.FC = (): JSX.Element => {
 
 			<br />
 			<hr />
-			<button onClick={() => remoteModalOpener(idModal1)} className="btn-line-md me-2">
+			<button onClick={() => remoteModalOpener(idModal1)} className="btn-line-md me-5">
 				backdrop 없는 모달
 			</button>
 			<button onClick={() => remoteModalOpener(idModal2)} className="btn-filled-md">

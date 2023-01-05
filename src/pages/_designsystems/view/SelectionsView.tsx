@@ -3,6 +3,7 @@ import React from 'react';
 const Selections = () => (
 	<div className="container">
 		<h1>Selections</h1>
+		<br />
 		<span className="subhead-long-03">토글, 라디오, 체크박스</span>
 		<br />
 		<br />

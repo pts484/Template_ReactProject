@@ -105,7 +105,7 @@ const DropMenuView = (): JSX.Element => {
 							},
 						]}
 					>
-						저는 여러분이 이걸 지갑 연결 버튼이라고 생각해 줬으면 좋겠어요
+						border 제거 된 지갑연결
 					</DropMenu>
 				</li>
 				<li className="col">{/* '여백의 미'**/}</li>
