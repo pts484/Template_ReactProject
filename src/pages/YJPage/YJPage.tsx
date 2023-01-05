@@ -23,7 +23,7 @@ export const YJPage: React.FC<any> = (): JSX.Element => {
 				<EventModal
 					id="eventModal"
 					autoHideInterval={60 * 60 * 24 * 3}
-					link="www.naver.com"
+					link="https://www.naver.com/"
 					img="https://picsum.photos/386/416"
 				/>
 			</div>
