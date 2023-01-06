@@ -49,7 +49,7 @@ const Button = (props: BUTTON) => {
 	return (
 		<>
 			<button
-				className={cx(className, styleSwitch(), sizeSwitch(), disabled && 'btn-disabled-lg')}
+				className={cx(className, disabled && 'btn-disabled-lg', styleSwitch(), sizeSwitch())}
 				onClick={onClick}
 				onSubmit={onSubmit}
 				disabled={!!disabled}
