@@ -44,23 +44,23 @@ button[class|='btn-disabled'] {
 
 /** ********* 사이즈 별 너비, 높이, 패딩 적용. *********  **/
 
-button[class$='lg'] {
+button.lg {
 	padding: 1.125rem 1.5rem; //18px 24px;
 }
 
-button[class$='md'] {
+button.md {
 	padding: 1rem 1.5rem; // 16px 24px;
 }
 
-button[class$='sm'] {
+button.sm {
 	padding: 0.75rem 1.5rem; //12px 24px
 }
 
-button[class$='xs'] {
+button.xs {
 	padding: 0.625rem 1rem; //10px 16px
 }
 
-button[class$='sqr'] {
+button.sqr {
 	padding: 0;
 	min-width: 2.5rem;
 	width: 2.5rem;
@@ -69,15 +69,15 @@ button[class$='sqr'] {
 
 /** ********* 사이즈 별 font-weight,-size,line-height,letter-spacing, border radius 적용. *********  **/
 
-button[class$='lg'],
-button[class$='md'] {
+button.lg,
+button.md {
 	@include subhead-03;
 	@include button-border-radius($border-radius-large);
 }
 
-button[class$='sm'],
-button[class$='xs'],
-button[class$='sqr'] {
+button.sm,
+button.xs,
+button.sqr {
 	@include subhead-02;
 	@include button-border-radius($border-radius-small);
 }
@@ -197,6 +197,7 @@ button[class$='sqr'] {
 	@include button-border-radius($border-radius-small);
 	padding: 0.75rem 1.5rem; //12px 24px
 }
+
 .btn-filled-xs,
 .btn-line-xs,
 .btn-grayline-xs,
