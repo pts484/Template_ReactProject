@@ -6,7 +6,13 @@ export const YJPage: React.FC<any> = (): JSX.Element => {
 		<div>
 			<div className="container">
 				<h1>Event Modal</h1>
-				<span>????</span>
+				<p className="subhead-long-03 gray-500">
+					﹗<code style={{ color: '#33bba0', fontWeight: 'bold' }}>{`<EventModal>`}</code>에 props로{' '}
+					<code style={{ color: '#4ebbf1', fontWeight: 'bold' }}>id, autoHideInterval, link, img </code>를
+					입력하여 사용합니다.
+					<br />﹗ props에 <code style={{ color: '#4ebbf1', fontWeight: 'bold' }}>showNone</code>를 입력하면
+					모달을 숨길 수 있습니다.
+				</p>
 				<hr />
 				<EventModal
 					// showNone

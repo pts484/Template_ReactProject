@@ -72,7 +72,7 @@ const EventModal: React.FC<any> = (props: EVENT_MODAL): JSX.Element => {
 			if (storageRemoveFlag) {
 				// true일 경우 localStorage 지움
 				window.localStorage.removeItem(id);
-				setCloseTime(''); // 이걸 안넣으면 새고 2번해야지만 팝업이 다시 뜸... 왜?
+				setCloseTime('');
 			}
 		}
 		console.log('버튼 누른 시간 : ', closeTime);
