@@ -41,10 +41,10 @@ const App = (): JSX.Element => {
 		 */
 		return () => {
 			window.removeEventListener('resize', () => {
-				console.log('disabled _STATUS_ALL_');
+				// console.log('disabled _STATUS_ALL_');
 			});
 			window.addEventListener('orientationchange', (): void => {
-				console.log('disabled _ORIENTATION_');
+				// console.log('disabled _ORIENTATION_');
 			});
 		};
 	}, []);
@@ -91,14 +91,9 @@ const App = (): JSX.Element => {
 				aaaaaaaaaa
 			</button> */}
 			<header>
-				<nav className={cx(CSS.gnb, 'container')}>
-					<Link to="/">main</Link>
-					<Link to="/designsystem">Design System</Link>
-					<Link to="/yj">YJpage</Link>
-				</nav>
+				<nav className={cx(CSS.gnb, 'container')}></nav>
 			</header>
 			<Routers />
-			<footer className="text-center my-5 py-2 bg-success">푸터</footer>
 		</div>
 	);
 };

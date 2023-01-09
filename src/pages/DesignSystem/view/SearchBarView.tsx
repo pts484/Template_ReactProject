@@ -1,9 +1,6 @@
-import Input from '@/components/input/input';
 import React from 'react';
-import SearchBar from '../components/SearchBar/SearchBar';
-import SearchBarContainer from '../components/SearchBar/SearchBarContainer';
-import SearchDeleteIcon from '../components/SearchBar/SearchDeleteIcon';
-import SearchGlassIcon from '../components/SearchBar/SearchGlassIcon';
+import SearchBar from '../../../components/SearchBar/SearchBar';
+import SearchBarContainer from '../../../components/SearchBar/SearchBarContainer';
 
 const SearchBarView = (): JSX.Element => {
 	return (

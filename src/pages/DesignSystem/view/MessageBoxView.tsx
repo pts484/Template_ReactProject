@@ -1,5 +1,5 @@
 import React from 'react';
-import MessageBox from '../components/MessageBox/MessageBox';
+import MessageBox from '../../../components/MessageBox/MessageBox';
 
 const MessageBoxView = (): JSX.Element => {
 	return (

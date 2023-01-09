@@ -1,10 +1,9 @@
 import React from 'react';
 import LOGOS from '@/assets/logos';
-import InputSelect from '../components/InputSelect';
-import InputContainer from '../components/Input/InputContainer';
-import Input from '../components/Input/Input';
-import Separate from '../components/Input/Seperate';
-import SelectToken from '../components/Input/SelectToken';
+import InputContainer from '../../../components/Input/InputContainer';
+import Input from '../../../components/Input/Input';
+import Separate from '../../../components/Input/Seperate';
+import SelectToken from '../../../components/Input/SelectToken';
 
 const InputView = (): JSX.Element => {
 	return (

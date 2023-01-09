@@ -1,21 +1,15 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-
-import Button from './view/Button';
+import ButtonView from './view/ButtonView';
 import Tooltip from './view/Tooltip';
 import SelectionsView from './view/SelectionsView';
-import ModalLayout from './view/ModalLayout';
 import SelectView from './view/SelectView';
-
-// 분리 작업한 import 내용
-
 import InputView from './view/InputView';
 import SearchBarView from './view/SearchBarView';
 import MessageBoxView from './view/MessageBoxView';
 import ToastView from './view/ToastView';
 import ModalView from './view/ModalView';
 import DropMenuView from './view/DropMenuView';
-import ButtonView from './view/ButtonView';
 
 const DesignSystem = (): JSX.Element => {
 	return (
@@ -23,7 +17,7 @@ const DesignSystem = (): JSX.Element => {
 			className="container"
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
-			transition={{ duration: 1 }}
+			transition={{ duration: 0.3 }}
 		>
 			<ButtonView />
 			<br />

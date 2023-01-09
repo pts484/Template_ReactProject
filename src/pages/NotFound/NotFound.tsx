@@ -3,7 +3,13 @@ import cx from 'classnames';
 import './NotFound.module.scss';
 
 const NotFound = (): JSX.Element => {
-	return <section>경로 다시 입력 ㄱㄱㄱ</section>;
+	return (
+		<section>
+			{`/designsystem ➡️ 디자인시스템 `}
+			<br />
+			{`/modal => 모달시연 `}
+		</section>
+	);
 };
 
 export default NotFound;

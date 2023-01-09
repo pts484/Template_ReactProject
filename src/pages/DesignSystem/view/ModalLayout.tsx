@@ -1,9 +1,8 @@
 // 📣 bootstrap 모달을 기반으로 작성하였고 따로 custom 시 각 페이지 내 scss 파일에 작성하여 설명 주석 달아주세요
 import React from 'react';
-import LOGOS from '@/assets/logos';
 import ICONS from '@/assets/icons';
 
-import Modal from '@/pages/_designsystems/components/Modal/Modal';
+import Modal from '@/components/Modal/Modal';
 
 const ModalLayout = () => (
 	<div className="container">

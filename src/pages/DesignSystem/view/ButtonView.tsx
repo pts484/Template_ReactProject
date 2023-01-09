@@ -1,10 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEarthAsia } from '@fortawesome/free-solid-svg-icons';
 import React, { useState } from 'react';
-import DropMenu from '../components/DropMenu/DropMenu';
-import Button from '../components/Button/Button';
-import { disabled } from 'dist/routers/root';
-import cx from 'classnames';
+import Button from '../../../components/Button/Button';
 
 const ButtonView = () => {
 	return (

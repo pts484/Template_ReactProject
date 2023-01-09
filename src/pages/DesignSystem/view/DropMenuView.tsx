@@ -1,7 +1,7 @@
-import { faAdjust, faEarthAsia, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faEarthAsia } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import DropMenu from '../components/DropMenu/DropMenu';
+import DropMenu from '../../../components/DropMenu/DropMenu';
 
 const DropMenuView = (): JSX.Element => {
 	return (

@@ -1,27 +1,22 @@
-import LOGOS from '@/assets/logos';
-import React, { useEffect, useRef, useState } from 'react';
-import cx from 'classnames';
+import React from 'react';
 
-interface INPUT extends React.InputHTMLAttributes<HTMLInputElement> {
-	separator?: 'left' | 'right';
-	onValue?: (value: string | number | readonly string[]) => void;
+declare interface INPUT extends React.InputHTMLAttributes<HTMLInputElement> {
+	placeholder?: string;
+	defaultValue?: string;
+	type?: string;
+	onChange?: React.ChangeEventHandler<HTMLInputElement>;
 }
 
-const Input = (props: INPUT): JSX.Element => {
-	const inputRef = useRef<HTMLInputElement>(null);
-
-	useEffect(() => {
-		if (!inputRef?.current?.value) return;
-
-		props.onValue?.(inputRef.current.value);
-	}, [inputRef?.current?.value]);
-
+const Input = (props: INPUT) => {
+	// const { readOnly, placeholder, defaultValue, type, onChange } = props;
 	return (
-		<>
-			{props.separator === 'left' && <div>|</div>}
-			<input ref={inputRef} {...props} />
-			{props.separator === 'right' && <div>|</div>}
-		</>
+		<input
+			type={props.type}
+			readOnly={!!props.readOnly}
+			placeholder={props.placeholder}
+			defaultValue={props.defaultValue}
+			onChange={props.onChange}
+		/>
 	);
 };
 

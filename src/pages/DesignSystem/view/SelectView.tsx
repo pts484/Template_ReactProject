@@ -1,9 +1,7 @@
 import React from 'react';
-
-import Select from '../components/Select/Select';
-
+import Select from '../../../components/Select/Select';
 import LOGOS from '@assets/logos';
-import ICONS from '@assets/icons';
+
 const SelectBtn = () => (
 	<div className="container">
 		<h1>Select</h1>

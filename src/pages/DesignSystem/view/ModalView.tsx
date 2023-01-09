@@ -1,9 +1,5 @@
 import React from 'react';
-import Modal, {
-	remoteModalOpener,
-	remoteModalCloser,
-	remoteModalToggler,
-} from '@/pages/_designsystems/components/Modal/Modal';
+import Modal, { remoteModalOpener, remoteModalCloser, remoteModalToggler } from '@/components/Modal/Modal';
 
 const DesignSystemTooltip: React.FC = (): JSX.Element => {
 	const idModal1 = 'sample-modals-1';

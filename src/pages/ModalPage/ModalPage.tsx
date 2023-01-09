@@ -1,7 +1,7 @@
 import React from 'react';
-import EventModal from './EventModal';
+import EventModal from '../../components/Modal/EventModal';
 
-export const YJPage: React.FC<any> = (): JSX.Element => {
+export const ModalPage: React.FC<any> = (): JSX.Element => {
 	return (
 		<div>
 			<div className="container">
