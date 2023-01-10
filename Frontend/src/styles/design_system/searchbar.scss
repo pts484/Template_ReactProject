@@ -1,0 +1,34 @@
+/**
+  * Search Bar Style
+ **/
+@import 'design_system/inputs';
+
+@mixin searchbar-default-styling {
+	@include input-default-styling;
+	border-radius: 0.75rem;
+
+	svg {
+		color: var(--gray-scale-08);
+	}
+
+	.cic-icon-glass {
+		margin-right: 0.875rem;
+	}
+
+	svg.visible {
+		visibility: visible;
+	}
+
+	svg.hidden {
+		visibility: hidden;
+	}
+}
+
+.cic-searchbar {
+	@include searchbar-default-styling;
+}
+
+.cic-searchbar-focus {
+	@include searchbar-default-styling;
+	border-color: var(--gray-scale-08);
+}

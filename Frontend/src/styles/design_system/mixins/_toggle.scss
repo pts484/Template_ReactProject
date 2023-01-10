@@ -1,0 +1,22 @@
+// 토글 버튼 트랜지션 및 그림자 mixin
+
+@mixin inactive-mixin {
+    content: '';
+    position: absolute;
+    display: block;
+}
+
+@mixin before-animation {
+    -moz-transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
+    -o-transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
+    -webkit-transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
+    transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
+}
+
+@mixin after-animation {
+    box-shadow: 0px 4px 16px rgba(46, 12, 84, 0.15);
+    -moz-transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);
+    -o-transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);
+    -webkit-transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);
+    transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);
+}

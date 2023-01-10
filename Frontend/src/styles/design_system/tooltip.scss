@@ -1,0 +1,9 @@
+// 부트스트랩 툴팁 오버라이딩한 css입니다.
+.tooltip-inner {
+	padding: 8px 16px;
+	background: rgba(72, 76, 86, 0.9);
+	border-radius: 8px;
+}
+.tooltip .tooltip-arrow {
+	display: none;
+}

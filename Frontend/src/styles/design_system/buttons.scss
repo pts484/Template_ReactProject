@@ -1,0 +1,471 @@
+// 버튼 스타일별 디자인시스템 파일입니다.
+.btn-filled-lg,
+.btn-filled-md,
+.btn-filled-sm,
+.btn-filled-xs {
+	img {
+		vertical-align: bottom;
+	}
+}
+
+/** *************************************
+ * filled Button Styles
+ ************************************* **/
+.btn-filled-lg {
+	background-color: var(--brand-bl-900);
+	color: var(--white);
+	border-radius: $border-radius-large;
+	border: 1px solid var(--brand-bl-900);
+	padding: 1.125rem 1.5rem; //18px 24px;
+	display: inline-block;
+	align-self: center;
+	@include subhead-03;
+}
+
+.btn-filled-md {
+	background-color: var(--brand-bl-900);
+	color: var(--white);
+	border-radius: $border-radius-large;
+	border: 1px solid var(--brand-bl-900);
+	padding: 1rem 1.5rem; // 16px 24px;
+	// padding: 1rem 3.75rem;
+	display: inline-block;
+	align-self: center;
+	@include subhead-03;
+}
+
+.btn-filled-sm {
+	background-color: var(--brand-bl-900);
+	color: var(--white);
+	border-radius: $border-radius-small;
+	border: 1px solid var(--brand-bl-900);
+	padding: 0.75rem 1.5rem; //12px 24px
+	display: inline-block;
+	align-self: center;
+	@include subhead-02;
+}
+
+.btn-filled-xs {
+	background-color: var(--brand-bl-900);
+	color: var(--white);
+	border-radius: $border-radius-small;
+	border: 1px solid var(--brand-bl-900);
+	padding: 0.625rem 1rem; //10px 16px
+	display: inline-block;
+	align-self: center;
+	@include subhead-02;
+}
+
+.btn-filled-sqr {
+	height: 2.5rem;
+	min-width: 2.5rem;
+	width: 2.5rem;
+	padding: 0;
+	line-height: normal;
+	background-color: var(--brand-bl-900);
+	border-radius: $border-radius-small;
+	border: 1px solid var(--brand-bl-900);
+}
+
+/** *************************************
+ * Border Line Button Styles
+ ************************************* **/
+
+.btn-line-lg {
+	background-color: var(--white);
+	color: var(--brand-bl-900);
+	border-radius: $border-radius-large;
+	border: 1px solid var(--brand-bl-900);
+	padding: 1.125rem 1.5rem; //18px 24px;
+	display: inline-block;
+	align-self: center;
+	@include subhead-03;
+}
+
+.btn-line-md {
+	background-color: var(--white);
+	color: var(--brand-bl-900);
+	border-radius: $border-radius-large;
+	border: 1px solid var(--brand-bl-900);
+	padding: 1rem 1.5rem; // 16px 24px;
+	display: inline-block;
+	align-self: center;
+	@include subhead-03;
+}
+
+.btn-line-sm {
+	background-color: var(--white);
+	color: var(--brand-bl-900);
+	border-radius: $border-radius-small;
+	border: 1px solid var(--brand-bl-900);
+	padding: 0.75rem 1.5rem; //12px 24px
+	display: inline-block;
+	align-self: center;
+	@include subhead-03;
+}
+
+.btn-line-xs {
+	background: none;
+	color: var(--brand-bl-900);
+	border-radius: $border-radius-small;
+	border: 1px solid var(--brand-bl-900);
+	padding: 0.625rem 1rem; //10px 16px
+	display: inline-block;
+	align-self: center;
+	@include subhead-02;
+}
+
+.btn-line-sqr {
+	height: 2.5rem;
+	min-width: 2.5rem;
+	width: 2.5rem;
+	padding: 0;
+	line-height: normal;
+	background-color: var(--white);
+	border-radius: $border-radius-small;
+	border: 1px solid var(--brand-bl-900);
+}
+
+/** *************************************
+ * Border line gray Color Button Styles
+ ************************************* **/
+
+.btn-grayline-lg {
+	background-color: var(--white);
+	color: var(--gray-scale-15); //$gray-900;
+	border-radius: $border-radius-large;
+	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
+	padding: 1.125rem 1.5rem; //18px 24px;
+	height: 3.75rem;
+	display: flex;
+	align-self: center;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	@include subhead-03;
+}
+
+.btn-grayline-md {
+	background-color: var(--white);
+	color: var(--gray-scale-15); //$gray-900;
+	border-radius: $border-radius-large;
+	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
+	padding: 1rem 1.5rem; // 16px 24px;
+	height: 3.5rem;
+	display: flex;
+	align-self: center;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	@include subhead-03;
+}
+
+.btn-grayline-sm {
+	background-color: var(--white);
+	color: var(--gray-scale-15); //$gray-900;
+	border-radius: $border-radius-small;
+	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
+	padding: 0.75rem 1.5rem; //12px 24px
+	display: inline-block;
+	align-self: center;
+	@include subhead-03;
+}
+.btn-grayline-xs {
+	background-color: var(--white);
+	color: var(--gray-scale-15); //$gray-900;
+	border-radius: $border-radius-small;
+	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
+	padding: 0.625rem 1rem; //10px 16px
+	display: inline-block;
+	align-self: center;
+	@include subhead-02;
+}
+
+#btn-grayline-xs {
+	background-color: var(--white);
+	color: var(--gray-scale-15); //$gray-900;
+	border-radius: $border-radius-small;
+	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
+	padding: 0.44rem 1.16rem;
+	display: inline-block;
+	align-self: center;
+	@include subhead-02;
+}
+
+.btn-grayline-no-border {
+	background-color: var(--white);
+	color: var(--gray-scale-15); //$gray-900;
+	padding: 0.44rem 1.16rem;
+	border-radius: $border-radius-small;
+	border: 1px solid var(--white);
+	display: inline-block;
+	align-self: center;
+	@include subhead-02;
+	img {
+		width: 16px;
+	}
+}
+
+.btn-grayline-sqr {
+	height: 2.5rem;
+	min-width: 2.5rem;
+	width: 2.5rem;
+	padding: 0;
+	line-height: normal;
+	background-color: var(--white);
+	border-radius: $border-radius-small;
+	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
+}
+
+/** *************************************
+ * Hover Button Styles
+ ************************************* **/
+
+.btn-hover-lg {
+	background-color: var(--gray-scale-02); //$gray-50;
+	color: var(--gray-scale-15); //$gray-900;
+	border-radius: $border-radius-large;
+	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
+	padding: 1.125rem 1.5rem; //18px 24px;
+	display: inline-block;
+	align-self: center;
+	@include subhead-03;
+}
+
+.btn-hover-md {
+	background-color: var(--gray-scale-02); //$gray-50;
+	color: var(--gray-scale-15); //$gray-900;
+	border-radius: $border-radius-large;
+	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
+	padding: 1rem 1.5rem; // 16px 24px;
+	display: inline-block;
+	align-self: center;
+	@include subhead-03;
+}
+
+.btn-hover-sm {
+	background-color: var(--gray-scale-02); //$gray-50;
+	color: var(--gray-scale-15); //$gray-900;
+	border-radius: $border-radius-small;
+	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
+	padding: 0.75rem 1.5rem; //12px 24px
+	display: inline-block;
+	align-self: center;
+	@include subhead-03;
+}
+
+.btn-hover-xs {
+	background-color: var(--gray-scale-02); //$gray-50;
+	color: var(--gray-scale-15); //$gray-900;
+	border-radius: $border-radius-small;
+	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
+	padding: 0.625rem 1rem; //10px 16px
+	display: inline-block;
+	align-self: center;
+	@include subhead-02;
+}
+
+.btn-hover-sqr {
+	height: 2.5rem;
+	min-width: 2.5rem;
+	width: 2.5rem;
+	padding: 0;
+	line-height: normal;
+	background-color: var(--gray-scale-02); //$gray-50;
+	border-radius: $border-radius-small;
+	border: 1px solid var(--gray-scale-06); //var(--gray-scale-06); //var(--gray-scale-06); //$gray-200;
+}
+
+/** *************************************
+ * gray Color Button Styles
+ ************************************* **/
+
+.btn-grayfilled-lg {
+	background-color: var(--gray-scale-03); //$gray-100
+	color: var(--gray-scale-15); //$gray-900;
+	border-radius: $border-radius-large;
+	border: 1px solid var(--gray-scale-03); //$gray-100
+	padding: 1.125rem 1.5rem; //18px 24px;
+	display: inline-block;
+	align-self: center;
+	@include subhead-03;
+}
+
+.btn-grayfilled-md {
+	background-color: var(--gray-scale-03); //$gray-100
+	color: var(--gray-scale-15); //$gray-900;
+	border-radius: $border-radius-large;
+	border: 1px solid var(--gray-scale-03); //$gray-100
+	padding: 1rem 1.5rem; // 16px 24px;
+	display: inline-block;
+	align-self: center;
+	@include subhead-03;
+}
+.btn-grayfilled-sm {
+	background-color: var(--gray-scale-03); //$gray-100
+	color: var(--gray-scale-15); //$gray-900;
+	border-radius: $border-radius-small;
+	border: 1px solid var(--gray-scale-03); //$gray-100
+	padding: 0.75rem 1.5rem; //12px 24px
+	display: inline-block;
+	align-self: center;
+	@include subhead-03;
+}
+.btn-grayfilled-xs {
+	background-color: var(--gray-scale-03); //$gray-100
+	color: var(--gray-scale-15); //$gray-900;
+	border-radius: $border-radius-small;
+	border: 1px solid var(--gray-scale-03); //$gray-100
+	padding: 0.625rem 1rem; //10px 16px
+	display: inline-block;
+	align-self: center;
+	@include subhead-02;
+}
+
+.btn-grayfilled-sqr {
+	background-color: var(--gray-scale-03); //$gray-100
+	color: var(--gray-scale-15); //$gray-900;
+	border-radius: $border-radius-small;
+	border: 1px solid var(--gray-scale-03); //$gray-100
+	padding: 0;
+	height: 2.5rem;
+	min-width: 2.5rem;
+	width: 2.5rem;
+	display: inline-block;
+	align-self: center;
+}
+
+/** *************************************
+ * Disabled Button Styles
+ ************************************* **/
+
+.btn-disabled-lg {
+	background-color: var(--gray-scale-03); //$gray-100
+	color: var(--gray-scale-08); //var(--gray-scale-08); //$text-550;
+	border-radius: $border-radius-large;
+	border: 1px solid var(--gray-scale-03); //$gray-100
+	padding: 1.125rem 1.5rem; //18px 24px;
+	display: inline-block;
+	align-self: center;
+
+	svg {
+		fill: var(--gray-scale-08); //$text-550;
+	}
+}
+
+.btn-disabled-md {
+	background-color: var(--gray-scale-03); //$gray-100
+	color: var(--gray-scale-08); //$text-550;
+	border-radius: $border-radius-large;
+	border: 1px solid var(--gray-scale-03); //$gray-100
+	padding: 1rem 1.5rem; // 16px 24px;
+	display: inline-block;
+	align-self: center;
+
+	svg {
+		fill: var(--gray-scale-08); //$text-550;
+	}
+}
+.btn-disabled-sm {
+	background-color: var(--gray-scale-03); //$gray-100
+	color: var(--gray-scale-08); //$text-550;
+	border-radius: $border-radius-small;
+	border: 1px solid var(--gray-scale-03); //$gray-100
+	padding: 0.75rem 1.5rem; //12px 24px
+	display: inline-block;
+	align-self: center;
+
+	svg {
+		fill: var(--gray-scale-08); //$text-550;
+	}
+}
+.btn-disabled-xs {
+	background-color: var(--gray-scale-03); //$gray-100
+	color: var(--gray-scale-08); //$text-550;
+	border-radius: $border-radius-small;
+	border: 1px solid var(--gray-scale-03); //$gray-100
+	padding: 0.625rem 1rem; //10px 16px
+	display: inline-block;
+	align-self: center;
+
+	// svg {
+	//     fill: var(--gray-scale-08); //$text-550;
+	// }
+}
+
+.btn-disabled-sqr {
+	background-color: var(--gray-scale-03); //$gray-100
+	color: var(--gray-scale-08); //$text-550;
+	border-radius: $border-radius-small;
+	border: 1px solid var(--gray-scale-03); //$gray-100
+	padding: 0;
+	height: 2.5rem;
+	min-width: 2.5rem;
+	width: 2.5rem;
+	display: inline-block;
+	align-self: center;
+
+	svg {
+		fill: var(--gray-scale-08); //$text-550;
+	}
+}
+
+/** *************************************
+ *  (footer에 적용 돼 있음)
+ ************************************* **/
+.btn-focus {
+	display: flex;
+	align-items: center;
+	padding: 10px 16px;
+}
+/** *************************************
+ * btn background none
+ ************************************* **/
+.btn-bg-none {
+	background: none;
+	border: none;
+}
+
+/** *************************************
+ * 조건부 키워드 스타일
+ ************************************* **/
+[class*='btn-filled'] {
+	// btn-filled-가 hover일때 color: inherit;
+	// &:hover {
+	//     color: inherit;
+	// }
+}
+
+[class*='btn-gray'] {
+	//btn-gray-... 가 hover일때 바뀌는  background-color 컬러
+	&:hover {
+		@include btn-hover;
+		& [class*='ic-']::before {
+			color: var(--gray-scale-15); //$gray-900;
+		}
+	}
+}
+
+[class*='btn-disabled-'] {
+	//btn-disabled- 가 disabled일때 text 스타일
+	& {
+		@include subhead-02;
+		color: var(--gray-scale-08); //$text-550;
+	}
+}
+
+[class*='btn-outline-'],
+.btn-link {
+	&.disabled,
+	&:disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&.focus,
+		&:active,
+		&.active {
+		}
+	}
+}

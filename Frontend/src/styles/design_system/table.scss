@@ -1,0 +1,108 @@
+.table {
+    // width: 100%;
+    // display: block;
+
+    > :not(caption) > * > * {
+        padding: 6px 8px 4px 20px !important;
+        vertical-align: middle !important;
+    }
+}
+
+// thead {
+//     display: inline-block;
+//     width: 100%;
+// }
+
+// tbody {
+//     height: 200px;
+//     display: inline-block;
+//     width: 100%;
+//     overflow: auto;
+// }
+
+.property-p {
+    padding: 1.25rem;
+}
+
+.table-content-container {
+    height: initial;
+    overflow: visible;
+    transition: height 100ms ease 0s;
+}
+.event-history-Panel {
+    overflow-x: scroll;
+}
+.table-scroll-container {
+    max-height: 376px; //6.5개 부터 보이게
+    overflow-x: auto;
+    width: 100%;
+}
+.scroll-sort {
+    display: flex;
+    flex-direction: column;
+}
+.scroll-sort .scrollbox-content {
+    border-color: rgba(0, 0, 0, 0);
+    overflow-y: auto;
+    transition: border-color 0.2s ease-in 0s;
+}
+.th-area {
+    display: flex;
+    border-bottom: 1px solid #eceaee;
+    background: #fdfcfe;
+}
+.th-area.row-header {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+.th-area .row-cell {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    flex: 1 0 100px;
+    overflow-x: auto;
+    padding: 1rem 0.25rem;
+}
+.th-area.row-header .row-cell {
+    background-color: rgb(255, 255, 255);
+    color: rgb(4, 17, 29);
+    padding-bottom: 4px;
+    padding-top: 4px;
+    border-bottom: 1px solid #eceaee;
+}
+.th-area .row-cell:first-child {
+    padding-left: 1rem;
+}
+.bcRYPI .event-history-col {
+    flex-basis: 130px;
+}
+.th-area .row-center {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    flex: 1 0 100px;
+    overflow-x: auto;
+    padding: 0.875rem 0.25em;
+    justify-content: flex-end;
+}
+.th-area .row-cells-spaced {
+    flex-basis: 140px;
+    background-color: #fdfcfe;
+}
+.event-history-price-col {
+    flex-basis: 140px;
+}
+.center-sort {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 24px;
+    width: 100%;
+}
+.btn-right-sort {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.875rem 1.25em 0.875rem 0.25em !important;
+    background-color: #fdfcfe;
+}
