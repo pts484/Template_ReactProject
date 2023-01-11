@@ -31,6 +31,9 @@ module.exports = {
 		'@typescript-eslint/no-unused-expressions': 'warn',
 		'@typescript-eslint/no-invalid-void-type': 'warn',
 
+		'no-dynamic-delete': 0,
+		'@typescript-eslint/no-dynamic-delete': 0,
+
 		'no-unused-vars': 0,
 		'@typescript-eslint/no-unused-vars': 0,
 

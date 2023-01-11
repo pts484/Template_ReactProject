@@ -10,5 +10,8 @@
 		"format": "cd Frontend && npx prettier --write --config ./.prettierrc \"./src/**/*.{ts,tsx}\" && cd ..",
 		"bstart": "(cd ./dist && node start.js) & cd ./Frontend && npm run build",
 		"sstart": "(cd ./dist && node start.js) & cd ./Frontend && npm run start"
+	},
+	"dependencies": {
+		"@types/lodash": "^4.14.191"
 	}
 }

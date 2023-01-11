@@ -36,15 +36,6 @@ class StateSetter {
 	};
 
 	public chageStatus = (updateInterval: number = 3): typeof this.status | undefined => {
-		console.log(this.updateConut, updateInterval, 'Global Status Update', {
-			languageBrowser: navigator.language,
-			language: this.getBrowserLanguage(),
-			mobile: this._mobile(),
-			platform: this._platform(),
-			breakpoint: this._breakpoint(),
-			orientation: this._orientation(),
-		});
-
 		if (++this.updateConut % updateInterval === 0) {
 			this.updateConut = 0;
 			return {
