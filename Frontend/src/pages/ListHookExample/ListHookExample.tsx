@@ -62,15 +62,6 @@ const ListHookExample = (): JSX.Element => {
 		<div className="container">
 			<div className="w-100 my-2">
 				<button
-					className="btn btn-danger me-2"
-					onClick={() => {
-						console.log(dummyData);
-						onDelete(_.sample(dummyData));
-					}}
-				>
-					삭제
-				</button>
-				<button
 					className="btn btn-success"
 					onClick={() => {
 						console.log(dummyData);
@@ -113,6 +104,15 @@ const ListHookExample = (): JSX.Element => {
 							<div className="d-flex w-25">{item.data.id}</div>
 							<div className="d-flex w-25">{item.data.name}</div>
 							<div className="d-flex w-25">{item.data.nickname}</div>
+							<button
+								className="btn btn-danger me-2"
+								onClick={(e) => {
+									console.log(dummyData);
+									onDelete(e, item.id);
+								}}
+							>
+								삭제
+							</button>
 						</li>
 					);
 				})}

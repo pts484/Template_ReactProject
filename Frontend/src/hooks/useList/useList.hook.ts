@@ -725,7 +725,7 @@ function useList(uuid: string, initialData: any) {
 		});
 	}, []);
 
-	const onDelete = useCallback((e, _id = null): void => {
+	const onDelete = useCallback((e, _id: string | null = null): void => {
 		const pId = isNull(_id) ? e.target.id : _id;
 
 		dispatch({
